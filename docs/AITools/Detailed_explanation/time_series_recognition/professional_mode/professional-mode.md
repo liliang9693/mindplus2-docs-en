@@ -1,175 +1,165 @@
-# 【时序模式识别】 专业模式
+# 【Temporal Pattern Recognition】 Advanced Mode
 
-本项目以 “K10加速度动作识别” 为案例，带领大家学习如何在专业模式下完成时序模式识别。通过该案例，用户不仅能够掌握完整的基本流程（数据设置、数据标注、模型训练），还可以进一步体验专业模式中的进阶功能。
+This project takes **“K10 Acceleration-Based Motion Recognition”** as an example to demonstrate how to perform temporal pattern recognition in **Advanced Mode**. Through this case, users will not only learn the complete workflow — including **data setup, data annotation, and model training** — but also gain experience with the advanced features available in this mode.
 
-在模型训练完成后，系统能够对实时采集的加速度传感器数据进行分析与识别，从而实现对不同动作的分类预测。
+After the model training is completed, the system can analyze and recognize real-time acceleration sensor data, enabling **classification and prediction of different motion patterns**.
 
-在开始之前，需要提前准备并整理好对应的时序数据集，这是模型训练与识别的前提条件。 为了便于大家操作，针对本项目要实现的功能（检测鼓掌、挥手、静止 三种动作），提供了UNIHIKER K10的两类数据集：
+Before getting started, it’s essential to prepare and organize the corresponding **temporal datasets**, which serve as the foundation for model training and recognition.
+For this project, which aims to detect **three motion types (clapping, waving, and stillness)**, two types of UNIHIKER K10 datasets are provided:
 
-- **有标注的时序数据集**：用于模型训练与验证。
-- **无标注的时序数据集**：用于体验专业模式的详细使用过程。
+- **Labeled temporal dataset:** for model training and validation.
+- **Unlabeled temporal dataset:** for exploring the detailed workflow of Advanced Mode.
 
-这里，主要以UNIHIKER K10为例，展示如何利用加速度传感器完成时序模式识别的数据采集与应用。但需要注意的是，这一流程并不局限于UNIHIKER K10，其他具备传感器和串口通信功能的主控板（如UNIHIKER M10、micro:bit、掌控板等）同样可以按照类似方式实现。
+This tutorial mainly uses **UNIHIKER K10** as an example to demonstrate how to utilize the acceleration sensor for temporal pattern recognition — from data collection to practical application. However, the same process can also be applied to other microcontrollers equipped with sensors and serial communication capabilities, such as **UNIHIKER M10**, **micro:bit**, or **zhangkongban**.
 
-暂时无法在飞书文档外展示此内容
+**Result:**
+The trained model can recognize different motion patterns — such as **Applausing**, **waving**, and **stillness** — based on the **x, y, and z-axis acceleration data** collected from the UNIHIKER K10 sensor.
 
-暂时无法在飞书文档外展示此内容
+## Mode Switching
 
-**效果：**训练采集到的UNIHIKER K10加速度传感器x、y、z 三轴采集到的时序数据，可以让模型识别出鼓掌、挥手、静止等不同动作模式。
+- Click the **Home** icon to return to the Mind+ homepage. In the menu bar, select **Create New Project**, then click **Model**. In the training options, find **Temporal Pattern Recognition (M4)** and click it to create the project.
 
-**效果展示：**
+![img](../img/2_professional_mode/1762139252904-50b6db12-0202-485e-876d-994b9cfe1e72.webp)
 
-![img](../img/2_professional_mode/img.gif)
+- Click **"Advanced Mode"** in the top-right corner of the interface to switch modes. Once switched successfully, the menu bar will add the following modules: **Data Settings**, **Annotation Settings**, **Model Training**, and **Model Validation**.
 
-## 模式切换
+![img](../img/2_professional_mode/1762154661929-a3d704fc-72a2-4800-8365-c26ada218870.png)
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。在训练选项中找到 “时序模式识别（M4）” 并点击，即可完成项目创建。
+## Data Settings
 
-![img](../img/2_professional_mode/image_01.png)
+- Switch to **“Data Settings”** → click the **“Create Dataset”** button in the upper-left corner, and create a dataset named **“K10 Motion Recognition”** as an example.
 
-- 在界面右上角点击 “专业模式” 以切换模式。切换成功后，菜单栏将新增以下功能模块：数据设置、标注设置、模型训练、模型校验和模型部署。
+![img](../img/2_professional_mode/1762155559226-b22f9933-3569-4243-9b8e-2cd5a0bd28aa.png)
 
-![img](../img/2_professional_mode/image_02.png)
+- After switching to Advanced Mode, the dataset list will display a default "Experience" dataset, which is generated from the Quick Experience mode. Users can perform the following operations on newly created datasets: annotation, copy, import data, export, and delete.  
 
-## 数据设置
+ Note: The default dataset cannot be deleted.  
 
-- 切换到 “数据设置” → 点击左上角 “创建数据集”，例如创建一个名为“K10动作识别”的数据集。
+![img](../img/2_professional_mode/1762155911165-6ffa495a-365b-40fe-b58a-016e9fc5bd57.png)
 
-![img](../img/2_professional_mode/image_03.png)
+- Next, perform the **Import Data** operation for the newly created Traffic Sign Recognition dataset. The system supports two import methods: **Annotation Data** and **Unannotation Data.**
+-  Import Method 1: **Unannotation Data**
 
-- 切换到专业模式后，数据集列表中会默认显示一个 “Experience” 数据集，该数据集由快速体验模式生成。用户可以对新建数据集执行以下操作：标注、复制、导入数据、导出以及删除。
+- - Suitable for uploading only raw images (e.g., images containing mixed traffic signs such as straight, left turn, right turn, with at least 20 images per category).
+  - **Steps:** Select **Unannotation Data** as the import type → Click Click to Upload → Choose images from the local computer → Click Confirm to complete the import.  
 
-注意：默认数据集不可删除。
+![img](../img/2_professional_mode/1762156854346-d85f95b3-2550-4698-aa22-3ec18f5bb8e1.png)
 
-![img](../img/2_professional_mode/image_04.png)
+- **Import Method 2: Annotation Data**
 
-- 接下来，为新建的K10动作识别数据集执行 “导入数据” 操作。系统支持两种导入方式：有标注数据和无标注数据。
-- 导入方式1：无标注数据导入
-  - 适用于仅上传原始图片的情况（如鼓掌、挥手、静止混合在一起的数据，且每种类别数据数量不低于10条）。
-  - 操作步骤：选择导入类型为 “无标注数据” → 点击 “点击上传” → 从本地选择数据 → 点击“确认”完成导入。
+- - Directly upload **Annotation Data** in CSV format (as a .zip archive).
+  - Organize the folder structure according to platform requirements. After uploading, manual labeling is not required — you can proceed directly to model training.
 
-![img](../img/2_professional_mode/image_05.png)
+## Annotation Settings
 
-- 导入方式2：有标注数据
-  - 直接上传csv格式的已标注数据（.zip 压缩包）。
-  - 按照平台要求组织文件夹结构，上传后无需手动标注，直接跳转到模型训练。
-  - 注意：有标注数据的分类名称需使用英文，否则上传后标签可能出现乱码。
+- After the traffic sign images are successfully imported, the annotation progress bar will simultaneously display the number of imported images and their corresponding annotations.  
 
-## 标注设置
+![img](../img/2_professional_mode/1762157099077-ea4b131d-7128-49a8-a14c-b306ee6713ee.png)
 
-- 时序数据导入成功后，标注进度栏会同步显示已导入时序数据数量及对应的标注数量。
+- Click **Annotate** in the **Actions** column to enter the traffic sign annotation settings interface.
 
-![img](../img/2_professional_mode/image_06.png)
+![img](../img/2_professional_mode/1762157166225-d0d11832-259d-4193-ab37-2338ff4dae73.png)
 
-- 在“操作”栏中点击 “标注”，进入时序数据的标注设置界面。
+- Follow the on-screen instructions to create labels (**Applause**, **Wave**, **Still**) for annotating different action categories.  
 
-![img](../img/2_professional_mode/image_07.png)
+![img](../img/2_professional_mode/1762157306811-64de2c5d-557b-4033-adb0-e490ae1c32d9.png)
 
-- 按照界面提示完成标签创建（鼓掌、挥手、静止），用于标注不同类别的水果。
+- Next, in the **Temporal Data** area on the far right of the interface, annotate the data one by one:
 
-![img](../img/2_professional_mode/image_08.png)
+| **Temporal Data Chart**                                      | **Corresponding Label Name** |
+| ------------------------------------------------------------ | ---------------------------- |
+| ![img](../img/2_professional_mode/1762152814143-2ca84781-0fad-4c46-b227-bb3c9d274ae7.png) | Applause                     |
+| ![img](../img/2_professional_mode/1762152815145-9535276c-a0b0-4ca0-b112-54b9047dc3f1.png) | Still                        |
+| ![img](../img/2_professional_mode/1762152815251-d9364fa0-6520-4e9b-88cb-ba77a3747f77.png) | Wave                         |
 
-- 接下来，在界面最右侧的时序数据区，对数据逐一标注：
+- After labeling, a blue **√** will appear at the bottom-right corner of the temporal data, and the labeling results will be shown in the **Annotation Results** column.
+  **Note:** All temporal data must be labeled.
 
-  - | **时序数据图**                                               | **对应标签名** |
-    | ------------------------------------------------------------ | -------------- |
-    | ![img](../img/2_professional_mode/image_09.png) | 鼓掌           |
-    | ![img](../img/2_professional_mode/image_10.png) | 静止           |
-    | ![img](../img/2_professional_mode/image_11.png) | 挥手           |
+![img](../img/2_professional_mode/1762157929864-926cd124-010c-4d31-8410-cb6a3892a1fe.png)
 
-- 标签标注完成后，时序数据右下角会显示蓝色√，标注的结果会显示在标注结果栏中。
+-  Import Method 2: Annotation Data  
 
-注意：所有时序数据都需要进行标注。
+- - Directly upload labeled data as a **.zip** archive.
+  - Organize the folder structure according to platform requirements. After uploading, manual labeling is not needed — you can proceed directly to model training.  
 
-![img](../img/2_professional_mode/image_12.png)
+![img](../img/2_professional_mode/1762159030803-a85bf6a5-c88e-42a6-9dba-da22e6fcb3ed.png)
 
-- 导入方式2：有标注数据
-  - 直接上有标注数据（.zip 压缩包）。
-  - 按照平台要求组织文件夹结构，上传后无需手动标注，直接跳转到模型训练。
+## Model Training
 
-![img](../img/2_professional_mode/image_13.png)
+- After all temporal data has been labeled, switch to the **Model Training** module.
 
-## 模型训练
+![img](../img/2_professional_mode/1762159293691-ff4c4c58-0da6-4101-8785-de283086f6ab.png)
 
-- 所有时序数据都标注完成后，切换到“模型训练”功能模块。
+-  Click **Create Training Task**, and in the pop-up window, configure the following settings:  
 
-![img](../img/2_professional_mode/image_14.png)
+- - **Name:** K10 Motion Recognition Model (customize as needed)
+  - **Device:** Select the corresponding main board (**UNIHIKER K10**)
+  - **Dataset:** K10 Motion Recognition (In **Data Settings**, we have created and named the dataset “K10 Motion Recognition”; in **Annotation Settings**, the temporal data labeling and organization are complete. The dataset now has the full structure required for model training. In the next stage, the system will learn temporal features from this dataset, enabling action recognition based on acceleration values. Therefore, select the **K10 Motion Recognition** dataset here.)
+  - **Training Set Ratio:** Choose according to your needs (or keep the default).  
 
-- 点击 “创建训练任务”，在弹出的窗口中进行如下设置：
-  - **名称**：K10加速度动作识别模型（根据需求自行命名）
-  - **设备**：选择对应的主控设备（UNIHIKER K10）
-  - **数据集**：K10动作识别（在数据设置中，我们已创建并命名数据集 “K10动作识别”；在标注设置中，也完成了时序数据的标注与整理。至此，数据已具备模型训练所需的完整结构。接下来进入模型训练阶段，系统将基于该数据集学习时序特征，从而逐步具备通过加速度值进行动作识别的能力。因此，此处的数据集必须选择K10动作识别。）
-  - **训练比例**：根据自己需求进行选择（也可保持默认）
+| **Training Task Parameter** | **Purpose**                                                  | **Description**                                              |
+| --------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name                        | Used to distinguish and manage different training tasks; does not affect model performance. | Acts as a label for this experiment, making it easier to review and compare later. |
+| Device                      | Specifies which main board to use.                           | Select the device corresponding to the main board in use.    |
+| Dataset                     | Indicates which data the model should learn from.            | Acts as the “textbook”; the model learns to recognize different actions from the dataset’s images and labels. |
+| Training Set Ratio          | Determines what proportion of the dataset is used for training and validation. | Training set = examples used by the model to learn. Validation set = examples used to test the model’s learning (unseen by the model). |
 
-| **创建任务参数** | **作用**                                           | **说明**                                                     |
-| ---------------- | -------------------------------------------------- | ------------------------------------------------------------ |
-| 名称             | 仅用于区分和管理不同的训练任务，不会影响模型性能。 | 相当于给这次实验取一个名字，方便后续查看和比较。             |
-| 识别             | 确定使用的主控。                                   | 主控用的是什么，这里的设备就选择什么                         |
-| 数据集           | 告诉模型要从哪些数据中学习。                       | 相当于教材，模型会从这个数据集的图片和标签里，学习如何识别不同交通标志。 |
-| 训练比列         | 决定数据集中多少比例用来训练，多少比例用来验证。   | 训练集 = 模型学习用的例子验证集 = 检查模型学习效果的例子（模型没见过的图片） |
+![img](../img/2_professional_mode/1762159668375-a06cc736-0c98-486b-aed7-9c45a574ade2.png)
 
-![img](../img/2_professional_mode/image_15.png)
+- After the model training task is successfully created, click **Config Params** to enter the training parameter configuration interface. You can adjust the parameters as needed or start training directly with the default settings.
+- **Parameters:** Data Time Interval, Epochs, Batch Size, Learning Rate
 
-- 模型训练任务创建成功后，点击“参数设置”进入训练参数配置界面。你可以根据需要调整参数，也可以直接使用默认设置开始训练。
-  - 参数设置：数据时间间隔、训练轮次、批次大小、学习率。
+| Parameter          | Description                                                  | Notes                                                      | Recommended Setting                         |
+| ------------------ | ------------------------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------- |
+| Data Time Interval | The time interval between two sensor samples. Shorter intervals capture more details but generate more data. | Frequency of recorded actions                              | 100 ms (default, can be adjusted as needed) |
+| Batch Size         | Number of data samples sent into the model for training at one time. Large datasets are split into batches to avoid computational overload. Example: default batch size is 16, meaning 16 images are used per training step. | How much content is learned at a time                      | 16 (default)                                |
+| Epochs             | One complete pass of all training data through the model is called an epoch. Multiple epochs are needed to solidify learning. Example: default is 100 epochs; small datasets can use fewer epochs. | How many times to learn the data                           | 100 (reduce for small datasets if needed)   |
+| Learning Rate      | Determines the size of the step taken when updating model parameters. Too large may overshoot the optimum, too small may learn too slowly. | Step size: too big may overshoot, too small slows learning | 0.005 (default)                             |
 
-| 参数         | 参数说明                                                     | 类别说明                             | 推荐设置                                        |
-| ------------ | ------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------- |
-| 数据时间间隔 | 传感器两次采样之间的时间间隔，间隔越短，捕捉的细节越多，数据量也越大。 | 记录动作的频率高低                   | 数据时间间隔：100ms（默认即可，根据需求可调整） |
-| 批次大小     | 一次送入模型里训练的数据样本数量。当数据很多时，一次把数据都送进去，计算机算不过来，因此就分成一批一批来学习。例如，默认批大小为16，每次训练用16张图片。 | 每次学习多少内容                     | 批次大小：16（默认即可）                        |
-| 训练轮次     | 所有训练数据完整地送入模型学习一遍，叫做一轮。学习一遍可能会不够牢固，要重复多次训练才能记住规律。例如，默认训练轮次为100，模型会将数据集从头到尾学习100遍。推荐训练轮次为20次以上。 | 学几遍                               | 训练轮次：100（小数据集可以将训练轮次适当减小） |
-| 学习率       | 决定模型在每次更新参数时迈出的“步子”大小。步子太大容易错过最佳点，步子太小学习会很慢。 | 步子太大容易摔倒，步子太小走得很慢。 | 学习率：0.005（默认即可）（默认即可）           |
+![img](../img/2_professional_mode/1762160063488-7bba877f-f411-42ac-92f6-d1cbfc92be31.png)
 
-![img](../img/2_professional_mode/image_16.png)
+- Click **Train** to start the model training.
 
-- 点击“训练”，开始进行模型训练。
+![img](../img/2_professional_mode/1762160167698-db11e80b-fee7-4749-874b-98f375b27262.png)
 
-![img](../img/2_professional_mode/image_17.png)
+- After training is complete, click **Training Results** in the operation bar to check the model’s key metrics, including the highest validation accuracy, the best validation loss, and the final accuracy and loss values, which are used to evaluate the training performance.
 
-- 训练完成后，可在操作栏点击 “查看训练结果”，查看模型的关键指标，包括验证集最高准确率、最佳验证准确率损失值、以及最终的准确率和损失值，用于评估模型的训练效果。
+| **Metric Name**          | **Description**                                              | **Interpretation (Simple Understanding)**                    |
+| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Best Validation Accuracy | The highest recognition accuracy the model achieved during training. | Higher is better; indicates the model can accurately recognize training samples. |
+| Best Validation Loss     | The lowest loss value obtained on the validation dataset.    | Lower is better; indicates smaller prediction errors on the validation set. |
+| Final Accuracy           | The model’s accuracy at the end of the last training epoch.  | If close to the highest accuracy, the training is stable.    |
+| Final Loss               | The model’s loss value at the end of the last training epoch. | Lower is better; if significantly higher than the lowest loss, the model may need further training or parameter adjustment. |
 
-| **指标名称**             | **指标说明**                         | **判断标准（通俗理解）**                                     |
-| ------------------------ | ------------------------------------ | ------------------------------------------------------------ |
-| **验证集最高准确率**     | 模型在训练过程中达到的最高识别准确率 | 数值越高越好，说明模型能很好识别训练样本。                   |
-| **最佳验证准确率损失值** | 验证数据集上获得的最低损失值         | 越低越好，表示模型在验证集上的预测误差更小。                 |
-| **最终准确率**           | 模型在最后一次训练完成时的准确率     | 如果接近最高准确率，说明训练较为稳定。                       |
-| **最终损失值**           | 模型在最后一次训练时的损失值         | 越低越好，若明显高于最低损失，说明模型可能还需继续训练或调整参数。 |
+![img](../img/2_professional_mode/1762160357139-aabfd960-bb27-46f0-87ee-83905fc7526a.png)
 
-![img](../img/2_professional_mode/image_18.png)
+## Model Validation  
 
-## 模型校验
+- Switch to the **Model Validation** module, select the training project **K10 Motion Recognition**, and choose the model **model.pt**.
 
-- 切换到“模型校验”功能模块，选择训练项目为：K10加速度动作识别；选择模型为：model.h5。
+![img](../img/2_professional_mode/1762161094400-af553ebd-161c-4e2f-b25a-f8689b4d3d50.png)
 
-![img](../img/2_professional_mode/image_19.png)
+- In **Real-Time Validation**, first click **Get Serial Port**, and select the corresponding UNIHIKER K10 serial port device.
 
-- 在 “实时验证” 中，先点击 “获取串口”，选择对应的UNIHIKER K10串口设备。
+![img](../img/2_professional_mode/1762161333461-2c2dfa0e-2af2-47ce-a466-128040dd1621.png)
 
-![img](../img/2_professional_mode/image_20.png)
+- After the device is successfully connected, click **Start** to perform action recognition and output the corresponding prediction results based on the temporal data.
 
-- 设备连接成功后，点击 “开始验证”，即可进行动作识别验证，并且根据时序数据输出对应的预测结果。
+![img](../img/2_professional_mode/1762499102621-e2b161c5-a6f0-4337-ad61-a58d9a510741.png)
 
-![img](../img/2_professional_mode/image_21.png)
+## Model Export  
 
-## 模型部署
+- When the model test results meet your requirements, switch to the **Model Training** module to export the model.  
 
-- 当模型测试结果符合需求时，切换到 “模型部署”功能模块：
-  - 可根据需求导出、转换或上传模型。
-  - 平台支持导出为 ONNX 格式，便于在其他应用环境或硬件设备中使用。
+![img](../img/2_professional_mode/1762162096360-a4b55df1-37e7-45ed-8923-07a61c4236be.png)
 
-![img](../img/2_professional_mode/image_22.png)
+The exported model can be used for deployment. To learn how to operate model deployment, you can refer to Section [4.1.4 Model Deploy.](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi)
 
-**如需了解模型部署及实时结果推送的操作方法，可访问以下进行学习**
+## **Common Issues**
 
-- [4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment) 
-
-- [4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push) 
-
-## 常见问题
-
-| **问题**                           | **可能原因**                                                 | **解决方案**                                                 |
-| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 模型训练效果不理想，识别准确率偏低 | 数据量不足，未覆盖完整动作过程标注不够精准，存在错误或模糊动作间相似度高，特征不明显 | 增加不同速度、力度的动作样本检查并修正标注调整训练参数（增加轮次/优化学习率） |
-| 实时识别结果不稳定                 | 传感器采样频率与训练不一致测试动作幅度或速度差异大           | 保持采样设置与训练一致增加不同幅度、速度的训练样本，提升泛化能力 |
-| 导入数据集时报错或无法识别         | 数据集命名或结构不符合要求标注文件缺失或格式错误             | 检查标注文件完整性，参考示例数据集                           |
-| 静止状态与轻微动作容易混淆         | 静止数据采集不足，覆盖不全轻微动作与静止特征过近             | 增加不同姿势下的静止样本明确采集标准，保证标注准确           |
+| Issue                                                     | Possible Cause                                               | Solution                                                     |
+| --------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Poor model training performance, low recognition accuracy | Insufficient data, incomplete coverage of action sequences Labeling not precise, contains errors or ambiguities High similarity between actions, unclear features | Increase samples with varying speed and intensity Check and correct labeling Adjust training parameters (increase epochs / optimize learning rate) |
+| Unstable real-time recognition results                    | Sensor sampling frequency inconsistent with training Large differences in test action amplitude or speed | Keep sampling settings consistent with training Add training samples with varying amplitude and speed to improve generalization |
+| Errors or unrecognized data import                        | Dataset naming or structure does not meet requirements Missing or incorrectly formatted annotation files | Check annotation file completeness and format; refer to example dataset |
+| Confusion between stillness and slight movements          | Insufficient collection of still data, incomplete coverage Slight movements have features similar to stillness | Increase still samples in different postures Clarify data collection standards and ensure labeling accuracy |

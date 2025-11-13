@@ -1,153 +1,161 @@
-### 文本分类-快速体验
 
-文本分类的快速体验操作步骤以“电影评论倾向文本分类”案例为例，带领用户学习文本分类模型的完整训练流程。该案例旨在直观演示文本分类在实际场景中的应用效果：模型能够对输入的电影评论文本进行识别与分类（如区分 “正面评价”“负面评价”“中立评价”），帮助用户清晰理解文本分类的核心原理（基于文本语义、情感词等特征提取与类别匹配）与应用价值（如电影口碑分析、观众反馈收集、影视平台评论筛选等）。
 
-- **效果：** 能准确区分 3 种常见电影评论情感类别，包含正面评价、负面评价、中立评价
+The **Quick Experience for Text Classification (M6)** uses the *“Movie Review Sentiment Classification”* case as an example to guide users through the complete process of training a text classification model.
+This case demonstrates the practical application of text classification — the model can recognize and categorize movie review texts (e.g., **“Positive,” “Negative,”** and **“Neutral”**). It helps users clearly understand the **core principles** (such as text semantics, sentiment words, and feature extraction) and the **practical value** (e.g., movie reputation analysis, audience feedback collection, and review filtering on film platforms).  
 
-快速体验文本分类模型训练实现过程分为五个步骤：
+**Effect:** 
 
-- **新建项目** —— 创建文本分类项目并准备数据集；
-- **类别及对应样本添加** —— 添加待识别的文本分类标签（如 “正面评价”“负面评价”“中立评价”），并通过手动输入（或上传文本TXT文件）的方式获取对应类别的文本数据集；
-- **训练模型** —— 通过平台训练得到文本分类模型；
-- **模型校验** —— 测试模型效果。
-- **模型部署** —— 模型训练完成后，可以将其导出并部署到硬件设备，实现本地运行与应用。同时，用户还可以选择将模型的识别结果实时推送到SIoT平台，便于远程监测与管理。
+The model can accurately distinguish among three common sentiment categories in movie reviews:**Positive**, **Negative**, and **Neutral**.
 
-### 步骤1：新建项目
+![img](../img/1_quick_experience/1762422552936-019da757-c6d2-429a-865d-65a3f9c12b06.png)
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。
-- 在训练选项中找到 “文本分类（M6）” 并点击，即可完成项目创建。
+The quick experience for text classification consists of **five steps**:
 
-![img](../img/1_quick_experience/image_01.png)
+1. **Create a New Project**:  Create a text classification project and prepare the dataset.
+2. **Add Categories and Corresponding Samples**: Add classification labels (e.g., *Positive*, *Negative*, *Neutral*) and obtain text datasets for each category by manually entering text or uploading `.txt` files.
+3. **Train Model**: Train the text classification model on the platform.
+4. **Model Validation**: Test the model’s performance and accuracy.
+5. **Model Deploy**: After training, export and deploy the model to hardware devices for local execution and application.
+   Additionally, users can enable **real-time result push** to the **SIoT platform** for remote monitoring and management.
 
-- 项目创建成功后，将自动跳转至新的文本分类快速体验界面。
+### **Step 1: Create Project**
 
-![img](../img/1_quick_experience/image_02.png)
+- Open Mind+, select “New Project” from the menu bar, then click “Model”. In the training options, locate “**Text Classification (M6)**” and click it to create the project.
 
-### 步骤2：**类别及对应样本添加**
+![img](../img/1_quick_experience/1762397398660-3179a62a-801b-4b6d-a18c-fd0003c42b0b.png)
 
-- 点击笔，修改类别名称，添加对应文本样本数据。
+- After the project is successfully created, it will automatically redirect to the new **Text Classification Quick Experience** interface.
 
-![img](../img/1_quick_experience/image_03.png)
+![img](../img/1_quick_experience/1762406349006-92cc3ef7-47fa-4114-8890-8b8456c5fbff.png)
 
-- 样本可通过以下两种方式添加，用户可根据实际需求灵活选择：
+### **Step 2: Add Class and Corresponding Samples**  
 
-  - **手动输入：** 适合现场生成少量干扰文本（如输入 “asdfg12345”“今天天气真好，和电影无关” 等无关内容），操作便捷，能快速匹配当前场景干扰特征；
-  - **本地上传：** 适合导入已准备好的批量文本素材（如提前整理的好评文本TXT 文件）便于高效管理文本数据
+- Click the **pencil icon** to rename the category and add the corresponding text sample data.  
 
-- 通过这两种方式，用户能够灵活地构建数据集，为后续的模型训练做好准备。
+![img](../img/1_quick_experience/1762406733328-bc682eb7-c8d3-4ec2-bbab-e67af83b874f.png)
 
-  - **命名类别**
-    - 继续修改下方默认生成的 “Class1” 标签，点击标签旁的笔型按钮，修改类别名称为具体文本类型（如 “干扰文本”），完成该文本样本的类型命名。
-    - ![img](../img/1_quick_experience/image_04.png)
+-  Samples can be added in the following two ways, allowing users to flexibly choose according to their needs:  
 
-- **样本添加方式1：手动输入**
+- - **Manual Input:** Suitable for generating a small amount of interference text on the spot (e.g., entering unrelated content such as “asdfg12345” or “The weather is nice today, not related to the movie”). This method is convenient and helps quickly capture interference features relevant to the current scenario.  
+  - **Local Upload:** Suitable for importing pre-prepared batches of text materials (e.g., pre-collected positive review .txt files), making it easier to manage text data efficiently.  
 
-  - 点击界面中的 “手动输入” 按钮，系统将弹出文本输入框，输入单条干扰文本（如 “qwertyuiop”“这不是电影相关内容”），每条文本长度建议控制在 10-200 字符（避免过短无意义或过长增加模型负担）。
-  - ![img](../img/1_quick_experience/image_05.png)
+-  By using these two methods, users can flexibly build datasets and prepare for subsequent model training.  
 
-  - 输入完成后点击 “添加样本” 按钮，文本将自动归入干扰文本样本类别；若需补充样本，可重复 “输入文本 - 添加样本” 操作，直至样本数量达到预期建议确保覆盖多种干扰类型。
-  - ![img](../img/1_quick_experience/image_06.png)
+- -  **Naming Class**
 
-  - 可对添加的干扰文本样本进行单独删除、批量删除或批量导出（导出格式支持 TXT），便于样本管理与更新。
-  - 该类型样本采集完成后，点击输入框右上角 “×” 退出输入界面。
-  - ![img](../img/1_quick_experience/image_07.png)
+- - -  Continue modifying the default label **“Class1”** by clicking the pencil icon next to it. Rename the category to a specific text type (e.g., **“Interference Text”**) to complete the naming of this text sample Class.  
 
-- **样本添加方式2：本地上传**
+![img](../img/1_quick_experience/1762406892526-1828f473-f650-411a-bc6e-70c919316f79.png)
 
-  -  首先继续修改下方默认生成的 “Class2” 标签，点击标签旁的笔型按钮，修改类别名称为具体文本类型（如 “好评文本”），完成该文本样本的类型命名。
+-  **Sample Addition Method 1: Manual Input**  
 
-  - 点击 “上传” 按钮，进入文本样本上传界面。
+- -  Click the **“Add Sample”** button on the interface. A text input box will pop up, allowing you to enter a single piece of interference text (e.g., “qwertyuiop” or “This content is not related to the movie”). It is recommended to keep each text entry between **10–200 characters** to avoid overly short, meaningless text or excessively long entries that may increase the model’s processing load.  
 
-    - ![img](../img/1_quick_experience/image_08.png)
+![img](../img/1_quick_experience/1762407294205-eb068156-b9cd-4579-83bb-876bdc7ed9d6.png)
 
-  - 点击 “上传” 按钮，进入文本样本上传界面；点击 “选择文件上传”，选择本地提前整理的电影评论文本文件，支持TXT格式。
+- - After entering the text, click the **“Add Sample”** button. The text will automatically be categorized under **Interference Text**. To add more samples, repeat the **“Enter Text → Add Sample”** process until the desired number of samples is reached. It is recommended to include a variety of interference types.
 
-    - 注：文件中的内容需要按“换行符”分割（即一句/一词 换一次行）
+![img](../img/1_quick_experience/1762407329862-923d589b-19a1-4356-886e-af7f27cd6963.png)
 
-    - ![img](../img/1_quick_experience/image_09.png)
+- - You can **delete individual interference text samples, delete in bulk, or export in bulk** (export format supports `.txt`) to facilitate sample management and updates.  
+  -  After completing the collection of this sample type, click the **“Return”** button at the top right of the input box to exit the input interface.  
 
-    - 完成样本上传。点击“×”退出采集界面。
-    - ![img](../img/1_quick_experience/image_10.png)
+![img](../img/1_quick_experience/1762407964753-64084b36-8171-49f7-9726-40194d026937.png)
 
-    - 可在此基础上继续上传添加新样本，采集补充
+- **Sample Addition Method 2: Local Upload**  
 
-  - 点击“新增类别”，新建另一类别（如“好评”），重复上述样本添加操作，直至完成所有类别的样本添加。
+   First, continue modifying the default label **“Class2”** below by clicking the pencil icon next to it. Rename the category to a specific text type (e.g., **“Positive Reviews”**) to complete the naming of this text sample category.  
 
-    - ![img](../img/1_quick_experience/image_11.png)
+- - Click the **“Upload”** button to enter the text sample upload interface.  
+  -  Click the **“Upload”** button to enter the text sample upload interface; then click **“Select File Upload”** and choose a pre-prepared movie review text file from your local computer. The file must be in **txt format**.  
 
-    - ![img](../img/1_quick_experience/image_12.png)
+**Note:** The content in the file should be separated by **line breaks** (i.e., each sentence or phrase should be on a new line).  
 
-    - 数据样本小提示：
+![img](../img/1_quick_experience/1762408792682-56174afc-ae1f-484c-be70-4e07d6542d44.png)
 
-    - - 每个数据类别可准备多样化的样本文本，类别间数量尽量平衡。
-      - 建议给类别起个简洁的名字，不要用太复杂的符号或过长的名称。
+- - - After completing the sample upload, click **“Return”** to exit the input interface.
 
-### 步骤3：训练模型
+![img](../img/1_quick_experience/1762408958055-a702216b-ef87-4191-a1c3-415aca6ac5c1.png)
 
-- **高级参数设置**
+On this basis, continue uploading and adding new samples to supplement the dataset.  
 
-  - 在训练模型前，点击“高级”设置训练参数，可设置以下 3 个核心参数：
+- - Click **“Add a Class”** to create a new category (e.g., **“Neutral Reviews”**) and repeat the sample addition steps above until all categories have been added.  
 
-  - | **参数**                  | **参数说明**                                                 | **类别说明**                                                 | **推荐设置** |
-    | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------ |
-    | 周期数（Epochs）          | 一个周期指训练数据集中的所有文本样本均已向模型馈送并完成一次参数更新。例如，周期数设为 30，即模型对全量训练样本迭代学习 30 次。 | 反映模型对训练文本特征的学习深度：周期数不足易导致欠拟合（分类准确率低，无法识别常见电影评论类别）；周期数过多可能导致过拟合（对训练文本分类准确，但对新文本分类误差大）。 | 100          |
-    | 批次大小（Batch Size）    | 模型每次训练时同时处理的文本样本数量。例如，批次大小设为 12，即每次从训练集中抽取 12 条文本进行特征计算（如情感词提取、语义编码）与参数更新。 | 影响训练速度与模型稳定性：批次过小会增加训练耗时（需更多迭代次数），且参数更新波动大；批次过大可能导致内存不足（文本特征处理需占用内存），或模型收敛困难（单次更新覆盖样本过多，难以调整参数）。 | 32           |
-    | 学习速率（Learning Rate） | 控制模型每次参数更新的步长，即模型根据文本分类误差调整权重的幅度。例如，学习速率设为 0.001，即每次参数更新幅度为 0.001 倍的梯度值。 | 决定模型训练的收敛速度与最终精度：速率过大易导致训练震荡（误差忽高忽低，无法稳定收敛）；速率过小会使训练缓慢（需更多周期才能达到低误差），且可能陷入局部最优解。 | 0.001        |
+![img](../img/1_quick_experience/1762409368088-4eefc720-aabf-439e-a465-227ec8aeb020.png)
 
-- **启动模型训练**
+Tips for Data Samples:  
 
-  - 完成训练参数设置后，点击 **“训练模型”** 即可开始训练（若不做设置，也可直接使用系统默认参数）。
+- Prepare diverse text samples for each category, and try to keep the number of samples balanced across categories.
+- It is recommended to give each category a simple name without using overly complex symbols or excessively long names.  
 
-  - ![img](../img/1_quick_experience/image_13.png)
+### Step 3: Train Model  
 
-  - > 训练过程中，请务必保持此标签页为打开状态，避免切换页面或关闭浏览器导致训练中断。
+- **Advanced Parameter Settings**  
 
-  - **训练过程监测**
+- - Before training the model, click **“Advanced”** to set the training parameters. You can configure the following three core parameters:  
 
-  -  在训练模型过程中，可通过点击“深入了解”按钮，查看训练监测相关数据。
+| **Parameter**     | **Description**                                              | **Category Explanation**                                     | **Recommended Setting** |
+| ----------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------- |
+| **Epochs**        | One epoch means that all text samples in the training dataset have been fed to the model once and a parameter update has been completed. For example, setting epochs to 30 means the model iterates over the entire training dataset 30 times. | Reflects the depth of the model’s learning on training text features: too few epochs may lead to underfitting (low classification accuracy, unable to recognize common movie review categories); too many epochs may lead to overfitting (high accuracy on training text but large errors on new text). | 100                     |
+| **Batch Size**    | The number of text samples the model processes simultaneously in one training iteration. For example, a batch size of 12 means 12 text samples are drawn from the training set each time for feature computation (e.g., sentiment word extraction, semantic encoding) and parameter update. | Affects training speed and model stability: too small a batch increases training time (requires more iterations) and causes high variance in parameter updates; too large a batch may cause memory issues (text feature processing consumes memory) or make convergence difficult (too many samples updated at once, making parameter adjustment harder). | 32                      |
+| **Learning Rate** | Controls the step size of each parameter update, i.e., how much the model adjusts weights based on classification error. For example, a learning rate of 0.001 means each parameter update moves 0.001 times the gradient value. | Determines the convergence speed and final accuracy of the model: a too high learning rate may cause oscillation (error fluctuates, unable to converge stably); a too low learning rate slows training (requires more epochs to reach low error) and may get stuck in local minima. | 0.001                   |
 
-  - - **每个周期的准确率：** 是指在模型训练的一个周期（即对整个训练数据集完整迭代一次）内，模型预测结果与实际结果相符的比例。
-    - **每个周期的损失：** 则是该周期内模型预测值与真实值之间的误差程度量化指标。
+- **Start Model Training**  
 
-  - ![img](../img/1_quick_experience/image_14.png)
+- - After setting the training parameters, click **“Train Model”** to begin training. (If no settings are adjusted, the system will use the default parameters.)  
 
-### 步骤4：模型校验
+![img](../img/1_quick_experience/1762409919259-a62a172c-3c2c-4ab5-a01f-476808e61cc7.png)
 
-- 模型训练完成后，可以通过校验区，检验模型效果。
-  - > 小提示：用一些未参与训练的新文本进行测试，更能反映模型实际效果。
-- 检验方式：输入文本
-  - 在 “输入” 区域点击 “手动输入” 选项，在文本框中输入新的电影评论文本内容，界面 “输出” 区域会显示实时分类结果。
-  - ![img](../img/1_quick_experience/image_15.png)
+During training, make sure to **keep this tab open** to avoid interruptions caused by switching pages or closing the browser.  
 
-  - ![img](../img/1_quick_experience/image_16.png)
+- - **Training Monitoring**  
 
-校验结果分析：
+   While the model is training, you can click **“Learn More”** to view relevant training metrics:  
 
-- 若校验准确率≥80%：说明模型满足基础应用需求，可进入部署阶段；
-- 若校验准确率 65%-80%：需优化模型，可补充该类别样本
+- - - **Accuracy per Epoch:** The proportion of predictions that match the actual results within one epoch (i.e., one complete iteration over the entire training dataset).  
+    - **Loss per Epoch:** A quantitative measure of the error between the model’s predictions and the true values within that epoch.  
 
-### 步骤5：模型导出
+![img](../img/1_quick_experience/1762410126392-8b92b044-365f-49b1-bb4f-9cfdb3470df8.png)
 
-- 当模型校验结果满足需求时，就可以进入部署阶段。
-  - “部署” → 点击 “导出模型”。
-  - 平台支持将模型导出为zip格式，便于在其他环境中使用或进行二次开发。
-  - ![img](../img/1_quick_experience/image_17.png)
+### Step 4: Model Validation  
 
-### 步骤6：模型部署
+-  After the model training is complete, you can validate its performance in the validation area.  
 
-方法一：参考[4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment)
+**Tip:** Testing with new texts that were not part of the training set better reflects the model’s actual performance.  
 
-- 适用：支持硬件部署的模型（如行空板M10/K10），如图像分类、目标检测等模型。
+- Validation Method: Text Input  
 
-方法二：参考[4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push)
+- - In the **“Input”** area, click **“Manual Input”** and enter new movie review text in the text box. The **“Output”** area will display the real-time classification results.  
 
-- 适用：暂不支持硬件部署的模型，如语音识别、文本分类等模型。
+![img](../img/1_quick_experience/1762410512613-79994c05-fda5-468a-9560-6ed6edf2d8ce.png)
 
-### 模型训练常见问题
+![img](../img/1_quick_experience/1762410575815-41c16d87-f349-44fd-9148-6bd7cc239ca6.png)
 
-- 在模型训练过程中，可能会遇到各种问题，例如训练速度慢、精度不理想或参数设置不当。下面整理了常见问题及解决思路，帮助你更顺利地完成模型训练。
+Validation Result Analysis:  
 
-| **常见问题**   | **导致的原因及解决方法**                                     |
-| -------------- | ------------------------------------------------------------ |
-| 模型准确率不高 | 可能原因：样本数据数量不足样本类别不平衡训练参数设置不合理解决方法：补充样本：每个类别样本增至20-30 个，覆盖不同表述风格、情感倾向等尽量保持各类别样本数量均衡，以提升模型的准确率。调整周期数、批次大小、学习速率等训练参数。 |
-| 训练时间过长   | 可能原因：批次大小设置过小，每次训练处理的文本量少，导致训练轮次需要更多时间；训练轮次设置过大，模型重复学习数据太多。解决方法：适当增大批次大小，让模型每次处理更多文本，加快训练速度；根据数据量和任务需求合理调整训练轮次，避免不必要的重复训练。 |
+- If the validation accuracy ≥ 80%: The model meets the basic application requirements and can proceed to the deployment stage.  
+- If the validation accuracy is between 65%–80%: The model needs optimization, and additional samples for this category can be added.  
+
+### Step 5: Model Deploy
+
+- Once the model validation results meet the requirements, you can proceed to the deployment stage.  
+
+- - Go to **“Deploy”** → Click **“Export Model”**.  
+  - The platform supports exporting the model in **ZIP format**, making it easy to use in other environments or for secondary development.  
+
+![img](../img/1_quick_experience/1762410820213-d615b13d-231d-447f-b1a3-7adcb7b8ca28.png)
+
+- After validation is complete, the model can **push prediction results in real time**. Click **“Real-Time Result Push”** to synchronize the output results to the SIoT platform, enabling online monitoring and data visualization, and allowing interaction with hardware.
+
+![img](../img/1_quick_experience/1762410959296-ac50b8d6-adee-40c1-9167-60b7bd947ce5.png)
+
+For instructions on model deployment and real-time result push, please refer to section [4.1.4 Model Deploy](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi) & [4.1.5Real-Time Result Push.](https://www.yuque.com/joanna-rqvih/ilxuhv/ph3e9rp4q7c7x1oe)
+
+### Common Issues in Model Training  
+
+- During model training, you may encounter various issues, such as slow training speed, low accuracy, or incorrect parameter settings. The following summarizes common problems and suggested solutions to help you complete model training more smoothly.
+
+| **Common Issue**       | **Possible Causes & Solutions**                              |
+| ---------------------- | ------------------------------------------------------------ |
+| **Low Model Accuracy** | **Possible Causes:**Insufficient sample dataImbalanced sample categoriesImproper training parameter settings**Solutions:**Add more samples: Increase each category to 20–30 samples, covering different expression styles and sentiment tendencies.Keep the number of samples balanced across categories to improve accuracy.Adjust training parameters such as epochs, batch size, and learning rate. |
+| **Long Training Time** | **Possible Causes:**Batch size set too small, so each training iteration processes too few texts, requiring more iterations.Epochs set too high, causing excessive repetition of learning.**Solutions:**Increase batch size appropriately so the model processes more samples per iteration, speeding up training.Adjust the number of epochs based on data volume and task requirements to avoid unnecessary repeated training. |

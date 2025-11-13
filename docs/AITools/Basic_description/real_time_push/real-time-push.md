@@ -1,98 +1,100 @@
-# 4.1.5 实时结果推送
+## 1. Function Overview
 
-## 1.功能介绍
+Real-time Result Push is another Model Deploy method. Unlike exporting the model to run on hardware, real-time result push performs inference on the platform and instantly transmits the prediction results to the SIoT platform or external devices. In this way, users can experience the model’s performance in real-world applications without loading the full model locally or on hardware.
 
-实时结果推送是另一种模型部署方式。不同于将模型导出到硬件端运行，实时结果推送是在平台端完成推理，并将预测结果即时传输到SIoT平台或外部设备。通过这种方式，用户无需在本地或硬件中加载完整模型，也能直接体验模型在实际应用中的效果。
+![img](../img/5_real_time_push/1761643100593-3f1e2e09-6e69-4ce7-b885-79d76b1b5698.png)
 
-![img](../img/5_real_time_push/image_01.png)
+**Features**
 
-**功能特点**
+- **Lightweight:** The hardware does not need to perform inference computations and only receives results pushed from the platform, reducing performance requirements on the device.
+- **Real-time:** Model outputs are pushed instantly, facilitating interaction and rapid verification.
+- **Flexible:** Can interact with different terminals, such as visualization panels, smart cars, or IoT devices.
+- **Easy to Use:** No complex deployment operations are required, making it suitable for teaching experiments and rapid prototyping.
 
-- **轻量化**：硬件无需承担推理运算，只接收平台推送的结果，降低设备端性能要求。
-- **实时性**：模型输出会即时推送，方便进行交互与快速验证。
-- **灵活性**：可与不同终端联动，如可视化面板、智能小车或IoT设备。
-- **易用性**：不需要复杂的部署操作，适合教学实验和快速原型开发。
+## 2. Application Scenarios  
 
-## 2.应用场景
+- **Teaching Demonstration:** Students can visually observe the model’s recognition results and interact with the hardware.
+- **Prototype Verification:** Quickly verify model feasibility in the early stages of a project without waiting for full deployment.
+- **IoT Integration:** Combine with smart hardware, e.g., trigger car movement or lighting control based on recognition results.
+- **Data Visualization:** Display inference results in real time on the platform or terminal for analysis and demonstration.
 
-- **教学演示**：学生能够直观观察模型识别效果，并与硬件互动。
-- **原型验证**：在项目初期快速验证模型可行性，而无需等待完整部署。
-- **IoT** **联动**：与智能硬件结合，例如识别结果触发小车运动或灯光控制。
-- **数据展示**：在平台或终端实时显示推理结果，便于分析与展示。
+## 3. Operation Guide  
 
-## 3.操作流程
+This guide focuses on demonstrating the workflow and specific steps for real-time result push of Image Classification on the UNIHIKER K10.
+The following operation steps are mainly for real-time result push after the model validation meets the expected results. For detailed steps on model training, please refer to the corresponding model Operation Guide.  
 
-重点演示在UNIHIKER K10上进行图像分类实时结果推送的操作流程与具体步骤。
+### 3.1 Hardware List
 
-以下操作流程主要针对模型校验结果符合预期后实时结果推送。关于模型训练的详细步骤，可参考对应的模型操作指南。
+- Hardware Preparation
 
-### 3.1硬件清单
-
-- 硬件准备
-
-| ![img](../img/5_real_time_push/image_02.png) | ![img](../img/5_real_time_push/image_03.png) |
+| ![img](../img/5_real_time_push/1761628513538-f3c58807-72a2-41ed-9d36-dda7142e0828.png) | ![img](../img/5_real_time_push/1761628513667-854367e3-1788-4bae-b05c-be82a357b1e9.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [UNIHIKER K10](https://www.dfrobot.com.cn/goods-4014.html)   | [USB数据线](https://www.dfrobot.com.cn/goods-2977.html)      |
 
-- 硬件连接
+- Hardware Connection  
 
-![img](../img/5_real_time_push/image_04.png)
+![img](../img/5_real_time_push/1761628514074-b881462f-2295-43de-a718-25e21a46da96.png)
 
-### 3.2环境准备
+### 3.2 Environment Preparation
 
-实时结果推送依托MQTT进行无线网络传输，因此需要输入计算机的实际IP地址。操作流程如下：首先启动数据传输工具（运行.bat批处理文件），然后获取计算机的 IP 地址。
+Real-time result push relies on MQTT for wireless network transmission, so the actual IP address of the computer needs to be entered. The operation steps are as follows: first, start the data transmission tool (run the .bat batch file), then obtain the computer’s IP address.
 
-运行过程中不能关闭传输工具。
+Do not close the transmission tool while it is running.
 
-- SIoT工具下载连接：
-  - 腾讯微云下载（推荐）: 链接: https://share.weiyun.com/6SFhgLQj
-  - 百度云盘下载： 链接：https://pan.baidu.com/s/17clVjJXWTZh02FteKy3mcA?pwd=mind 提取码：mind
-  - 阿里云盘下载： https://www.aliyundrive.com/s/tCqwJwGtZzL 提取码: 3h4x
-  - 谷歌云盘下载： 链接： [点击下载](https://drive.google.com/drive/folders/16Lf0itQ-v2oZrUJEFHrOhjfgS68eN6bn?usp=sharing)
+-  SIoT Tool Download Links：
 
-![img](../img/5_real_time_push/image_05.png)
+- - Tencent Weiyun (Recommended): Link: https://share.weiyun.com/6SFhgLQj
+  - Baidu Netdisk: Link: https://pan.baidu.com/s/17clVjJXWTZh02FteKy3mcA?pwd=mind Extraction Code: mind
+  - Alibaba Cloud Drive: https://www.aliyundrive.com/s/tCqwJwGtZzL Extraction Code: 3h4x
+  - Google Drive: Link: [Click to Download](https://drive.google.com/drive/folders/16Lf0itQ-v2oZrUJEFHrOhjfgS68eN6bn)
 
-![img](../img/5_real_time_push/image_06.png)
+![img](../img/5_real_time_push/1761628514086-91176434-5375-444d-890b-0fcc1c07112d.png)
 
-### 3.3实时结果推送应用
+![img](../img/5_real_time_push/1762149507961-2c4d282e-c28d-45e0-b74a-64633cb8fb2f.png)
 
-- 实时结果推送
-  - 当模型校验完成并满足要求后，点击“实时结果推送”。在“实时推送服务器设置”中，将MQTT服务器地址修改为本机 IP 地址（可在数据传输工具中查看）。
+###  3.3 Real-Time Result Push Application  
 
-![img](../img/5_real_time_push/image_07.png)
+- Real-Time Result Push  
 
-- 服务器连接成功后，实时结果推送的按钮变为绿色。
+- -  After the model validation is completed and meets the requirements, click “Real-Time Result Push.” In the “Real-Time Push Server Settings,” change the MQTT server address to the local IP address (can be viewed in the Data Transmission Tool).  
 
-![img](../img/5_real_time_push/image_08.png)
+![img](../img/5_real_time_push/1761644663046-9641bcb9-9a20-42d4-90e4-6d921ee5c66b.png)
 
-- 编写程序
-  - 添加主控：点击“扩展”，在“主控扩展”中，下载“行空板K10”并添加。
+- Once the server connection is successful, the Real-Time Result Push button turns green.
 
-![img](../img/5_real_time_push/image_09.png)
+![img](../img/5_real_time_push/1761644761616-c805d5a6-195b-4fb4-b1e7-6b6b8d9fdd41.png)
 
-- 添加扩展库：点击“扩展”，在“扩展库”的搜索框中分别输入“Wi-Fi”、“MQTT”下载后并添加。
+-  Programming  
 
-![img](../img/5_real_time_push/image_10.png)
+- - Add Main Controller: Click “Extensions,” then in “Board,” download and add “UNIHIKER K10.”  
 
-- 程序示例
+![img](../img/5_real_time_push/1761645167223-2df936ad-7f84-45a1-a121-dd35b00a7575.png)
 
- 接收实时结果推送到MQTT上的消息，并分析MQTT消息。如果MQTT消息为开心，UNIHIKER K10上的RGB灯显示为黄灯；接收到MQTT消息为愤怒，UNIHIKER K10上的RGB灯显示红灯。
+- Add Extension Libraries: Click “Extensions,” then in the search box of “Model,” enter “Wi-Fi” and “MQTT” separately, download and add them.
 
-![img](../img/5_real_time_push/image_11.png)
+![img](../img/5_real_time_push/1761645289598-0e4ce863-fbd0-45ca-ae18-73d6eee2addc.png)
 
-- 测试与运行
+-  Program Example  
 
-| 实时结果推送                                                 | UNIHIKER K10执行效果                                         |
+ Receive real-time result messages pushed to MQTT and analyze the MQTT messages. If the MQTT message is "happy," the RGB light on the UNIHIKER K10 will display yellow; if the MQTT message is "angry," the RGB light on the UNIHIKER K10 will display red.  
+
+![img](../img/5_real_time_push/1762481525662-7f3d629d-5c68-4411-bb75-f6c04d8c181d.png)
+
+- **Test & Run**
+
+| **Real-time Result Push**                                    | **UNIHIKER K10 Execution Result**                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![img](../img/5_real_time_push/image_12.png) | ![img](../img/5_real_time_push/image_13.png) |
-| ![img](../img/5_real_time_push/image_14.png) | ![img](../img/5_real_time_push/image_15.png) |
+| ![img](../img/5_real_time_push/1762481296906-c7b006ec-f0e1-433f-85f3-81e6c3f74d61.png) | ![img](../img/5_real_time_push/1762481667613-a117c996-5043-46ee-b469-9f2b164ed790.png) |
+| ![img](../img/5_real_time_push/1762481344779-6a294dcb-e072-4a8a-ab05-20f54b706262.png) | ![img](../img/5_real_time_push/1762481653978-f838c4fd-7dee-4836-8fc3-df47b2019763.png) |
 
-## 4.更多实时结果推送应用案例
+## 4. More Real-Time Result Push Application Cases
 
-| 模型     | 应用案例                                                     | 案例描述                                                     |
-| -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 姿态分类 | [人脸追踪摇头风扇](https://h7dvigefi0.feishu.cn/drive/folder/ZZEJfHGOPlTLsJdM1PRc0CUin5d) | 这个项目实现了一款能够实时检测人脸关键点并自动跟随人脸位置转动的智能风扇。它不仅能像普通风扇一样持续送风，还能根据人脸位置智能调整方向，从而实现随人移动的精准送风。 |
+| Model               | Application Case                                             | Case Description                                             |
+| ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Pose Classification | [Based Face-Tracking Oscillating Fan](https://h7dvigefi0.feishu.cn/drive/folder/GDiff1318lt85fdrwsYcXofbnff) | This project implements an intelligent fan capable of real-time face keypoint detection and automatic tracking. Unlike ordinary fans that blow in a fixed direction, it intelligently adjusts its angle based on the user’s face position, achieving precise airflow that follows the person’s movement. |
 
-- 实时结果推送是一种高效的模型应用方式，可将推理结果通过网络实时传输到指定平台或设备。除了示例中的UNIHIKER K10主控板外，该功能同样适用于UNIHIKER M10、micro:bit、Arduino、掌控板等多种主控板，甚至能够直接运行在实时模式下，实现跨硬件的数据交互与结果展示。
+
+
+- Real-time result push is an efficient model deployment method that can transmit inference results over the network to a specified platform or device in real time. In addition to the UNIHIKER K10 mainboard used in the example, this feature is also applicable to UNIHIKER M10, micro:bit, Arduino, Makernotes boards, and other mainboards, and can even run directly in real-time mode to achieve cross-hardware data interaction and result display.
 - 如需进一步学习，可前往[SioT使用教程](https://mindplus.dfrobot.com.cn/siot)查看详细说明。
-- 特别提示：当主控板为micro:bit与Arduino时，需要搭配硬件OBLOQ物联网WiFi模块一起使用。
+- Special note: When using micro:bit or Arduino as the mainboard, the OBLOQ IoT WiFi module is required.

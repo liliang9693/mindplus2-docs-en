@@ -1,156 +1,215 @@
-## 时序模式识别-快速体验
 
-时序模式识别的快速体验操作步骤以“UNIHIKER K10动作识别”案例为例，带领大家学习如何利用加速度传感器的时序数据来完成模式训练与识别。该案例主要演示时序模式识别在实际应用中的效果：模型不仅能够通过采集的加速度三轴数据区分不同动作，还能对实时输入的传感器数据进行识别，帮助用户直观理解时序模式识别的基本原理与应用价值。
+Taking the UNIHIKER K10 Motion Recognition case as an example, this Quick Experience guide demonstrates how to use time-series data from an accelerometer to perform pattern training and recognition. This case mainly showcases the practical application of temporal pattern recognition: the model can distinguish between different motions based on three-axis acceleration data and recognize real-time sensor inputs, helping users intuitively understand the fundamental principles and practical value of temporal pattern recognition.
 
-- **效果**：通过采集并训练加速度传感器的 x、y、z 三轴数据，可以让模型识别出鼓掌、挥手、静止等不同动作模式，识别结果会以标签形式显示在屏幕上。
-- **效果展示**：
+**Effect:**
+By collecting and training the accelerometer’s x, y, and z axis data, the model can recognize different motion patterns such as clapping, waving, and staying still. The recognition results will be displayed on the screen in the form of labels.
 
-![img](../img/1_quick_experience/img.gif)
+###  Coding  
 
-这里，主要以 UNIHIKER K10 为例，展示如何利用加速度传感器完成时序模式识别的数据采集与应用。但需要注意的是，这一流程并不局限于UNIHIKER K10，其他具备传感器和串口通信功能的主控板（如UNIHIKER M10、micro:bit、掌控板等）同样可以按照类似方式实现。
+#### **Step 1: Create a New Project**
 
-## 程序设计
+- Open Mind+, select “New Project” from the menu bar, then click “Coding”.
+  Choose “Upload Mode” and click to complete the project creation.  
 
-### 步骤1：新建项目
+![img](../img/1_quick_experience/1762137582669-fbab1861-1584-41ac-901c-febd3080ef4d.png)
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “程序设计”，选择“上传模式”并点击，即可完成项目创建。
+#### Step 2: Add Board
 
-![img](../img/1_quick_experience/image_01.png)
+- Click **Extensions**, then find **UNIHIKER K10** under **Main Board** and download it. After the download is complete, click **UNIHIKER K10** to load the main board. Once the main board is successfully loaded, click **Return** to switch to the coding interface.
 
-### 步骤2：添加主控
+![img](../img/1_quick_experience/1762137941630-29c93555-d4b2-4051-aad2-bd0d77ba290f.png)
 
-- 点击 扩展，在“主控扩展”中找到 UNIHIKER K10 并下载。下载完成后，点击UNIHIKER K10完成主控加载。主控加载成功后，点击返回，切换到编程界面。
+#### Step 3: Programming
 
-![img](../img/1_quick_experience/image_02.png)
+- Use the built-in accelerometer on the UNIHIKER K10 to collect real-time three-axis data (x, y, z). Set the sampling interval to 0.2 s (i.e., 20 Hz) and output the acceleration data via the serial port.
+  **Note:** Separate the output characters with commas (,) in English input mode.
 
-### 步骤3：程序编写
+![img](../img/1_quick_experience/1762138149517-9e4020ce-ac5f-4810-b0ee-453bacf4910d.png)
 
-- 利用UNIHIKER K10内置加速度传感器，实时采集三轴数据（x、y、z）。设置采样间隔为0.2s（即 20Hz），并通过串口将加速度数据输出。
 
-![img](../img/1_quick_experience/image_03.png)
 
-### 步骤4：程序上传
+#### Step 4: Upload the Program
 
-- 点击连接设备，选择识别到的UNIHIKER K10端口并完成连接。
+- Click **Connect Device**, select the detected **UNIHIKER K10** port, and complete the connection.
 
-![img](../img/1_quick_experience/image_04.png)
+![img](../img/1_quick_experience/1762138309984-a88afb8d-8585-467f-9df5-4cd578bf7fb5.png)
 
-- 设备连接成功后，点击运行，等待程序上传完成。
+- After the device is successfully connected, click Run and wait for the program to finish uploading.
 
-![img](../img/1_quick_experience/image_05.png)
+![img](../img/1_quick_experience/1762138631724-805ef6ff-2d17-4ea4-a9a6-4880f1fb6079.png)
 
-- 程序上传成功后，需要及时断开设备连接，以避免在添加样本数据时出现串口占用的问题。
+- After the program is successfully uploaded, disconnect the device promptly to avoid serial port conflicts when adding sample data.
 
-![img](../img/1_quick_experience/image_06.png)
+![img](../img/1_quick_experience/1762138784523-38b35b42-c47d-4e02-a14d-d7e3973e9768.png)
 
-## 模型训练
+### Model Training
 
-### 步骤1：新建项目
+#### Step 1: Create a New Project
 
-- 点击“首页”图标，返回Mind+首页。在菜单栏中选择 “新建项目”，然后点击 “模型训练”。在训练选项中找到 “时序模式识别（M4）” 并点击，即可完成项目创建。
+- Click the **Home** icon to return to the Mind+ homepage. In the menu bar, select **Create New Project**, then click **Model**. In the training options, find **Temporal Pattern Recognition (M4)** and click it to create the project.
 
-![img](../img/1_quick_experience/image_07.png)
+![img](../img/1_quick_experience/1762139252904-50b6db12-0202-485e-876d-994b9cfe1e72.png)
 
-- 项目创建成功后，会跳转到新的时序模式识别快速体验界面。
+- After the project is successfully created, it will navigate to the new **Temporal Pattern Recognition Quick Experience** interface.
 
-![img](../img/1_quick_experience/image_08.png)
+![img](../img/1_quick_experience/1762139518175-8bce16bd-4c37-49a4-bc23-5423c8952d5a.png)
 
-### 步骤2：添加样本数据
+#### Step 2: Add Sample Data
 
-- 点击 “添加类别” 按钮，为图像分类任务创建所需类别。用户可以根据项目需求，添加多个类别，用于后续数据采集与模型训练。
+- Click the **Add Class** button to create the required categories for the image classification task. Users can add multiple categories according to the project requirements for subsequent data collection and model training.
 
-![img](../img/1_quick_experience/image_09.png)
+![img](../img/1_quick_experience/1762139653765-789bba11-2a07-44ab-be05-0977e8ae0ad9.png)
 
-- 类别创建完成后，可以通过以下两种方式添加样本数据：
-  - **采集**：通过串口直接采集实时数据。
-  - **上传**：导入已准备好的数据文件，支持批量添加和管理。
-- 利用这两种方式，用户能够高效、灵活地构建数据集，为模型训练打下基础。
+- After creating the categories, sample data can be added in the following two ways:
 
-![img](../img/1_quick_experience/image_10.png)
+- - **Collect:** Collect real-time data directly via the serial port.
+  - **Upload:** Import prepared data files, supporting batch addition and management.
 
-- 样本添加方式1：采集
-  - 点击采集，然后在串口中，点击“获取串口”，在弹出的“选择串口设备“中，选择串口调试设备。
+- Using these two methods, users can efficiently and flexibly build a dataset, laying the foundation for model training.
 
-![img](../img/1_quick_experience/image_11.png)
+![img](../img/1_quick_experience/1762141846684-73d6909d-a516-499f-896f-a4741d7785e5.png)
 
-- 开发板串口连接成功后，点击“采集”即可开始实时数据采集，在“实时数据”界面可以看到连续更新的折线图，直观展示传感器输出的时序变化。
+- Sample Addition Method 1: Collect
 
-数据采集过程中，不能断开UNIHIKER K10与电脑的连接。
+- - Click **Collect**, then in the serial port section, click **Get Serial Port**. In the pop-up **Select Serial Port Device** window, choose the serial debug unit.
 
-数据采集过程中，我们需要手持UNIHIKER K10执行对应的动作。
+![img](../img/1_quick_experience/1762142106089-217351ff-0c2d-435f-8e4d-cd7d40c4227a.png)
 
-建议数据样本不低于10条，采集数据样本时保持动作一致。
+- Once the development board is successfully connected via the serial port, click **Collect** to start real-time data acquisition. In the **Real-Time Data** interface, you can see a continuously updating line chart, visually showing the temporal changes of the sensor output.
+- Do not disconnect the UNIHIKER K10 from the computer during data collection.
+- During data collection, hold the UNIHIKER K10 and perform the corresponding actions.
+- It is recommended to collect at least 10 samples, keeping the actions consistent during data collection.
+- The duration of each sample collection is best controlled within 3–5 seconds.
 
-样本数据的采集时长最好控制到3-5秒。
-
-![img](../img/1_quick_experience/image_12.png)
+![img](../img/1_quick_experience/1762147460376-00aa56f0-d13f-4fc0-a9cf-17c6fffb00bb.png)
 
 - 样本添加方式2：上传
-  - 点击“添加类别”，新建另一类别（如“挥手”）→ 点击 “上传”，选择电脑本地csv数据批量导入。
-  - 这种方式，适合有对应的csv文件，才能完成数据样本添加。
 
-  - 提供简单的鼓掌、挥手、静止的csv文件供大家体验上传的操作。
+- - 点击“添加类别”，新建另一类别（如“挥手”）→ 点击 “上传”，选择电脑本地csv数据批量导入。
 
-暂时无法在飞书文档外展示此内容
+这种方式，适合有对应的csv文件，才能完成数据样本添加。
 
-![img](../img/1_quick_experience/image_13.png)
+提供简单的鼓掌、挥手、静止的csv文件供大家体验上传的操作。
 
-- 数据上传完成后，点击“×”退出上传数据界面。
+- Sample Addition Method 2: Upload
 
-![img](../img/1_quick_experience/image_14.png)
+- - Click **Add Class** to create a new class (e.g., “Wave”) → Click **Upload** and select local CSV files on your computer for batch import.
 
-接下来，你可以选择上面任意一种数据添加方式，进行“静止”类别的样本数据添加。
+![img](../img/1_quick_experience/1762147845616-3c496695-f528-463e-83c4-f119283fe514.png)
 
-### 步骤3：训练模型
+- After the data upload is complete, click Return to exit the data upload interface.
 
-- 在训练模型前，可点击“高级”进行训练参数的设置，数据时间间隔、训练轮次、批次大小、学习率。
+![img](../img/1_quick_experience/1762147998615-9c3a6706-9d06-45e1-9ab2-167fe393f61b.png)
 
-| 参数         | 参数说明                                                     | 类别说明                             | 推荐设置                                        |
-| ------------ | ------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------- |
-| 数据时间间隔 | 传感器两次采样之间的时间间隔，间隔越短，捕捉的细节越多，数据量也越大。 | 记录动作的频率高低                   | 数据时间间隔：100ms（默认即可，根据需求可调整） |
-| 批次大小     | 一次送入模型里训练的数据样本数量。当数据很多时，一次把数据都送进去，计算机算不过来，因此就分成一批一批来学习。例如，默认批大小为16，每次训练用16张图片。 | 每次学习多少内容                     | 批次大小：16（默认即可）                        |
-| 训练轮次     | 所有训练数据完整地送入模型学习一遍，叫做一轮。学习一遍可能会不够牢固，要重复多次训练才能记住规律。例如，默认训练轮次为100，模型会将数据集从头到尾学习100遍。推荐训练轮次为20次以上。 | 学几遍                               | 训练轮次：100（小数据集可以将训练轮次适当减小） |
-| 学习率       | 决定模型在每次更新参数时迈出的“步子”大小。步子太大容易错过最佳点，步子太小学习会很慢。 | 步子太大容易摔倒，步子太小走得很慢。 | 学习率：0.005（默认即可）（默认即可）           |
+Next, you can choose either of the above data addition methods to add sample data for the “Still” class.
 
-- 完成训练参数设置后，点击 “训练模型” 即可开始训练（若不做设置，也可直接使用系统默认参数）。
+#### Step 3: Train Model
 
-![img](../img/1_quick_experience/image_15.png)
+- Before training the model, click **Advanced** to set training parameters such as Data Time Interval, epochs, batch size, and learning rate.
 
-### 步骤4：模型校验
+| Parameter          | Description                                                  | Notes                                                      | Recommended Setting                         |
+| ------------------ | ------------------------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------- |
+| Data Time Interval | The time interval between two sensor samples. Shorter intervals capture more details but generate more data. | Frequency of recording actions                             | 100 ms (default, can be adjusted as needed) |
+| Batch Size         | The number of data samples sent into the model for training at one time. Large datasets are split into batches to avoid computational overload. Example: default batch size is 16, meaning 16 images are used per training step. | How much content is learned at a time                      | 16 (default)                                |
+| Epochs             | One complete pass of all training data through the model is called an epoch. Multiple epochs are needed to solidify learning. Example: default is 100 epochs; small datasets can use fewer epochs. | How many times to learn the data                           | 100 (reduce for small datasets if needed)   |
+| Learning Rate      | Determines the size of the step taken when updating model parameters. Too large may overshoot the optimum, too small may learn too slowly. | Step size: too big may overshoot, too small slows learning | 0.005 (default)                             |
 
-- 模型训练完成后，可在校验区测试模型效果。手持UNIHIKER K10执行动作，观察输出结果是否与实际动作一致，从而判断模型识别的准确性。
+- After completing the training parameter settings, click **Train Model** to start training (if no settings are adjusted, the system default parameters will be used).
 
-![img](../img/1_quick_experience/image_16.png)
+![img](../img/1_quick_experience/1762148403005-1893a5ea-606c-4328-a82c-001ff35722d8.png)
 
-### 步骤5：模型导出
+#### Step 4: Model Validation
 
-- 当模型校验结果满足需求时，就可以进入部署阶段。
-  - “部署” → 点击 “导出模型”。
-  - 平台支持将模型导出为 ONNX 格式，便于在其他环境中使用或进行二次开发。
+- After the model training is complete, test the model in the validation area. Hold the UNIHIKER K10 and perform actions, observing whether the output matches the actual actions to evaluate the model’s accuracy.
 
-> 小提示：ONNX 是一种开放的模型格式，可以在多种深度学习框架和设备上运行。这样，你不仅可以在平台上测试，还能把模型应用到真实项目中。
->
-> ![img](../img/1_quick_experience/image_33.png)
+![img](../img/1_quick_experience/1762148618688-217572c8-d4fa-4657-aaab-020f98ba74f2.png)
 
+#### Step 5: Real-Time Result Push
 
+##### Environment Preparation
 
-### 步骤6：模型部署
+- After validation, the model can push prediction results in real time. Real-time result push uses MQTT for wireless network transmission, so the computer’s actual IP address must be entered. The procedure is as follows: first, start the data transfer tool (run the .bat batch file), then obtain the computer’s IP address.
+- Do not close the transfer tool during operation.
 
-方法一：参考[4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment)
+SIoT Tool Download Links:
 
-- 适用：支持硬件部署的模型（如行空板M10/K10），如图像分类、目标检测等模型。
+- Tencent Weiyun (recommended): https://share.weiyun.com/6SFhgLQj
+- Baidu Cloud: https://pan.baidu.com/s/17clVjJXWTZh02FteKy3mcA?pwd=mind (Access code: mind)
+- Aliyun Drive: https://www.aliyundrive.com/s/tCqwJwGtZzL (Access code: 3h4x)
+- Google Drive: [Click to download](https://drive.google.com/drive/folders/16Lf0itQ-v2oZrUJEFHrOhjfgS68eN6bn)
 
-方法二：参考[4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push)
+![img](../img/1_quick_experience/1762136308742-1c3cac22-08a8-4caf-b44f-1734b0d22280.png)
 
-- 适用：暂不支持硬件部署的模型，如语音识别、文本分类等模型。
+![img](../img/1_quick_experience/1762149498387-6b3c1d08-6822-4727-a72d-07fea5722c13.png)
 
-## 模型训练常见问题
+##### Programming
 
-| **常见问题**       | **可能原因**                                         | **解决方案**                                    |
-| ------------------ | ---------------------------------------------------- | ----------------------------------------------- |
-| 样本数量不足       | 每个动作采集的数据太少，模型难以学习动作特征。       | 每个动作至少采集 10–30 条数据，复杂动作可更多。 |
-| 动作不一致或噪声多 | 动作幅度、速度姿态差异大。                           | 采集时保持动作一致，可适当加入轻微变化。        |
-| 采样间隔不合理     | 时间间隔太长漏掉动作细节，太短增加数据量和计算压力。 | 一般设置约 100ms，可根据动作快慢调整。          |
-| 识别准确率低       | 样本太少、动作噪声大或特征不明显。                   | 增加样本量、确保动作标准、或调整训练参数。      |
-| 实时识别延迟       | 采样率低、数据传输或模型推理速度慢。                 | 提高采样率、优化模型或硬件性能。                |
-| 校验动作误差大     | 手持设备动作与训练动作不一致。                       | 校验时保持动作与训练一致，幅度和速度尽量相似。  |
+- Add the main board and extension libraries
+
+- - Create a new program to receive real-time results. Go to the homepage, and in **Coding**, select **Upload Mode**.
+
+![img](../img/1_quick_experience/1762137582669-fbab1861-1584-41ac-901c-febd3080ef4d.png)
+
+- - Add Board: Click **Extensions**, then under **Board**, add the main board **UNIHIKER K10**.
+
+![img](../img/1_quick_experience/1762137941630-29c93555-d4b2-4051-aad2-bd0d77ba290f.png)
+
+- - Add Extension Libraries: Click “Extensions,” then in the search box of “Model,” enter “Wi-Fi” and “MQTT” separately, download and add them.
+
+![img](../img/1_quick_experience/1761645289598-0e4ce863-fbd0-45ca-ae18-73d6eee2addc.png)
+
+- **Program Example**
+- Receive real-time result messages pushed to MQTT and analyze the MQTT messages. If the MQTT message is **Applause**, the RGB light on the UNIHIKER K10 displays red; if the MQTT message is **Wave**, the RGB light displays blue; if the MQTT message is **Still**, the RGB light displays yellow.
+
+![img](../img/1_quick_experience/1762479825182-60d8d4f7-e3ff-4608-b5a4-29e37a7ee292.png)
+
+- - After the program is uploaded, disconnect the device.
+
+![img](../img/1_quick_experience/1762150019608-0b136345-9778-494c-b188-0f138ff94276.png)
+
+##### Real-Time Result Push
+
+- Click **Real-Time Result Push**. In **Real-Time Server Settings**, change the MQTT server address to the local IP address (can be found in the data transfer tool).
+- The result push here refers to the model prediction results pushed by the system after **Step 4: Model Validation** is successful.
+
+![img](../img/1_quick_experience/1762150380477-7ee4a2dc-2b2a-4c07-8d31-6e2fd09c913e.png)
+
+- - Once the server is successfully connected, the **Real-Time Result Push** button turns green.
+
+![img](../img/1_quick_experience/1762150587322-11692cbd-824f-4b50-9f6f-4db5cefdbac0.png)
+
+- - Click **Get Serial Port Device** to start action recognition and enable real-time result push.
+
+![img](../img/1_quick_experience/1762151304833-9ef3cca3-6146-41b8-b5d3-7c6ddeda676c.png)
+
+##### Testing and Running
+
+| Real-Time Result Push                                        | UNIHIKER K10 Performance                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![img](../img/1_quick_experience/1762151406239-39473453-bd1e-4691-94b6-c796ce10f1f0.png) | ![img](../img/1_quick_experience/1762479485335-b9a1406f-e601-4f02-af0c-9a1de3fc287e.png) |
+| ![img](../img/1_quick_experience/1762151379039-d729eb2a-961b-4d26-a00f-cb98d5ca9c43.png) | ![img](../img/1_quick_experience/1762479518990-67e9eeaa-df1b-408c-8fe7-67d85772549e.png) |
+| ![img](../img/1_quick_experience/1762151389258-b65472c7-368e-4cde-a219-b8f65df1a162.png) | ![img](../img/1_quick_experience/1762479501817-fff144ef-ddcb-446d-a12d-69fa4e54e7e1.png) |
+
+#### Step 6: Model Deploy
+
+-  Once the model validation results meet the requirements, you can proceed to deployment
+
+- - “Deploy” → Click “Export Model”.
+  - The platform supports exporting the model in ONNX format, making it easy to use in other environments or for secondary development.
+
+Tip: ONNX is an open model format that can run across various deep learning frameworks and devices. This allows you not only to test on the platform but also to apply the model in real projects.  
+
+![img](../img/1_quick_experience/1762151657199-31dc4e43-855d-4d4f-8998-132ad81bd03e.png)
+
+For instructions on model deployment and real-time result push, please refer to section [4.1.4 Model Deploy](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi) & [4.1.5Real-Time Result Push.](https://www.yuque.com/joanna-rqvih/ilxuhv/ph3e9rp4q7c7x1oe)
+
+## Common Issues in Model Training  
+
+| Common Issue                       | Possible Cause                                               | Solution                                                     |
+| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Insufficient sample data           | Too few samples collected for each action, making it difficult for the model to learn action features. | Collect at least 10–30 samples per action; more for complex actions. |
+| Inconsistent actions or high noise | Large differences in action amplitude, speed, or posture.    | Keep actions consistent during collection; minor variations are acceptable. |
+| Unreasonable sampling interval     | Interval too long misses action details; too short increases data volume and computational load. | Typically set around 100 ms; adjust based on action speed.   |
+| Low recognition accuracy           | Too few samples, noisy actions, or unclear features.         | Increase sample quantity, ensure standard actions, or adjust training parameters. |
+| Real-time recognition delay        | Low sampling rate, slow data transmission, or model inference speed. | Increase sampling rate, optimize the model or hardware performance. |
+| Large validation action error      | Actions performed during validation differ from training actions. | Keep validation actions consistent with training in amplitude and speed. |

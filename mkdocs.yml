@@ -248,25 +248,25 @@ nav:
       # - 3.6 Python代码模式: ProgrammingModes/PythonCodeMode/index.md
     - 4.Model:
       # - AITools/index.md
-      - 4.1 Mind+ Model Tool - Basic Introduction: 
+      - 4.1 Basic Description: 
         # - AITools/Basic_description/index.md
         - 4.1.1 Introduction: AITools/Basic_description/introduction/introduction.md
         - 4.1.2 Quick Start: AITools/Basic_description/quick_start/quick-start.md
         - 4.1.3 Model Training: AITools/Basic_description/model_training/model-training.md
-        - 4.1.4 Model Deployment: AITools/Basic_description/model_deployment/model-deployment.md
+        - 4.1.4 Model Deploy: AITools/Basic_description/model_deployment/model-deployment.md
         - 4.1.5 Real-time Result Push: AITools/Basic_description/real_time_push/real-time-push.md
-      - 4.2 Detailed Explanation:
-        - 4.2.1 【Image Classification】 Quick Experience: AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md
-        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Image Classification】 Professional Mode": AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
-        - 4.2.2 【Object Detection】 Quick Experience: AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md
-        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Object Detection】 Professional Mode": AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
-        - 4.2.3 【Instance Segmentation】 Quick Experience: AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md
-        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Instance Segmentation】 Professional Mode": AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
-        - 4.2.4 【Time Series Recognition】 Quick Experience: AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience.md
-        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Time Series Recognition】 Professional Mode": AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
-        - 4.2.5 【Speech Classification】 Quick Experience: AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md
-        - 4.2.6 【Text Classification】 Quick Experience: AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md
-        - 4.2.7 【Pose Classification】 Quick Experience: AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md
+      - 4.2 Detailed Description:
+        - 4.2.1 【Image Classification】 Quick Start: AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Image Classification】 Advanced Mode": AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
+        - 4.2.2 【Object Detection】 Quick Start: AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Object Detection】 Advanced Mode": AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
+        - 4.2.3 【Instance Segmentation】 Quick Start: AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Instance Segmentation】 Advanced Mode": AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
+        - 4.2.4 【Temporal Pattern Recognitionn】 Quick Start: AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Temporal Pattern Recognition】 Advanced Mode": AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
+        - 4.2.5 【Speech Classification】 Quick Start: AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md
+        - 4.2.6 【Text Classification】 Quick Start: AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md
+        - 4.2.7 【Pose Classification】 Quick Start: AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md
     - 5.Interface Design: 
       - 5.1 Data Visualization Dashboard: 
         - ViewDesign/DashBoard/index.md

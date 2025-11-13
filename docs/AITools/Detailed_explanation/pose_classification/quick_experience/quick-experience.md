@@ -1,170 +1,167 @@
-### 姿态分类-快速体验
 
-姿态分类的快速体验操作步骤以“课堂姿态识别”案例为例，带领用户学习姿态分类模型的完整训练流程。该案例旨在直观演示姿态分类在实际场景中的应用效果：模型能够对摄像头实时采集或本地上传的姿态图片进行识别与分类（如区分 “站立”、“坐正“、“举手”），帮助用户清晰理解姿态分类的核心原理（基于图像特征提取与类别匹配）与应用价值（如课堂姿态监测、运动监测、安防监控、健康护理辅助等）。
 
-- **效果：** 能准确区分3种常见课堂人体姿态，包含坐正、举手、站立
-- **效果展示：**
+The quick experience for posture classification uses the **“Classroom Posture Recognition”** case as an example, guiding users through the complete workflow of training a posture classification model. This case is designed to intuitively demonstrate the practical application of posture classification: the model can recognize and classify posture images captured in real-time via camera or uploaded locally (e.g., distinguishing **“Sitting Upright,” “Raising Hand”**), helping users clearly understand the core principles of posture classification (based on image feature extraction and category matching) and its application value (such as classroom posture monitoring, exercise tracking, security surveillance, and health care assistance).  
 
-![img](../img/1_quick_experience/img.gif)
+- **Effect:** Accurately distinguish three common classroom postures, including Sitting Upright, Raising Hand.  
 
-姿态分类模型训练实现过程分为六个步骤：
+The posture classification model training process consists of six steps:  
 
-- **新建项目** —— 创建姿态分类项目并准备数据集；
-- **背景样本** —— 采集当前环境的背景图样本数据，减少环境干扰对模型识别精度的影响；
-- **新增类别** —— 添加待识别的姿态分类标签（如 “站立”“坐姿”），并通过摄像头（按住录制）或本地上传的方式获取对应姿态的图片数据集；
-- **训练模型** —— 通过平台训练得到姿态分类模型；
-- **模型校验** —— 测试模型效果。
-- **模型部署** —— 模型训练完成后，可以将其导出并部署到硬件设备，实现本地运行与应用。同时，用户还可以选择将模型的识别结果实时推送到 SIoT 平台，便于远程监测与管理。
+- **Create Project**:  Create a posture classification project and prepare the dataset.
+- **Background Samples**:  Capture background images of the current environment to reduce environmental interference and improve model accuracy.
+- **Add Categories**:  Add posture classification labels (e.g.,  **“Sitting”**) and collect corresponding posture images via camera (hold to record) or local upload.
+- **Train Model**:  Train the posture classification model on the platform.
+- **Model Validation**:  Test the model’s performance.
+- **Model Deploy**:  Once training is complete, export the model and deploy it to hardware for local operation. Users can also choose to **push the model’s recognition results in real-time to the SIoT platform** for remote monitoring and management.  
 
-### 步骤1：新建项目
+### Step 1: Create Project
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。
-- 在训练选项中找到 “姿态分类（M7）” 并点击，即可完成项目创建。
+- Open Mind+, select “New Project” from the menu bar, then click “Model”. In the training options, locate “Pose Classification (M7) ” and click it to create the project.
 
-![img](../img/1_quick_experience/image_01.png)
+![img](../img/1_quick_experience/1762412087145-818cab57-197c-4d98-b916-eec72589a0a7.png)
 
-- 项目创建成功后，将自动跳转至新的姿态分类快速体验界面。
+- After the project is successfully created, it will jump to the new **Pose Classification – Quick Experience** interface.
 
-![img](../img/1_quick_experience/image_02.png)
+![img](../img/1_quick_experience/1762412351484-a85e094b-b70f-4f03-aad3-bad104f0a988.png)
 
-### 步骤2：背景样本
+### Step 2: Background Samples  
 
-- 为提升模型鲁棒性，或如检测场景背景画面较为复杂、需要提高准确率的情况下，建议添加当前环境下的背景图像样本数据（建议覆盖环境内不同区域、光线条件，如窗边、墙角、室内灯光 / 自然光切换场景），避免单一背景导致模型对环境变化敏感。
+- To improve model robustness, or in cases where the detection scene has a complex background and higher accuracy is required, it is recommended to add background image samples of the current environment. (It is suggested to cover different areas and lighting conditions in the environment, such as near windows, corners, indoor lighting, or natural light changes.) This helps prevent the model from being overly sensitive to environmental variations.  
 
-数据样本小提示：背景样本需与后续姿态样本的采集环境保持一致（如均在室内客厅场景），若后续应用场景变化，需重新采集对应环境的背景样本
+**Tip for Data Samples:** Background samples should match the environment where posture samples will be collected (e.g., both in an indoor living room scene). If the application environment changes later, corresponding background samples should be re-collected.  
 
-![img](../img/1_quick_experience/image_03.png)
+![img](../img/1_quick_experience/1762414400612-7d0f08b4-c959-4474-b2f0-a7db4648c2a2.png)
 
-- 样本可通过以下两种方式添加，用户可根据实际需求灵活选择：
+- Samples can be added in the following two ways, allowing users to choose flexibly based on actual needs:  
 
-  - **摄像头采集：** 适合现场获取实时环境背景，操作便捷，能最大程度匹配后续姿态采集的真实场景；
-  - **本地上传：** 适合导入已准备好的图像素材（如提前拍摄的环境照片），支持批量添加，便于高效管理固定场景的数据。
+- - **Camera Collection:** Suitable for capturing real-time environmental backgrounds on-site. It is convenient to operate and ensures maximum consistency with the real scene used later for posture data collection.  
+  - **Local Upload:** Suitable for importing pre-prepared image materials (such as photos of the environment taken in advance). It supports batch uploading, making it easier to efficiently manage data for fixed scenes.  
 
-- 通过这两种方式，用户能够灵活地构建数据集，为后续的模型训练做好准备。
+- By using these two methods, users can flexibly build datasets and prepare for subsequent model training.  
 
-  - **样本添加方式1：摄像头采集**
+- - **Sample Collection Method 1: Camera Collection**  
 
-    - 点击界面中的 “摄像头” 按钮，系统将弹出摄像头选择列表，选择当前设备可用的摄像头（如笔记本内置摄像头、外接 USB 摄像头）；若未检测到摄像头，需检查设备连接状态或驱动程序。
+- - - Click the **“Camera”** button on the interface, and the system will display a list of available cameras. Select the camera currently available on the device (e.g., built-in laptop camera or external USB camera). If no camera is detected, check the device connection status or driver installation.  
 
-      ![img](../img/1_quick_experience/image_04.png)![img](../img/1_quick_experience/image_05.png)
+![img](../img/1_quick_experience/1762414834559-c4ab85c0-db3b-4405-9d67-892841c2c9cc.png)
 
+**Note:** If you are using a desktop computer without a built-in camera, you need to connect a compatible USB camera and ensure that the system has correctly recognized it.  
 
-    - 注：若使用台式机且无内置摄像头，需通过 USB 接口外接兼容的摄像头设备，并确保系统已正确识别
+ If the camera preview does not appear in the capture interface, troubleshoot as follows:  
 
-    - 如遇采集界面未显示摄像头画面，请按以下步骤排查：
+- Check whether the camera is occupied by another application (such as a video conferencing tool).
+- Make sure the camera lens is not blocked.
+- Restart **Mind+** and try again.
 
-    - 1. 检查摄像头是否被其他软件占用（如视频会议工具）；
-      2. 确认摄像头镜头无遮挡；
-      3. 重启 Mind + 后重新尝试采集
+- - **Press and hold** the “Hold to Record” button to start capturing the background. During recording, keep the camera steady to avoid image blur or shaking. **Release** the button to stop recording.  
+  - The system will automatically extract static images from the recorded video stream as samples. If you need to add more samples, repeat the “press to record – release to stop” operation until the number of samples meets your expectations (**recommended: 100–200 samples**).  
 
-    - 按住摄像头采集按钮“按住即可录制”开始录制背景（录制过程中保持镜头固定，避免画面晃动），松开按钮即可停止录制；
+ Once this type of sample collection is complete, click **“Return”** to exit the capture interface.  
 
-      - 系统将自动从录制的视频流中截取静态图像作为样本，若需补充样本，可重复 “按住录制 - 松开停止” 操作，直至样本数量达到预期（建议100-200个样本）。
+![img](../img/1_quick_experience/1762484472672-6aca0ad1-c656-4b7d-84b4-a0475021620f.png)
 
-    - 该类型样本采集完成后，点击“×”退出采集界面。
+- - - You can individually remove collected samples, remove all samples in bulk and recapture, or download the collected sample data.
 
-      ![img](../img/1_quick_experience/image_06.png)
+![img](../img/1_quick_experience/1762484976540-9da1a5f8-ecd5-4144-9033-2c2dae809d97.png)
 
-    - 可对采集的样本进行单独的移除；批量移除所有样本并重新采集；或对采集的样本数据进行下载
+### Step 3: Adding Samples  
 
-      ![img](../img/1_quick_experience/image_07.png)![img](../img/1_quick_experience/image_08.png)
+- After collecting background samples, you can start adding samples for the target posture categories. Edit the default “Class2” label below by clicking the pencil icon next to it, and rename the category to a specific posture (e.g., “Raise Hand”) to complete the posture sample type naming.  
 
+![img](../img/1_quick_experience/1762485104612-35f2258a-f0e6-4b60-867e-5b680e9c2289.png)
 
-### 步骤3：样本添加
+- **Sample Addition Method 2: Local Upload**  
 
-- 完成背景样本采集后，即可开始添加目标姿态类别的样本。继续修改下方默认生成的 “Class2” 标签，点击标签旁的笔型按钮，修改类别名称为具体姿态（如 “站立”），完成该姿态样本的类型命名。
+- - Under the target posture category (e.g., “Raise Hand”), click the **“Upload”** button to enter the posture sample upload interface.  
+  - Click the **“Select File Upload”** button, and in the local file manager, choose the prepared posture image files (supports single or multiple selections, formats supported: JPG/JPEG/PNG, with each image ≤ 5MB) or the sample ZIP file.  
 
-  ![img](../img/1_quick_experience/image_09.png)
+- - - Click **“Open”** to complete the sample upload. Click **“Return”** to exit the capture interface.  
 
-- **样本添加方式2：本地上传**
+![img](../img/1_quick_experience/1762485716590-65f22589-d670-41a5-b6c9-e028bdfa1b4b.png)
 
-  - 在目标姿态类别（如 “站立”）下，点击 “上传” 按钮，进入姿态样本上传界面。
+ You can continue uploading new samples or supplement them via camera capture.  
 
-  ![img](../img/1_quick_experience/image_10.png)
+- -  Click **“Add a Class”** to create another category (e.g., “Sit Upright”) and repeat the above sample addition steps until all categories have been added.  
 
-  - 点击 “选择文件上传” 按钮，在本地文件管理器中选择提前准备好的姿态图片文件（支持单张上传或多选上传，格式需为 支持JPG/JPEG/PNG格式，单张图片大小不超过5M），或者样本素材压缩包.zip格式。
+![img](../img/1_quick_experience/1762486548358-92cc2aed-bced-4bff-8804-f0d42828b16d.png)
 
-    - 点击“打开”，完成样本上传。点击“×”退出采集界面。
-    ![img](../img/1_quick_experience/image_11.png)
+ Tips for Data Samples:  
 
-    - 可在此基础上继续上传添加新样本，或通过摄像头采集补充
+- - - -  Prepare 100–200 diverse sample images for each category, keeping the number of samples balanced across categories.  
+      -  Use simple names for categories; avoid overly complex symbols or long names.  
 
-  - 点击“新增类别”，新建另一类别（如“举手”），重复上述样本添加操作，直至完成所有类别的样本添加。
+### Step 4: Train Model  
 
-    ![img](../img/1_quick_experience/image_12.png)
+- **Advanced Parameter Settings**  
 
-    ![img](../img/1_quick_experience/image_13.png)
+- - Before training the model, click **“Advanced”** to configure the training parameters. You can set the following three core parameters:  
 
-    数据样本小提示：
-    
-      - 每个数据类别可准备100-200张多样化的样本图片，类别间数量尽量平衡。
-      - 建议给类别起个简洁的名字，不要用太复杂的符号或过长的名称。
+| Parameter     | Description                                                  | Notes                                                        | Recommended Settings                                         |
+| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Epochs        | One epoch means all samples in the training dataset have been fed to the model once and the parameters updated. | Reflects the depth of the model's learning on the training data. Too few epochs may cause underfitting (low classification accuracy); too many may cause overfitting (poor generalization to new data). | • Basic scenario (5 postures, 10–20 samples per category): 50–100• Complex scenario (high sample variability): 100–200, adjust based on validation results to avoid overfitting |
+| Batch Size    | Number of samples processed simultaneously during each training step. | Affects training speed and model stability: too small increases training time (more iterations needed); too large may cause memory issues or hinder convergence. | • Standard PC (≥4GB RAM): 8–16• High-performance device (≥8GB RAM): 16–32, adjust according to memory to avoid lag |
+| Learning Rate | Controls the step size of each parameter update; determines how much weights are adjusted based on error. | Determines training convergence speed and final accuracy: too high causes unstable training; too low slows training (more epochs required). | • Initial recommendation: 0.001• If loss decreases slowly: increase to 0.005• If loss fluctuates heavily: decrease to 0.0001 |
 
-### 步骤4：训练模型
+- **Start Model Training**  
 
-- **高级参数设置**
-  - 在训练模型前，点击“高级”设置训练参数，可设置以下 3 个核心参数：
+- - After setting the training parameters, click **“Train Model”** to begin training. (If no parameters are set, the system will use the default settings.)  
 
-| **参数**                  | **参数说明**                                                 | **类别说明**                                                 | **推荐设置**                                                 |
-| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 周期数（Epochs）          | 一个周期指训练数据集中的所有样本均已向模型馈送并完成一次参数更新。![img](../img/1_quick_experience/image_14.png) | 反映模型对训练数据的学习深度，周期数不足易导致欠拟合（分类准确率低），周期数过多可能导致过拟合（对新数据泛化差）。 | ・基础场景（5 类姿态、每类 10-20 样本）：推荐设置 50-100； ・复杂场景（样本差异大）：可上调至 100-200，需结合校验结果微调，避免过拟合。 |
-| 批次大小（Batch Size）    | 模型每次训练时同时处理的样本数量。![img](../img/1_quick_experience/image_15.png) | 影响训练速度与模型稳定性：批次过小会增加训练耗时（需更多迭代次数），批次过大可能导致内存不足或模型收敛困难。 | ・普通电脑（4GB 内存以上）：推荐 8-16； ・高性能设备（8GB 内存以上）：可设置 16-32，需根据设备内存调整，避免卡顿。 |
-| 学习速率（Learning Rate） | 控制模型每次参数更新的步长，即模型根据误差调整权重的幅度。![img](../img/1_quick_experience/image_16.png) | 决定模型训练的收敛速度与最终精度：速率过大易导致训练震荡（无法稳定收敛），速率过小会使训练缓慢（需更多周期）。 | ・推荐初始设置 0.001； ・若训练中损失值下降缓慢，可上调至 0.005；若损失值波动大，可下调至 0.0001。 |
+![img](../img/1_quick_experience/1762487299759-e72d9e9d-fae8-41c4-808d-853bbd5f2b8a.png)
 
-- **启动模型训练**
-  - 完成训练参数设置后，点击 **“训练模型”** 即可开始训练（若不做设置，也可直接使用系统默认参数）。
-  ![img](../img/1_quick_experience/image_17.png)
+- - During training, make sure to keep this tab open. Switching pages or closing the browser may interrupt the training process.  
 
-  - 训练过程中，请务必保持此标签页为打开状态，避免切换页面或关闭浏览器导致训练中断。
-  ![img](../img/1_quick_experience/image_18.png)
+![img](../img/1_quick_experience/1762487351316-33562be2-8e15-4876-a44e-c699620d4968.png)
 
-  - **训练过程监测**
-  - 在训练模型过程中，可通过点击“深入了解”按钮，查看训练监测相关数据。
-    - **每个类别的准确率：** 指针对不同姿态类别（如背景、站立、举手、坐正），模型对该类别样本预测结果与实际结果相符的比例。
-    - **混淆矩阵：** 是用于展示模型对各个姿态类别预测情况的矩阵，能直观呈现真实姿态类别与模型预测姿态类别之间的对应关系。
-    - **每个周期的准确率：** 是指在模型训练的一个周期（即对整个训练数据集完整迭代一次）内，模型预测结果与实际结果相符的比例。
-    - **每个周期的损失：** 则是该周期内模型预测值与真实值之间的误差程度量化指标。
-    ![img](../img/1_quick_experience/image_19.png)![img](../img/1_quick_experience/image_20.png)![img](../img/1_quick_experience/image_21.png)
+- - **raining Process Monitoring**  
+  - During model training, you can click the **“Learn More”** button to view relevant training monitoring data:  
 
-    
+- - - **Accuracy per class**: Indicates the proportion of samples in each posture category (e.g., Background, Standing, Hand-Raising, Sitting Upright) for which the model’s predictions match the actual labels.  
+    - **Confusion matrix**: A matrix showing the prediction performance of the model across all posture categories, providing a clear view of how actual posture labels correspond to predicted labels.  
+    - **Accuracy per epoch**: Refers to the proportion of correct predictions over all samples during one complete pass (epoch) of the training dataset.  
+    - **Loss per epoch**: Quantifies the error between the model’s predicted values and the true values for that epoch.  
 
-### 步骤5：模型校验
+![img](../img/1_quick_experience/1762493145137-9187c7ef-9f3f-454b-acc6-52be11684fec.png)
 
-- 模型训练完成后，可以通过校验区，检验模型效果。校验的方式分为两种：摄像头、文件。
-  - > 小提示：用一些未参与训练的新图片进行测试，更能反映模型实际效果。
-- 检验方式1：摄像头
-  - 让测试对象保持目标姿态，系统将实时捕获姿态图片，将自动进行特征提取与类别预测，在界面 “输出” 区域显示实时分类结果。
-  ![img](../img/1_quick_experience/image_22.png)
-- 校验方式2：文件
-  - 修改检验方式为“文件”，点击“上传文件”，选择一张图片并打开。
-  ![img](../img/1_quick_experience/image_23.png)
+### Step 5: Model Validation  
 
-  - 图片上传成功后，输出图片分类结果。
-  ![img](../img/1_quick_experience/image_24.png)
+- After the model training is completed, you can validate the model in the **Model Validation** area. There are two validation methods: **Camera** and **File**.  
+- **Tip:** Using new images that were not included in the training set for testing will better reflect the model’s actual performance.  
 
-### 步骤6：模型导出
+- Validation Method 1: Camera  
 
-- 当模型校验结果满足需求时，就可以进入部署阶段。
-  - “部署” → 点击 “导出模型”。
-  - 平台支持将模型导出为zip格式，便于在其他环境中使用或进行二次开发。
+- - Ask the subject to maintain the target posture. The system will capture posture images in real time, automatically extract features, and predict the category. The **Output** area on the interface will display the real-time classification results.  
 
-![img](../img/1_quick_experience/image_25.png)
+![img](../img/1_quick_experience/1762488342612-5502bc4d-3c2f-4e4f-bb90-2a889a89c994.png)
 
-### 步骤6：模型部署
+- Validation Method 2: File  
 
-方法一：参考[4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment)
+- - Switch the validation method to “File”, click “Upload File”, select an image, and open it.  
 
-- 适用：支持硬件部署的模型（如行空板M10/K10），如图像分类、目标检测等模型。
+![img](../img/1_quick_experience/1762492334037-ed00700d-5a2c-4f9f-9714-ff45a2706138.png)
 
-方法二：参考[4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push)
+- - fter the image is successfully uploaded, the pose classification result of the image will be displayed.  
 
-- 适用：暂不支持硬件部署的模型，如语音识别、文本分类等模型。
+![img](../img/1_quick_experience/1762492633131-aea3e0b1-88bc-45d7-ab23-80f5b87c0e0b.png)
 
-### 模型训练常见问题
+### Step 6: Model Deploy
 
-- 在模型训练过程中，可能会遇到各种问题，例如训练速度慢、精度不理想或参数设置不当。下面整理了常见问题及解决思路，帮助你更顺利地完成模型训练。
+- Once the model validation results meet the requirements, you can proceed to the deployment stage.  
 
-| **常见问题**     | **导致的原因及解决方法**                                     |
-| ---------------- | ------------------------------------------------------------ |
-| 模型准确率不高。 | 可能原因：样本数据数量不足样本类别不平衡训练参数设置不合理解决方法：补充样本：每个类别样本增至 100-150个，覆盖不同拍摄角度（正面、侧面、45° 角，需体现姿态关键特征，如‘举手’包含手臂不同抬起高度）、人体体型、光线条件”尽量保持各类别样本数量均衡，以提升模型的准确率。 |
-| 训练时间过长     | 可能原因：批次大小设置过小，每次训练处理的数据量少，导致训练轮次需要更多时间。周期数设置过大，模型重复学习数据太多。解决方法：适当增大批次大小，让模型每次处理更多样本，加快训练速度。根据数据量和任务需求合理调整训练轮次，避免不必要的重复训练。 |
+- - Go to **“Deploy”** → Click **“Export Model”**.  
+  - The platform supports exporting the model in **ZIP format**, making it easy to use in other environments or for secondary development.  
+
+![img](../img/1_quick_experience/1762492856271-2674c507-5b47-4556-bb95-6b6b0370b6a2.png)
+
+- After validation is complete, the model can **push prediction results in real time**. Click **“Real-Time Result Push”** to synchronize the output results to the SIoT platform, enabling online monitoring and data visualization, and allowing interaction with hardware.
+
+![img](../img/1_quick_experience/1762492962342-9169f614-e0bc-4250-bd84-9a7160a98537.png)
+
+For instructions on model deployment and real-time result push, please refer to section [4.1.4 Model Deploy](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi) & [4.1.5Real-Time Result Push.](https://www.yuque.com/joanna-rqvih/ilxuhv/ph3e9rp4q7c7x1oe)
+
+### Common Issues in Model Training  
+
+- During model training, you may encounter various issues, such as slow training speed, low accuracy, or incorrect parameter settings. The following summarizes common problems and suggested solutions to help you complete model training more smoothly.
+
+| **Common Issue**       | **Possible Causes & Solutions**                              |
+| ---------------------- | ------------------------------------------------------------ |
+| **Low Model Accuracy** | **Possible Causes:**Insufficient sample dataImbalanced sample categoriesImproper training parameter settings**Solutions:**Add more samples: Increase each category to 20–30 samples, covering different expression styles and sentiment tendencies.Keep the number of samples balanced across categories to improve accuracy.Adjust training parameters such as epochs, batch size, and learning rate. |
+| **Long Training Time** | **Possible Causes:**Batch size set too small, so each training iteration processes too few texts, requiring more iterations.Epochs set too high, causing excessive repetition of learning.**Solutions:**Increase batch size appropriately so the model processes more samples per iteration, speeding up training.Adjust the number of epochs based on data volume and task requirements to avoid unnecessary repeated training. |

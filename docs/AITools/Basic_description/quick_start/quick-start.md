@@ -1,32 +1,31 @@
-# 4.1.2 快速开始
+## 1. **Quick Preview**
 
-## 1.快速预览
+The new version of the **Mind+ main interface** adopts a **left-side navigation bar + right-side functional area** layout, providing clear partitioning and intuitive operation, which allows users to quickly create and manage projects. The overall design is clean and straightforward, mainly using a **card-style display**, with all functional entrances clearly visible.
 
-重构后的Mind+主界面采用左侧导航栏+右侧功能区的布局，分区清晰、操作直观，方便用户快速创建和管理项目。整体设计简洁明了，以卡片式展示为主，各功能入口清晰可见。
+**Interface Features:**
 
-- 界面特点
-  - 卡片式布局：各功能模块独立展示，配有图标和简要说明，直观易懂。
-  - 图标可视化：图标形象直观，帮助用户快速理解功能用途。
-  - 清晰分类：程序设计、模型训练和数据可视化面板分区明显，便于用户快速选择。
+- **Card-Style Layout:** Each functional module is displayed independently, accompanied by icons and brief descriptions, making it easy to understand at a glance.
+- **Visual Icons:** Clear and intuitive icons help users quickly grasp the purpose of each function.
+- **Clear Categorization:** Panels for programming, model training, and data visualization are distinctly separated, allowing users to quickly select the desired function.
 
-![img](../img/2_quick_start/image_01.png)
+![img](../img/2_quick_start/1761630668596-076933b8-7088-4e63-9bcc-28fcef8d1ac7.png)
 
-## 2.操作示例
+## 2. **Operation Example**
 
-示例操作以“图像分类”为案例，演示模型训练的基本流程，帮助用户快速上手体验。
+The example operation uses **Image Classification** as a case study to demonstrate the basic workflow of **Model** training, helping users quickly get started.
 
-- 新建项目
+- **Create New Project**
 
-![img](../img/2_quick_start/image_02.png)
+![img](../img/2_quick_start/1761631288478-11d953aa-bfa8-4453-a144-09e0d4600196.png)
 
-- 添加数据集
+- Add Dataset  
 
-![img](../img/2_quick_start/image_03.png)
+![img](../img/2_quick_start/1761718492267-36acc661-3044-41e7-8245-f96adff2c4e6.png)
 
-- 训练模型
+- Train Model
 
-![img](../img/2_quick_start/image_04.png)
+![img](../img/2_quick_start/1761718535307-0b387882-4e29-45a0-bba7-5a8fb3035132.png)
 
-- 模型校验
+- Model Validation  
 
-![img](../img/2_quick_start/image_05.png)
+![img](../img/2_quick_start/1761718579108-aaaf0e56-218c-4de5-ae08-6415bec9529a.png)

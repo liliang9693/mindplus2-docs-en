@@ -1,156 +1,159 @@
-# 4.1.3模型训练
+In **Mind+**, **Model** is not only the core of AI projects but also the starting point for exploring intelligent applications. Whether it’s recognizing images, analyzing speech, or understanding text and motion data, you can use different training functions to teach the computer to **see, hear, read, and move**.
 
-在 Mind+中，模型训练不仅是AI项目的核心，也是探索智能应用的起点。无论是识别图像、分析语音，还是理解文本和动作数据，你都可以通过不同的训练功能，让计算机“学会看、听、读、动”。下面，我们将逐一了解每个模型训练模块，看看它们能帮你实现哪些有趣又实用的功能。
+Next, we will explore each **Model** module one by one to see what interesting and practical capabilities they can help you achieve.
 
-![img](../img/3_model_training/image_01.png)
+![img](../img/3_model_training/1761632847651-79c2a56d-4351-4bf3-8ae8-69240fe186c8.png)
 
-## 1. 图像分类
+## 1. **Image Classification（M1）**
 
-### 功能简介
+### Function Overview
 
-图像分类是人工智能中的基础任务之一，它可以让计算机自动识别图片所属类别。通过分析图片的内容，计算机能够判断图中对象是猫、狗、交通标志，或者其他指定类别。
+Image Classification is one of the fundamental tasks in artificial intelligence, enabling computers to automatically recognize the category of an image. By analyzing the content of an image, a computer can determine whether the objects depicted are cats, dogs, traffic signs, or other specified categories.
 
-它不仅能对静态图片进行识别，还能实时分析摄像头采集的画面，快速判断当前场景中出现的物体类别，实现动态识别和监控。这让图像分类不仅适用于照片整理和教学演示，也能应用于安防、智能驾驶、宠物识别等多种场景。
+It can not only identify static images but also analyze real-time footage captured by a camera, quickly determining the categories of objects in the current scene for dynamic recognition and monitoring. This makes **Image Classification** suitable not only for photo organization and educational demonstrations but also for applications in security, intelligent driving, pet recognition, and many other scenarios.
 
-![img](../img/3_model_training/image_02.png)
+![img](../img/3_model_training/1761632909491-54d8aa7c-c22b-476e-935e-8b3a68d37310.png)
 
-### 应用场景
+### Application Scenarios
 
-- **物体识别**：识别动物、植物、交通标志等，实现计算机对图片内容的自动识别分类。
-- **工业检测**：检查产品外观或发现缺陷，提高生产效率和质量控制水平。
-- **教育与科研**：用于快速实验、教学演示或科研数据分析，帮助理解人工智能的应用原理。
+- **Object Recognition:** Identify animals, plants, traffic signs, and more, enabling the computer to automatically classify image content.
+- **Industrial Inspection:** Check product appearance or detect defects to improve production efficiency and quality control.
+- **Education & Research:** Used for rapid experiments, teaching demonstrations, or research data analysis, helping users understand the principles and applications of artificial intelligence.
 
-### 操作指南
+### Operation Guide
 
-请选择适合你的学习方式，查看对应的教程：
+Please choose the learning mode that suits you and follow the corresponding tutorial:
 
-- [图像分类—快速体验](/AITools/Detailed_explanation/image_classification/quick_experience/quick-experience/)（适合入门，快速完成训练）
-- [图像分类—专业模式](/AITools/Detailed_explanation/image_classification/professional_mode/professional-mode/)（适合进阶，支持自定义参数与深度优化）
+- [**Image Classification — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/uazqevn601vxqvtd) (suitable for beginners, complete training quickly)
+- [**Image Classification — Advanced Mode**](https://www.yuque.com/joanna-rqvih/ilxuhv/cxcvw4obvfpsamog) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
-## 2. 目标检测
+## 2. Object Detection（M2）
 
-### 功能简介
+### Function Overview  
 
-目标检测是一种计算机视觉功能，它不仅能够识别图像中存在哪些类别的目标，还能通过边界框、精确定位目标在图像中的位置。与单纯的图像分类不同，目标检测强调“找出图中有什么”，因此在复杂场景下也能实现多目标的同时识别。
+**Object Detection** is a computer vision capability that not only identifies the categories of objects present in an image but also accurately locates their positions using bounding boxes. Unlike simple image classification, **Object Detection** focuses on “finding what is in the image,” enabling the recognition of multiple objects simultaneously even in complex scenes.
 
-在使用时，可以通过采集并标注包含不同目标的图片数据集，训练生成模型。当模型完成训练后，系统就能在新的图像或实时视频流中识别出多个对象，并输出它们的类别。
+To use this function, you can collect and label a dataset containing different objects and train a model. Once the model is trained, the system can identify multiple objects in new images or real-time video streams and output their categories.
 
-![img](../img/3_model_training/image_03.png)
+![img](../img/3_model_training/1761633021258-d695e3b8-d346-4884-a363-7d55a162242d.png)
 
-### 应用场景
+### Application Scenarios  
 
-- **智能安防**：在监控画面中自动检测出人员、车辆或可疑物体，实现智能报警和安全巡检。
-- **无人驾驶**：识别道路上的行人、车辆、交通标志和信号灯，为车辆的自动驾驶和安全决策提供基础。
-- **零售与物流**：在仓储和零售场景中自动检测货物、包装箱或货架物品，用于盘点和分拣。
-- **工业检测**：识别流水线上的零部件、产品缺陷或异物，提高生产质量与效率。
+- **Smart Security:** Automatically detect people, vehicles, or suspicious objects in surveillance footage, enabling intelligent alerts and security inspections.
+- **Autonomous Driving:** Recognize pedestrians, vehicles, traffic signs, and traffic lights on the road, providing a foundation for autonomous driving and safety decisions.
+- **Retail & Logistics:** Automatically detect goods, packages, or shelf items in warehouses and retail environments for inventory and sorting purposes.
+- **Industrial Inspection:** Identify components, product defects, or foreign objects on production lines to improve quality and efficiency.
 
-### 操作指南
+### Operation Guide
 
-- [目标检测-快速体验](/AITools/Detailed_explanation/object_detection/quick_experience/quick-experience/)（适合入门，快速完成训练）
-- [目标检测-专业模式](/AITools/Detailed_explanation/object_detection/professional_mode/professional-mode/)（适合进阶，支持自定义参数与深度优化）
+- [**Object Detection — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/kp5cr5b19cvy9mmk) (suitable for beginners, complete training quickly)
+- [**Object Detection — Advanced Mode**](https://www.yuque.com/joanna-rqvih/ilxuhv/zg2qaae4t9o427iu) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
-## 3. 实例分割
+## 3. Instance Segmentation（M3）  
 
-### 功能简介
+### Function Overview  
 
-实例分割是一种高级计算机视觉功能，它在目标检测的基础上进一步细化，不仅能够识别图像中有哪些类别的对象，并确定它们的位置，还能为每一个目标生成精确的像素级掩码，即区分同类对象的具体轮廓和形状。
+**Instance Segmentation** is an advanced computer vision capability that builds upon **Object Detection**. It not only identifies the categories and positions of objects in an image but also generates precise pixel-level masks for each object, distinguishing the exact contours and shapes of individual instances within the same category.
 
-与目标检测只能用矩形框标注不同，实例分割能够“精准勾勒每个对象”，即便在同一类别的多个目标重叠或靠得很近的情况下，也能准确区分它们。通过训练模型，系统可以对图像或视频中的每一个实例进行像素级识别，从而实现更精细的分析和处理。
+Unlike **Object Detection**, which uses only bounding boxes, **Instance Segmentation** can **accurately outline each object**, even when multiple objects of the same category overlap or are closely positioned. By training a model, the system can perform pixel-level recognition for every instance in images or videos, enabling more detailed analysis and processing.
 
-![img](../img/3_model_training/image_04.png)
+![img](../img/3_model_training/1761633273530-1f862b6b-e632-4bba-a37d-a74a48e0ca4d.png)
 
-### 应用场景
+### Application Scenarios  
 
-- **智能图像编辑**：在照片或视频中精确分离人物、动物或物体，实现背景替换、去除或特效处理。
-- **自动驾驶与交通分析**：识别道路上的每一辆车、行人或交通设施的精确轮廓，为路径规划和碰撞预测提供更精准的数据。
-- **工业质检**：在流水线生产中对零部件或产品进行像素级检测，快速识别缺陷、裂痕或异常形状，提高生产质量。
-- **医疗影像分析**：对器官、细胞或病灶区域进行精确分割，辅助医生进行诊断和手术规划。
-- **机器人视觉与交互**：让机器人能够准确识别和操作同类物体的不同实例，实现抓取、分类或避障等任务。
+- **Intelligent Image Editing:** Precisely separate people, animals, or objects in photos or videos for background replacement, removal, or special effects.
+- **Autonomous Driving & Traffic Analysis:** Identify the exact contours of every vehicle, pedestrian, or traffic facility on the road, providing more accurate data for path planning and collision prediction.
+- **Industrial Quality Inspection:** Perform pixel-level detection of components or products on production lines to quickly identify defects, cracks, or abnormal shapes, improving production quality.
+- **Medical Imaging Analysis:** Accurately segment organs, cells, or lesion areas to assist doctors in diagnosis and surgical planning.
+- **Robot Vision & Interaction:** Enable robots to accurately recognize and manipulate different instances of similar objects for tasks such as grasping, sorting, or obstacle avoidance.
 
-### 操作指南
+### Operation Guide
 
-- [实例分割-快速体验](/AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience/)（适合入门，快速完成训练）
-- [实例分割-专业模式](/AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode/)（适合进阶，支持自定义参数与深度优化）
+- [**Instance Segmentation — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/ns1n8me2s15684gm) (suitable for beginners, complete training quickly)
+- [**Instance Segmentation — Advanced Mode**](https://www.yuque.com/joanna-rqvih/ilxuhv/zfbteg84k4mxqgp8) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
-## 4. 时序模式识别
+## 4. Temporal Pattern Recognition（M4）  
 
-### 功能简介
+### Function Overview  
 
-时序模式识别是一种基于时间序列数据的智能识别功能，它能够将硬件传感器在一定时间范围内采集到的连续数据记录下来，并通过训练生成模型，从而实现对动态过程或动作的自动识别。与单一的瞬时数据不同，时序模式识别会综合考虑数据在时间轴上的变化趋势和规律，能够更准确地捕捉动作特征。
+**Temporal Pattern Recognition** is an intelligent recognition capability based on time-series data. It records continuous data collected by hardware sensors over a period of time and trains a model to automatically recognize dynamic processes or actions. Unlike single instantaneous data points, **Temporal Pattern Recognition** considers the trends and patterns of data over time, enabling more accurate capture of motion characteristics.
 
-例如，使用UNIHIKER K10板载的加速度传感器采集手部的运动数据，可以将“挥手”、“摇动”、“敲击”等动作的数据曲线录入平台，经过模型训练后，当再次识别到相似的运动轨迹时，系统就能自动预测并判断用户所做的动作。
+For example, using the accelerometer on the **UNIHIKER K10** to collect hand movement data, actions such as “waving,” “shaking,” or “tapping” can be recorded as data curves on the platform. After model training, when similar motion trajectories are detected again, the system can automatically predict and identify the user’s actions.
 
-![img](../img/3_model_training/image_05.png)
+![img](../img/3_model_training/1761633342177-50e70810-a937-452c-8b6d-cb95edfa687c.png)
 
-### 应用场景
+### Application Scenarios  
 
-- **体感交互**：通过识别不同的手势或动作，实现游戏控制或互动体验，例如“挥手开始游戏”、“摇动退出”等。
-- **运动检测**：监测跑步、跳跃、挥拍等运动方式，帮助进行运动习惯分析或智能锻炼指导。
-- **安全监测**：识别跌倒、突然晃动等异常动作，用于智能穿戴设备的安全报警。
-- **智能家居控制**：通过简单的动作识别（如轻敲或手势），触发灯光开关、音响播放等家居设备的控制。
+- **Motion Interaction:** Recognize different gestures or actions to enable game control or interactive experiences, such as “wave to start the game” or “shake to exit.”
+- **Activity Detection:** Monitor movements like running, jumping, or swinging, assisting in exercise habit analysis or intelligent workout guidance.
+- **Safety Monitoring:** Detect falls, sudden shakes, or other abnormal movements for safety alerts in smart wearable devices.
+- **Smart Home Control:** Trigger control of home devices, such as turning lights on/off or playing music, through simple action recognition like tapping or gestures.
 
-### 操作指南
+### Operation Guide
 
-- [时序模式识别-快速体验](/AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience/)（适合入门，快速完成训练）
-- [时序模式识别-专业模式](/AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode/)（适合进阶，支持自定义参数与深度优化）
+- [**Temporal Pattern Recognition — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/feg55z1op746fz0k) (suitable for beginners, complete training quickly)
+- [**Temporal Pattern Recognition — Advanced Mode**](https://www.yuque.com/joanna-rqvih/ilxuhv/gdy3dxdhw2ocqg4e) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
-## 5. 语音分类
+## 5. Speech Classification（M5）  
 
-### 功能简介
+### Function Overview  
 
-语音分类是一种基于声音信号的智能识别功能，它能够对采集到的音频数据进行分析，并将其自动划分到不同类别中。系统不仅能识别声音的类型，还可以根据训练模型判断音频所代表的事件或情绪特征。通过训练，语音分类模型可以从声音的频率、强度、时长、节奏等多维度特征中学习规律，从而实现高效准确的识别。
+**Speech Classification** is an intelligent recognition capability based on audio signals. It analyzes collected audio data and automatically classifies it into different categories. The system can not only identify the type of sound but also determine the event or emotional characteristics represented by the audio based on the trained model.
 
-![img](../img/3_model_training/image_06.png)
+Through training, a **Speech Classification** model can learn patterns from multiple audio features, such as frequency, intensity, duration, and rhythm, enabling efficient and accurate recognition.
 
-### 应用场景
+![img](../img/3_model_training/1761633456139-011c271b-671a-4d68-aa09-ddc34cada9d7.png)
 
-- **环境监测**：识别鸟叫声、交通噪声或机器运转声，用于生态监测或设备状态检测。
-- **智能家居**：通过识别门铃、敲门声或呼叫声，实现自动触发家居设备控制。
-- **健康与安全**：监测婴儿哭声、老人呼救或异常声响，实现智能报警和健康管理。
-- **娱乐与互动**：在游戏或互动项目中，识别口令、拍手声或乐器声，实现声音控制和多感官交互。
+### Application Scenarios  
 
-### 操作指南
+- **Environmental Monitoring:** Recognize bird calls, traffic noise, or machine sounds for ecological monitoring or equipment status detection.
+- **Smart Home:** Detect doorbells, knocking, or calling sounds to automatically trigger control of home devices.
+- **Health & Safety:** Monitor baby cries, elderly calls for help, or abnormal sounds for intelligent alerts and health management.
+- **Entertainment & Interaction:** In games or interactive projects, recognize voice commands, clapping, or musical instrument sounds to enable sound-based control and multi-sensory interaction.
 
-- [语音分类-快速体验](/AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience)
+### Operation Guide
 
-## 6. 文本分类
+- [**Speech Classification — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/qm4m7g1ut6ghf6u2)
 
-### 功能简介
+## 6. Text Classification （M6） 
 
-文本分类是一种基于自然语言处理（NLP）的智能识别功能，它可以对输入的文本内容进行分析，并将其自动归入预先定义的类别中。系统通过训练模型学习不同类别文本的语言特征、词汇分布和语义模式，从而在遇到新文本时，能够快速判断其所属类别。文本分类不仅可以处理短句或关键词，也可以分析长段落，实现高效的信息整理和内容识别。
+### Function Overview  
 
-![img](../img/3_model_training/image_07.png)
+**Text Classification** is an intelligent recognition capability based on Natural Language Processing (NLP). It analyzes input text and automatically assigns it to predefined categories. The system learns the language features, word distributions, and semantic patterns of different text categories through model training, enabling it to quickly determine the category of new text.
 
-### 应用场景
+**Text Classification** can handle short sentences or keywords as well as long paragraphs, achieving efficient information organization and content recognition.
 
-- **垃圾信息过滤**：自动识别垃圾邮件、广告信息或不良内容，提高信息安全和用户体验。
-- **情感分析**：分析评论、反馈或社交媒体内容的情绪倾向，如积极、消极或中性。
-- **智能客服**：对用户提问进行分类，快速匹配对应答案或自动分配给相关部门。
-- **新闻与内容管理**：将新闻、文章或文档按主题自动分类，便于检索和管理。
+![img](../img/3_model_training/1761633466846-b4b413f8-7ea3-4fd7-8e5f-b6f265445455.png)
 
-### 操作指南
+### Application Scenarios  
 
-- [文本分类-快速体验](/AITools/Detailed_explanation/text_classification/quick_experience/quick-experience)
+- **Spam Filtering:** Automatically identify spam emails, advertisements, or inappropriate content to enhance information security and user experience.
+- **Sentiment Analysis:** Analyze the emotional tendency of comments, feedback, or social media content, such as positive, negative, or neutral.
+- **Intelligent Customer Service:** Classify user queries to quickly match corresponding answers or automatically route them to relevant departments.
+- **News & Content Management:** Automatically categorize news, articles, or documents by topic for easier retrieval and management.
 
-## 7. 姿态分类
+### Operation Guide
 
-### 功能简介
+- [**Text Classification — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/zqvwv6gszslrguy1)
 
-姿态分类是一种基于人体关键点信息的智能识别功能。通过对图像或视频中的人体姿态进行分析，系统能够将不同的动作或姿态划分到预设类别中。例如，判断一个人是“站立”“挥手”还是“下蹲”。
+## 7. Pose Classification（M7）  
 
-与普通动作识别不同，姿态分类更关注身体各部位的相对位置和动作模式，因此不仅能识别静态姿势，还能支持体感交互，实现与用户的实时互动。
+### Function Overview  
 
-![img](../img/3_model_training/image_08.png)
+**Pose Classification** is an intelligent recognition capability based on human keypoint information. By analyzing human poses in images or videos, the system can classify different actions or postures into predefined categories. For example, it can determine whether a person is **standing**, **waving**, or **squatting**.
 
-### 应用场景
+Unlike general action recognition, **Pose Classification** focuses on the relative positions and movement patterns of body parts. Therefore, it can not only recognize static poses but also support motion-based interaction, enabling real-time engagement with users.
 
-- **运动健身**：识别跑步、深蹲、俯卧撑、瑜伽等运动姿势，帮助用户纠正动作。
-- **健康监测**：检测坐姿、站姿或睡姿，提醒不良姿势，辅助办公或康复训练。
-- **智能交互**：通过特定手势或身体姿势控制设备，例如挥手切换页面、抬手接听电话。
-- **教育与训练**：用于体育教学或舞蹈训练，分析动作标准度并提供反馈。
-- **安全监控**：检测危险姿势（如弯腰过度、跌倒），实现实时报警与安全防护。
+![img](../img/3_model_training/1761633476807-101db4e3-6c05-44b8-ad90-a48c32739398.png)
 
-### 操作指南
+### Application Scenarios  
 
-- [姿态分类-快速体验](/AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience)（适合入门，快速完成训练）
+- **Fitness & Exercise:** Recognize running, squats, push-ups, yoga, and other exercise poses to help users correct their movements.
+- **Health Monitoring:** Detect sitting, standing, or sleeping postures to remind users of poor posture and assist in office ergonomics or rehabilitation training.
+- **Intelligent Interaction:** Control devices using specific gestures or body poses, such as waving to switch pages or raising a hand to answer a call.
+- **Education & Training:** Used in sports teaching or dance training to analyze movement accuracy and provide feedback.
+- **Safety Monitoring:** Detect dangerous postures (e.g., excessive bending, falling) to enable real-time alerts and safety protection.
 
+### Operation Guide
+
+- [**Pose Classification — Quick Experience**](https://www.yuque.com/joanna-rqvih/ilxuhv/yye0mcobnnturgub)

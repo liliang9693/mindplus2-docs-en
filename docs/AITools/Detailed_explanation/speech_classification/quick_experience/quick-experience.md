@@ -1,162 +1,170 @@
-### 语音分类-快速体验
 
-语音分类的快速体验操作步骤以“音乐风格识别”案例为例，带领大家学习语音分类模型的训练流程。该案例主要演示语音分类在实际应用中的效果：模型能够对麦克风实时采集的音频进行音乐风格的识别与分类，帮助用户直观理解语音分类的基本原理与应用价值。
 
-- **效果：** 能准确区分乡村、古典、爵士、蓝调、摇滚 5 种不同的音乐风格
-- **效果展示：**
-![img](../img/1_quick_experience/img.gif)
+The quick experience of speech classification takes the **“Music Genre Recognition”** case as an example, guiding users to learn the training process of a speech classification model.
+This case demonstrates how speech classification works in real applications: the model can recognize and classify music genres from real-time audio captured by a microphone, helping users intuitively understand the basic principles and application value of speech classification.
 
-语音分类模型训练实现过程分为六个步骤：
+- **Effect:** Accurately distinguishes between five different music genres — **Country, Classical, Jazz, Blues, and Rock.**
 
-- **新建项目** —— 创建语音分类项目并准备数据集；
-- **背景噪声** —— 采集当前环境的背景音样本数据，保障模型对复杂环境下语音的识别能力；
-- **样本添加** —— 添加待识别的分类标签（如“摇滚”、“古典”），并通过麦克风采集（或上传）对应的音频样本数据；
-- **训练模型** —— 通过平台训练得到语音分类模型；
-- **模型校验** —— 测试模型效果。
-- **模型部署** —— 模型训练完成后，可以将其导出并部署到硬件设备，实现本地运行与应用。同时，用户还可以选择将模型的识别结果实时推送到 SIoT 平台，便于远程监测与管理。
 
-### 步骤1：新建项目
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。
-- 在训练选项中找到 “语音分类（M5）” 并点击，即可完成项目创建。
+The **speech classification model training process** consists of six steps:
 
-![img](../img/1_quick_experience/image_01.png)
+- **Create Project**:  Create a speech classification project and prepare the dataset.
+- **Background Noise**:  Collect background sound samples from the current environment to ensure the model’s ability to recognize speech accurately under complex noise conditions.
+- **Add Samples**:  Add classification labels to be recognized (e.g., “Rock,” “Classical”) and collect (or upload) corresponding audio samples via the microphone.
+- **Train Model**:  Train the model through the platform to obtain a speech classification model.
+- **Model Validation**:  Test and evaluate the model’s performance.
+- **Model Deploy**:  After training, export and deploy the model to hardware devices for local execution and application.
+  Additionally, users can choose to push real-time recognition results to the **SIoT platform** for remote monitoring and management.
 
-- 项目创建成功后，会跳转到新的语音分类快速体验界面。
+### Step 1: Create Project
 
-![img](../img/1_quick_experience/image_02.png)
+- Open Mind+, select “New Project” from the menu bar, then click “Model”. In the training options, locate “Speech Classification（M5）” and click it to create the project.
 
-### 步骤2：背景噪声
+![img](../img/1_quick_experience/1762328043111-53f27f28-db56-43f4-b170-18d4364c4f6c.png)
 
-- 需添加当前环境下的背景音样本数据
+- After the project is successfully created, it will jump to the new **Speech Classification – Quick Start** interface.
 
-数据样本小提示：该数据类别需最少20个
+![img](../img/1_quick_experience/1762328400538-05a32ddf-9af3-4db8-9a2c-8016c1aaa630.png)
 
-![img](../img/1_quick_experience/image_03.png)
+### **Step 2: Background Noise**
 
-- 可以通过两种方式添加音频样本：
-  - **麦克风采集**：适合现场录制，快速获取实时语音，方便在实验过程中直接收集数据。
-  - **本地上传**：适合导入已准备好的音频素材，便于批量添加和管理现有数据。
-- 通过这两种方式，用户能够灵活地构建数据集，为后续的模型训练做好准备。
-- **样本添加方式1：麦克风采集**
-  - 点击麦克风。选择当前电脑可用麦克风。
-    - ![img](../img/1_quick_experience/image_04.png)![img](../img/1_quick_experience/image_05.png)
+- Add background sound sample data from the current environment.
 
-    - 
-  - > 注：如果台式机没有麦克风，可通过外接麦克风。
+**Data Tip:** This category requires at least 20 samples.  
 
-  - 点击“录制20秒”进行音频样本采集。等待倒计时20秒结束，录制采集自动停止。
-    - ![img](../img/1_quick_experience/image_06.png)![img](../img/1_quick_experience/image_07.png)
+![img](../img/1_quick_experience/1762328747650-c104dd45-de9c-421f-83e8-752a49697d54.png)
 
-    - 
-  - 点击“提取样本”，对音频片段进行样本提取。
-    - ![img](../img/1_quick_experience/image_08.png)![img](../img/1_quick_experience/image_09.png)
+-  Audio samples can be added in two ways:  
 
-    - 
-  - 提取完成后，点击“×”退出采集界面。
-    - > - 提取样本后，界面会显示当前已采集样本数，若未达到最少20个（单类别），需重复录制/上传 - 提取操作
+- - **Microphone Recording**: Suitable for on-site recording, allowing you to quickly capture real-time speech and conveniently collect data directly during experiments.
+  -  **Local Upload**: Suitable for importing pre-prepared audio files, making it easy to add and manage existing data in batches.  
 
-    - ![img](../img/1_quick_experience/image_10.png)
-  - 采集状态检查
-    - > 注：如遇采集显示如下，请检查麦克风开启或连接状态。
+-  These two methods enable users to flexibly build datasets and prepare for subsequent model training.  
+- **Sample Addition Method 1: Microphone Recording**  
 
-    - ![img](../img/1_quick_experience/image_11.png)![img](../img/1_quick_experience/image_12.png)
+- - Click the microphone and select an available microphone on your computer.  
 
-    - 
-  - 音频采集设置
-    - ![img](../img/1_quick_experience/image_13.png)![img](../img/1_quick_experience/image_14.png)
+![img](../img/1_quick_experience/1762329414873-9ed92882-2627-4e4a-8636-960daff04047.png)
 
-    - 
+**Note:** If your desktop does not have a built-in microphone, you can use an external microphone.  
 
-### 步骤3：样本添加
+- - Click **“Record 20 seconds”** to start capturing audio samples. The recording will automatically stop when the 20-second countdown ends.  
 
-- 完成背景噪声采集后，可添加其他类别样本。首先修改 “Class2” 的名称，完成该音频样本类型命名，如“摇滚”。
+![img](../img/1_quick_experience/1762329572633-c2c45ff3-525d-4b62-97e9-2b743133f1d4.png)
 
-  - ![img](../img/1_quick_experience/image_15.png)![img](../img/1_quick_experience/image_16.png)
+- - Click **“Extract”** to extract samples from the audio segment.
 
-  - 
+![img](../img/1_quick_experience/1762329704950-9d45d2e4-c11a-4f58-8835-a08b6bec3759.png)![img](../img/1_quick_experience/1762329879493-6ceb51b6-9171-4b55-9df9-86e1c0d13774.png)
 
-  - **样本添加方式2：本地上传**
-  - 点击“上传”按钮，进入音频样本上传界面。
-  - 点击“选择文件上传”按钮，在本地文件中选择通过“下载样本”功能创建的.zip文件。
-  - 点击“打开”，完成样本上传。
-  - ![img](../img/1_quick_experience/image_17.png)
+- - After extraction is complete, click **“return”** to exit the recording interface.  
 
-  - ![img](../img/1_quick_experience/image_18.png)
+- - - -  After extracting samples, the interface will display the number of samples collected so far. If the minimum of 20 samples per category has not been reached, repeat the recording/upload and extraction process.  
 
-  - 音频样本提取完成后，点击“×”退出采集界面。
-  - > - 提取样本后，界面会显示当前已采集样本数，若未达到最少20 个（单类别），需重复录制/上传 - 提取操作
+![img](../img/1_quick_experience/1762331441737-a8da40a2-13a1-4c67-b654-b054ebc53c95.png)
 
-  - ![img](../img/1_quick_experience/image_19.png)
+- - Recording Status Check  
 
-- 点击“新增类别”，新建另一类别（如“古典乐”），重复上述样本添加操作，直至完成所有类别的样本添加。
+**Note:** If the recording displays as shown below, please check whether the microphone is turned on or properly connected.  
 
-  - ![img](../img/1_quick_experience/image_20.png)
+![img](../img/1_quick_experience/1762331510363-a03d16fd-714d-4fad-af7f-2409bac1e983.png)
 
-  - ![img](../img/1_quick_experience/image_21.png)
+- - Audio Recording Settings
 
-  - 数据样本小提示：
+![img](../img/1_quick_experience/1762332177225-8557d716-d012-4c47-a4a4-a7539ffcc470.png)
 
-  - - 每个数据类别可准备尽可能特点明确且音质清晰的音频样本数据，类别间数量尽量平衡。
-    - 建议给类别起个简洁的名字，不要用太复杂的符号或过长的名称。
+### Step 3: Adding Samples  
 
-### 步骤4：训练模型
+- After completing the background noise collection, you can add samples for other categories. First, rename **“Class2”** to define the audio sample type, for example, **“Rock”**.  
 
-- **高级参数设置**
-  - 在训练模型前，点击“高级设置”设置训练参数“周期数”。
+![img](../img/1_quick_experience/1762332904088-a6c02925-cb5f-4756-9acb-48e7135a6f4c.png)
 
-| 参数   | 参数说明                                                     | 类别说明                                                     | 推荐设置                                                     |
-| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 周期数 | 一个周期是指训练数据集中的每个样本都已至少向训练模型馈送一次。例如，如果您的周期设为50，则表示模型会对整个训练数据集迭代处理 50 次。在未出现过拟合的情况下，一般情况下，该数值越大，您的模型学习预测数据的效果越好。 | 模型对训练数据集的完整迭代次数，反映学习过程中对数据的遍历程度 | 可上调至100您可能需要微调(通常为提高)此数值，直到模型取得良好的预测结果。 |
+- **Sample Addition Method 2: Local Upload**  
 
-- **启动模型训练**
-  - 完成训练参数设置后，点击 **“训练模型”** 即可开始训练（若不做设置，也可直接使用系统默认参数）。
-  - ![img](../img/1_quick_experience/image_22.png)
+- - Click the **“Upload”** button to enter the audio sample upload interface.  
+  -  Click **“Select File Upload”** and choose the `.zip` file created using the **“Download Sample”** function from your local files.  
+  - Click **“Open”** to complete the sample upload.  
 
-  - 训练过程中，请务必保持此标签页为打开状态，避免切换页面或关闭浏览器导致训练中断。
-  - ![img](../img/1_quick_experience/image_23.png)
-- **训练过程监测**
-  - 在训练模型过程中，可通过点击“深入了解”按钮，查看训练监测相关数据。
-    - **每个周期的准确率：** 是指在模型训练的一个周期（即对整个训练数据集完整迭代一次）内，模型预测结果与实际结果相符的比例
-    - **每个周期的损失：** 则是该周期内模型预测值与真实值之间的误差程度量化指标。
-    - ![img](../img/1_quick_experience/image_24.png)
+![img](../img/1_quick_experience/1762334069483-dd66735c-1d3d-40ca-8a54-7ab948266dd0.png)
 
-    - > - **每个周期的准确率折线图**
-      > - 蓝色线（`acc`）代表模型在训练数据上每个周期的准确率，从图中能看到，随着训练周期（`Epochs`）增加，训练准确率快速上升，后期趋于稳定在接近1.0的高水平，说明模型对训练数据的拟合程度越来越好。 橙色线（`test acc`）代表模型在测试数据上每个周期的准确率，它前期有小幅度上升，但很快趋于平稳，且稳定在约0.6的水平，远低于训练准确率，这体现出模型在训练数据上表现很好，但在未见过的测试数据上表现一般，存在一定的泛化能力不足的情况。
-      > - **每个周期的损失折线图**
-      > - 蓝色线（`loss`）代表模型在训练数据上每个周期的损失，损失值随着训练周期增加快速下降，后期稳定在很低的水平，这和训练准确率的变化趋势一致，说明模型对训练数据的预测误差越来越小。 橙色线（`test loss`）代表模型在测试数据上每个周期的损失，它前期下降后，后期趋于平稳，且稳定值高于训练损失，结合测试准确率的表现，反映出模型在测试数据上的预测误差比在训练数据上大，进一步说明模型对训练数据过拟合，在测试数据上的泛化效果欠佳。
+- - After audio sample extraction is complete, click **“Return”** to exit the recording interface.  
 
-### 步骤5：模型校验
+- - - After extracting samples, the interface will display the number of samples collected so far. If the minimum of 20 samples per category has not been reached, repeat the recording/upload and extraction process.  
 
-- 模型训练完成后，可以通过校验区，检验模型效果。校验的方式为麦克风实时采集音频。
-  - > 小提示：用一些未参与训练的新音频进行测试，更能反映模型实际效果。
-- 靠近麦克风，播放未参与训练的新音频用于测试，查看输出d实时分类结果。
+![img](../img/1_quick_experience/1762334756527-b85a2d12-0502-4473-80ac-332cfd72a8d6.png)
 
-![img](../img/1_quick_experience/image_25.png)
+- Click **“Add a Class”** to create a new category (e.g., **“Classical”**) and repeat the sample addition steps above until all categories have been added.
 
-### 步骤6：模型导出
+![img](../img/1_quick_experience/1762335170775-9baab967-bfa5-4940-a9db-a155b8a778f1.png)
 
-- 当模型校验结果满足需求时，就可以进入部署阶段。
-  - “部署” → 点击 “导出模型”。
-  - 平台支持将模型导出为zip格式，便于在其他环境中使用或进行二次开发。
+Tips for Data Samples:  
 
-![img](../img/1_quick_experience/image_26.png)
+- - - For each category, prepare audio samples that are as distinct and clear as possible, and try to keep the number of samples balanced across categories.  
+    -  It is recommended to give each category a simple name without using overly complex symbols or excessively long names.  
 
-### 步骤6：模型部署
+### Step 4: Train Model  
 
-方法一：参考[4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment)
+- **Advanced Parameter Settings**  
 
-- 适用：支持硬件部署的模型（如行空板M10/K10），如图像分类、目标检测等模型。
+- - Before training the model, click **“Advanced Settings”** to set the training parameter **“Epochs”**.  
 
-方法二：参考[4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push)
+| Parameter | Description                                                  | Category Explanation                                         | Recommended Setting                                          |
+| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Epochs    | One epoch means that every sample in the training dataset has been fed into the model at least once. For example, if you set the epochs to 50, the model will iterate over the entire training dataset 50 times. Generally, the higher this value, the better the model learns to predict the data, as long as overfitting does not occur. | The total number of complete iterations over the training dataset, reflecting how thoroughly the model traverses the data during learning. | Can be increased up to 100. You may need to fine-tune (usually increase) this value until the model achieves good prediction results. |
 
-- 适用：暂不支持硬件部署的模型，如语音识别、文本分类等模型。
+- **Start Model Training**  
 
-### 模型训练常见问题
+- - After setting the training parameters, click **“Train Model”** to start training. (If no settings are made, the system default parameters will be used.)
 
-- 在模型训练过程中，可能会遇到各种问题，例如训练速度慢、精度不理想或参数设置不当。下面整理了常见问题及解决思路，帮助你更顺利地完成模型训练。
+![img](../img/1_quick_experience/1762335541644-60841d05-79dd-486e-9bbd-13ecd531e53b.png)
 
-| **常见问题**     | **导致的原因及解决方法**                                     |
-| ---------------- | ------------------------------------------------------------ |
-| 模型准确率不高。 | 可能原因：样本数据数量不足样本类别不平衡。解决方法：在添加样本数据时，确保每个类别的样本覆盖不同音量、播放场景（非训练时的背景噪声）。尽量保持各类别样本数量均衡，以提升模型的准确率。 |
-| 训练时间过长     | 可能原因：批次大小设置过小，每次训练处理的数据量少，导致训练轮次需要更多时间。训练轮次设置过大，模型重复学习数据太多。解决方法：适当增大批次大小，让模型每次处理更多样本，加快训练速度。根据数据量和任务需求合理调整训练轮次，避免不必要的重复训练。 |
+- - During training, make sure to keep this tab open. Switching pages or closing the browser may interrupt the training process.
+
+![img](../img/1_quick_experience/1762335689874-741ed344-270d-4c51-8771-d0d4984771fb.png)
+
+- **Training Process Monitoring**  
+
+- - During model training, you can click the **“Learn More”** button to view training monitoring data.  
+
+- - - **Accuracy per Epoch**: The proportion of model predictions that match the actual results within one epoch (i.e., one complete iteration over the entire training dataset).  
+    - **Loss per Epoch**: A quantitative measure of the error between the model’s predicted values and the true values during that epoch.  
+
+![img](../img/1_quick_experience/1762336040907-0c6f113c-97e7-4853-ab80-28d2d2a5380f.png)
+
+- - - - **Accuracy Line Chart per Epoch**  
+      - The blue line (**acc**) represents the model’s accuracy on the training data for each epoch. From the chart, you can see that as the number of epochs increases, the training accuracy rises rapidly and eventually stabilizes near 1.0, indicating that the model is increasingly fitting the training data well. The orange line (**test acc**) represents the model’s accuracy on the test data for each epoch. It rises slightly at first but quickly stabilizes around 0.6, much lower than the training accuracy. This shows that while the model performs very well on the training data, its performance on unseen test data is moderate, indicating limited generalization ability.  
+      - **Loss Line Chart per Epoch**  
+      -  The blue line (**loss**) represents the model’s loss on the training data for each epoch. The loss decreases rapidly as training progresses and stabilizes at a very low level, consistent with the trend observed in training accuracy, showing that prediction errors on the training data are decreasing. The orange line (**test loss**) represents the model’s loss on the test data for each epoch. It decreases initially but then stabilizes at a value higher than the training loss. Combined with the test accuracy, this indicates that prediction errors on the test data are larger than on the training data, further demonstrating that the model is overfitting the training data and has suboptimal generalization on unseen data.  
+
+### Step 5: Model Validation  
+
+- After the model training is complete, you can use the validation area to test the model’s performance. The validation is done by **real-time audio capture via the microphone**.
+  **Tip:** Testing with new audio that was not used during training better reflects the model’s actual performance.  
+- Bring the audio source close to the microphone and play the new, unseen audio for testing, then observe the real-time classification results.  
+
+![img](../img/1_quick_experience/1762396381647-6c4bbf5e-06db-4810-85aa-3185474accd6.png)
+
+### Step 6: Model Deploy
+
+- Once the model validation results meet your requirements, you can proceed to deployment.  
+
+- - Go to **“Deploy”** → Click **“Export Model”**.  
+  - The platform supports exporting the model as a .zip file, making it easy to use in other environments or for further development.  
+
+![img](../img/1_quick_experience/1762395930723-146a409a-7b41-4437-bf64-d001c4a6b6e5.png)
+
+- After validation, the model can push prediction results in real time. Click “Real-time Result Push” to synchronize the output to the SIoT platform. Hardware can receive the data from the platform and perform corresponding actions based on it.
+- Although the data is sent to the SIoT platform in real time, it is not stored in the platform's database, so it cannot be viewed via the SIoT web interface.
+
+![img](../img/1_quick_experience/1762396600906-58cc8271-2f2b-4879-9996-9791b4aa666e.png)
+
+For instructions on model deployment and real-time result push, please refer to section [4.1.4 Model Deploy](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi) & [4.1.5Real-Time Result Push.](https://www.yuque.com/joanna-rqvih/ilxuhv/ph3e9rp4q7c7x1oe)
+
+## Common Issues in Model Training  
+
+- During the model training process, you may encounter various issues such as slow training speed, unsatisfactory accuracy, or improper parameter settings. The following section summarizes common problems and their solutions to help you complete model training more smoothly.
+
+| **Common Issue**       | **Possible Causes and Solutions**                            |
+| ---------------------- | ------------------------------------------------------------ |
+| **Low Model Accuracy** | **Possible Causes:**• Insufficient amount of sample data.• Imbalanced sample categories.**Solutions:**• When adding sample data, ensure each category includes samples with varying volumes and recording environments (not just background noise from training).• Try to keep the number of samples in each category balanced to improve model accuracy. |
+| **Long Training Time** | **Possible Causes:**• Batch size is set too small, causing the model to process fewer samples per iteration and prolonging training time.• Too many epochs are set, leading the model to repeatedly learn the same data.**Solutions:**• Increase the batch size appropriately so the model processes more samples per iteration, speeding up training.• Adjust the number of epochs reasonably based on the dataset size and task needs to avoid unnecessary retraining. |

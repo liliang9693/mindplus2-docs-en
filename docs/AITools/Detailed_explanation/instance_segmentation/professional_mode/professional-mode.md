@@ -1,166 +1,170 @@
-# 【实例分割】 专业模式
+# 【Instance Segmentation】 Advanced Mode
 
-本项目以 "水果识别" 为案例，带领用户在专业模式下完成实例分割任务。通过该案例，不仅能够学习基本流程（数据设置、数据标注、模型训练），还可以进一步体验专业模式中的进阶功能，如自定义训练参数、观察训练曲线、调整数据增强策略等，从而更精细地掌控模型训练过程并不断优化模型效果。 当模型训练完成后，系统即可对新图像中的水果进行准确分割与识别。实例分割-专业模式
+This project uses **“Fruit Recognition”** as a case study to guide users through an **Instance Segmentation** task in **Advanced Mode**. Through this example, users can not only learn the basic workflow (data setup, data annotation, model training) but also explore advanced features in Advanced Mode, such as customizing training parameters, observing training curves, and adjusting data augmentation strategies. This allows users to gain fine-grained control over the training process and continuously optimize model performance.
 
-本项目以 “水果识别” 为案例，带领用户在专业模式下完成实例分割任务。通过该案例，不仅能够学习基本流程（数据设置、数据标注、模型训练），还可以进一步体验专业模式中的进阶功能，如自定义训练参数、观察训练曲线、调整数据增强策略等，从而更精细地掌控模型训练过程并不断优化模型效果。 当模型训练完成后，系统即可对新图像中的水果进行准确分割与识别。
+**Effect:** The system can perform real-time recognition and segmentation of fruits in uploaded images or camera feeds. Different colored masks are used to outline fruits such as apples, bananas, and pears, providing a clear visualization of the segmentation results.
 
-- 效果：系统可以在上传的图片或摄像头画面中，对水果进行实时识别和分割，并用不同颜色掩膜框标记出苹果、香蕉、梨等轮廓，直观展示分割结果。
-- 效果展示：
 
-![img](../img/2_professional_mode/img.gif)
 
-### 模式切换
+### Mode Switching
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。在训练选项中找到 “实例分割（M3）” 并点击，即可完成项目创建。
+- Open Mind+, select “New Project” from the menu bar, then click “Model”. In the training options, locate “Instance Segmentation (M3)” and click it to create the project.
 
-![img](../img/2_professional_mode/image_01.png)
+![img](../img/2_professional_mode/1761808020951-64039ca1-e82a-47d1-a272-edfaa4988a21.png)
 
-- 在界面右上角点击 “专业模式” 以切换模式。切换成功后，菜单栏将新增以下功能模块：数据设置、标注设置、模型训练、模型校验和模型部署。
+- Click **"Advanced Mode"** in the top-right corner of the interface to switch modes. Once switched successfully, the menu bar will add the following modules: **Data Settings**, **Annotation Settings**, **Model Training**, and **Model Validation**.
 
-![img](../img/2_professional_mode/image_02.png)
+![img](../img/2_professional_mode/1761814402643-0c13d810-7553-41c9-a85b-d4999b73ceb1.png)
 
-### 数据设置
+### Data Settings
 
-- 切换到 “数据设置” → 点击左上角 “创建数据集”，例如创建一个名为水果识别的数据集。
+- Switch to "Data Settings" → Click "Create" at the top left, for example, create a dataset named **Fruit Recognition**.  
 
-![img](../img/2_professional_mode/image_03.png)
+![img](../img/2_professional_mode/1761814545380-75e119d5-d8d3-4515-9df0-aec33d9ce002.png)
 
-- 切换到专业模式后，数据集列表中会默认显示一个 “Experience” 数据集，该数据集由快速体验模式生成。用户可以对新建数据集执行以下操作：标注、复制、导入数据、导出以及删除。
+- After switching to Advanced Mode, the dataset list will display a default "Experience" dataset, which is generated from the Quick Experience mode. Users can perform the following operations on newly created datasets: annotation, copy, import data, export, and delete.  
 
-注意：默认数据集不可删除。
+ Note: The default dataset cannot be deleted.  
 
-![img](../img/2_professional_mode/image_04.png)
+![img](../img/2_professional_mode/1761814627912-70b064ee-90b5-4f52-ac56-498157321c32.png)
 
-- 接下来，为新建的水果识别数据集执行 “导入数据” 操作。系统支持两种导入方式：有标注数据和无标注数据。
-- 导入方式1：无标注数据导入
-  - 适用于仅上传原始图片的情况（如苹果、梨、香蕉混合在一起的图片，且每种类别图片数量不低于20张）。
-  - 操作步骤：选择导入类型为 “无标注数据” → 点击 “点击上传” → 从本地选择图片 → 点击“确认”完成导入。
+- Next, perform the “Import Data” operation for the newly created Fruit Recognition dataset. The system supports two import methods: **Labeled Data** and **Unlabeled Data**.  
+- Import Method 1: Unlabeled Data  
 
-![img](../img/2_professional_mode/image_05.png)
+- - Suitable for uploading only raw images (e.g., images containing a mix of apples, pears, and bananas, with at least 20 images per category).  
 
-- 导入方式2：有标注数据
-  - 直接上传 YOLO 格式的已标注数据（.zip 压缩包）。
-  - 按照平台要求组织文件夹结构，上传后无需手动标注，直接跳转到模型训练。
-  - 注意：有标注数据的分类名称需使用英文，否则上传后标签可能出现乱码。
+**Steps:**
 
-![img](../img/2_professional_mode/image_06.png)
+1. Select the import type as **NO annotations.**
+2. Click **Import Data.**
+3. Choose images from your local device.
+4. Click **Confirm** to complete the import.
 
-### 标注设置
+![img](../img/2_professional_mode/1761815725820-450f58fb-692d-4900-877a-cbd3cbe994dc.png)
 
-- 水果图片导入成功后，标注进度栏会同步显示已导入的图片数量及对应的标注数量。
+- Import Method 2: **With Annotations**
 
-![img](../img/2_professional_mode/image_07.png)
+- - Directly upload YOLO-formatted annotated data (.zip file).
+  - Organize the folder structure according to platform requirements. After uploading, manual annotation is not needed, and the system will directly proceed to model training.  
 
-- 在“操作”栏中点击 “标注”，进入水果识别的标注设置界面。
+![img](../img/2_professional_mode/1761815761165-d768f1b4-36be-41ec-a18b-97d772d62a79.png)
 
-![img](../img/2_professional_mode/image_08.png)
+### **Annotation Settings**
 
-- 按照界面提示完成标签创建（苹果、梨、香蕉），用于标注不同类别的水果。
+- After the fruit images are successfully imported, the annotation progress bar will simultaneously display the number of imported images and their corresponding annotations. 
 
-![img](../img/2_professional_mode/image_09.png)
+![img](../img/2_professional_mode/1761816033067-674ae025-fa2b-4bb9-8002-c4ac6886cd76.png)
 
-- 下面为数据集进行标注。操作时，先点击对应的标签名，再沿图形边缘描绘形成闭合轮廓。
+- Click **Annotate** in the **Operations** panel to enter the annotation settings for Fruit Recognition.
 
-**数据集样本标注注意事项：**
+![img](../img/2_professional_mode/1761816077628-93d3aac6-ae71-413f-b7ce-5ac7c8c3c0a9.png)
 
-1. 标注过程中，需要将数据集中所有图片样本逐一完成标注。
-2. 如果一张图片中有多个图形，需要为每一个图形都进行标注。
+- Follow the on-screen prompts to create labels (**Apple**, **Pear**, **Banana**) for annotating different fruit categories.
 
-![img](../img/2_professional_mode/image_10.png)
+![img](../img/2_professional_mode/1761816401429-8887c919-dfaa-4999-aef7-16988296f097.png)
 
-### 模型训练
+-  Next, annotate the dataset. During annotation, first click the corresponding label name, then trace along the object’s edge to form a closed contour.  
 
-- 所有图片都标注完成后，切换到“模型训练”功能模块。
+ **Notes for dataset annotation:**  
 
-![img](../img/2_professional_mode/image_11.png)
+- Every image in the dataset must be annotated one by one.
+- If an image contains multiple objects, each object must be annotated individually.
 
-- 点击 “创建训练任务”，在弹出的窗口中进行如下设置：
-  - **名称**：水果识别模型（根据需求自行命名）
-  - **模型**：根据自己需求进行选择（也可保持默认）
-  - **训练类型**：根据自己需求进行选择（也可保持默认）
-  - **数据集**：交通标志识别（在数据设置中，我们已创建并命名数据集 **“水果**识别**”**；在标注设置中，也完成了图片的标注与整理。至此，数据已具备训练所需的完整结构。接下来进入模型训练阶段，系统将基于该数据集对图片进行特征提取与模式学习，从而逐步具备对转向标志进行分类识别的能力。所以，这里的数据集必须选择水果识别。）
-  - **训练比例**：根据自己需求进行选择（也可保持默认）
+![img](../img/2_professional_mode/1761816881438-f37b2040-112b-4373-aae2-9590d092571c.png)
 
-| **创建任务参数** | **作用**                                               | **说明**                                                     |
-| ---------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| 名称             | 仅用于区分和管理不同的训练任务，不会影响模型性能。     | 相当于给这次实验取一个名字，方便后续查看和比较。             |
-| 模型             | 决定使用哪一种神经网络结构来训练。                     | 不同的模型有不同的“学习方式”和“理解能力”。比如，有的模型适合处理小型数据集，有的模型更适合复杂的分类任务。 |
-| 训练类型         | 确定训练的方式，比如是**分类**、**回归**还是**检测**。 | 告诉模型“你要学会干什么”。                                   |
-| 数据集           | 告诉模型要从哪些数据中学习。                           | 相当于教材，模型会从这个数据集的图片和标签里，学习如何识别不同交通标志。 |
-| 训练比列         | 决定数据集中多少比例用来训练，多少比例用来验证。       | 训练集 = 模型学习用的例子验证集 = 检查模型学习效果的例子（模型没见过的图片） |
+### Model Training
 
-![img](../img/2_professional_mode/image_12.png)
+- After all images have been annotated, switch to the **Model Training** module.
 
-- 模型训练任务创建成功后，点击“参数设置”进入训练参数配置界面。你可以根据需要调整参数，也可以直接使用默认设置开始训练。
-  - 基础参数设置：图片大小、批次大小、训练轮次
-  - 高级参数设置：保存频率、随机上下翻转概率、随机左右翻转概率、优化器等
+![img](../img/2_professional_mode/1761817923596-9e593ec9-dd74-48b8-92d7-23daa3e333b5.png)
 
-| 高级参数     | 说明                                                         | 说明                                                         |
-| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 保存频率     | 指训练时模型保存的间隔，防止训练过程中意外中断导致数据丢失。 | 保存频率 = 5 → 每 5 轮训练保存一次模型。保存频率 = -1 → 不自动保存，只留最后一个模型。 |
-| 随机上下翻转 | 指对图像进行数据增强时，系统会随机决定是否把图像沿着水平中轴线（上下方向）翻转，让模型学会识别不同方向的图像。 | 概率 = 0 → 永远不会翻转（等于没开启这个增强）。一只猫的照片，随机上下翻转后就是头朝下、脚朝上的样子。对于一些任务（比如人脸识别），上下翻转可能会破坏特征，所以一般要根据实际任务决定要不要用。 |
-| 随机左右翻转 | 指对图像进行水平翻转，就是镜像处理。                         | 概率 = 0 → 永远不会翻转。苹果的图片，左右翻转后变成苹果从左往右变成从右往左。 |
+- Click **“Create Project”**, and in the pop-up window, set the following:  
 
-![img](../img/2_professional_mode/image_13.png)
+**Name**: Fruit Recognition Model (rename as needed).
 
-- 点击“训练”，开始进行模型训练。
+**Model**: Select according to your needs (default is also fine).
 
-![img](../img/2_professional_mode/image_14.png)
+**Training Method**: Select according to your needs (default is also fine).
 
-- 模型训练过程中，可通过“训练监测”窗口，查看相关数据。
-  - 训练损失（train loss）：训练损失是模型在**训练数据**上的预测误差，损失越小，说明模型对训练数据的预测越准确。
-  - 验证损失（val loss）：验证损失是模型在**验证数**（未用于训练的数据）上的预测误差，验证损失持续下降，模型泛化能力在提升。
-  - 验证集平均精度（Val mAP50）：表示在验证集上，当预测框和真实框的重叠率大于一半（50%）时，预测才算正确。数值越高，说明模型识别得越准。
+**Dataset**: Fruit Recognition (In **Data Settings**, we have already created and named the dataset **“Fruit Recognition”**; in **Annotation Settings**, the images have also been annotated and organized. At this point, the dataset has the complete structure required for training. Next, proceed to the **Model Training** stage, where the system will extract features and learn patterns from this dataset, gradually enabling the model to classify and recognize fruits. Therefore, the dataset selected here must be **Fruit Recognition**.).
 
-![img](../img/2_professional_mode/image_15.png)
+**Training Set Ratio**: Select according to your needs (default is also fine)  .
 
-- 模型训练完成后，可在操作栏对已训练的模型执行删除、导出或查看训练结果等操作。
+| **Task Parameter** | **Purpose**                                                  | **Description**                                              |
+| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name               | Used only to distinguish and manage different training tasks; does not affect model performance | Acts as a name for this experiment, making it easier to review and compare later |
+| Model              | Determines which neural network structure to use for training | Different models have different “learning methods” and “capabilities.” For example, some models are suitable for small datasets, while others are better for complex classification tasks |
+| Training Type      | Specifies the training method, e.g., classification, regression, or detection | Tells the model “what you want it to learn”                  |
+| Dataset            | Specifies which data the model should learn from             | Acts as the “textbook”; the model learns to recognize objects from the images and labels in this dataset |
+| Training Ratio     | Determines the proportion of the dataset used for training versus validation | Training set = examples for the model to learn fromValidation set = examples for checking model performance (images the model has not seen) |
 
-![img](../img/2_professional_mode/image_16.png)
+![img](../img/2_professional_mode/1761818431006-4130c614-d220-4bce-807b-cae677af5e9a.png)
 
-### 模型校验
+- After the model training task is successfully created, click **Config Params** to enter the training parameter configuration interface. You can adjust the parameters according to your needs, or start training directly with the default settings.
 
-- 切换到“模型校验”功能模块，选择训练项目为：水果识别模型；选择模型为：best.pt。其余参数根据需求进行设置，直接使用默认参数也可以。
+- - **Basic Parameters**: Image size, Batch size, Epochs.
+  - **Advanced Parameters**: Save Period, Vertical Flip Probability, fliplr, Optimizer, etc.  
 
-| **文件** | **保存时机**                       | **代表意义**       | **使用场景**  |
-| -------- | ---------------------------------- | ------------------ | ------------- |
-| last.pt  | 训练过程中的最后一次保存的模型     | 训练完成的最终状态 | 继续训练/微调 |
-| best.pt  | 训练过程中在验证集上表现最好的模型 | 模型验证性能最佳   | 测试/部署     |
+| **Advanced Parameter**    | **Description**                                              | **Explanation**                                              |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Save Period               | The interval at which the model is saved during training to prevent data loss in case of unexpected interruptions. | Save Period = 5 → The model is saved every 5 epochs. Save Period = -1 → No automatic saving; only the last model is kept. |
+| Vertical Flip Probability | During data augmentation, the system randomly decides whether to flip the image along the horizontal axis (up-down), helping the model learn to recognize images in different orientations. | Probability = 0 → Never flips (augmentation not applied).    |
+| fliplr                    | Flips the image horizontally (mirror image).                 | Probability = 0 → Never flips. Example: An apple image, when flipped horizontally, changes orientation from left-to-right to right-to-left. |
 
-![img](../img/2_professional_mode/image_17.png)
+![img](../img/2_professional_mode/1761818599445-2787f3e9-b0d8-4846-b36b-145706fb4146.png)
 
-- **型校验支持两种方式**：摄像头实时测试、单张图片测试。
-  - **摄像头实时测试：**通过摄像头实时识别水果，并对识别的水果生成掩膜，覆盖水果轮廓。
+- Click **Train** to start the model training.
 
-![img](../img/2_professional_mode/image_18.png)
+![img](../img/2_professional_mode/1761819092270-c6663cee-6a05-4483-b80e-240706468ce3.png)
 
-- **单张图片测试：**上传一张图片进行识别验证。
+- During model training, you can view relevant data through the **Training Monitoring** window.
 
-![img](../img/2_professional_mode/image_19.png)
+- - **Training Loss (train loss):** The prediction error of the model on the training data. Lower loss indicates the model predicts the training data more accurately.
+  - **Validation Loss (val loss):** The prediction error on the validation data (data not used for training). A consistently decreasing validation loss indicates improved model generalization.
+  - **Validation mAP50 (Val mAP50):** Indicates the accuracy on the validation set where a prediction is considered correct only if the predicted box overlaps with the ground truth box by more than 50%. Higher values indicate better detection accuracy.
 
-如果对模型效果不满意，可以在“模型训练”功能模块中，重新创建任务，调整参数后再次训练模型，以进一步提升识别效果。
+- After the model training is completed, you can delete, export, or view result of the trained model from the operation bar.
 
-### 模型部署
+![img](../img/2_professional_mode/1761874714851-f354380e-b8f7-495a-b211-2f428d4be05b.png)
 
-- 模型测试结果符合需求时，切换到 “模型部署”功能模块：
-  - 可根据需求导出、转换或上传模型。
-  - 平台支持导出为 ONNX 格式，便于在其他应用环境或硬件设备中使用。
+### Model Validation  
 
-![img](../img/2_professional_mode/image_20.png)
+- Switch to the **Model Validation** module, select the training project: **Fruit Recognition Model**; select the model: **best.pt**. Other parameters can be set according to your needs, or you can use the default settings.  
 
-**如需了解模型部署及实时结果推送的操作方法，可访问以下进行学习**
+| File    | Save Timing                                                  | Meaning                                    | Use Case                        |
+| ------- | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------- |
+| last.pt | The model saved at the last step during training             | Final state at the end of training         | Continue training / fine-tuning |
+| best.pt | The model that performed best on the validation set during training | Model with the best validation performance | Testing / deployment            |
 
-- [4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment) 
+![img](../img/2_professional_mode/1761874908342-99d44d04-7604-430f-9d2a-c82d34dd3550.png)
 
-- [4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push) 
+- **Model Validation** supports two methods: **Camera Real-Time Test** and **Single Image Test**.  
 
-### 常见问题
+- - **Camera Real-Time Test**: Recognize fruits in real time through the camera, and generate masks to cover the contours of the identified fruits, visually displaying the segmentation results.  
 
-1. 在使用专业模式进行实例分割任务时，如果遇到问题，可以先参考下表进行自查和排除。
+![img](../img/2_professional_mode/1761875653049-2a919446-93f8-4e2e-88ac-99592ddab764.png)
 
-| **问题**                   | **可能原因**                           | **解决方法**                                             |
-| -------------------------- | -------------------------------------- | -------------------------------------------------------- |
-| 上传数据集时报错/无法识别  | 文件夹结构不符合 YOLO 格式，压缩包错误 | 按平台要求整理 `images`、`labels` 文件夹，并重新打包上传 |
-| 导入无标注数据后数据集为空 | 图片格式不支持                         | 使用 JPG/PNG 格式，确保每类样本 ≥20 张                   |
-| 识别效果差                 | 标注边界不闭合或不精确                 | 沿图像轮廓描绘闭合多边形，确保边界准确                   |
-| 分割不完整 / 识别不准      | 训练样本不够多样化，未启用增强         | 增加不同环境下的样本，开启数据增强                       |
+- **Single Image Test**: Upload an image for recognition and validation.
+
+![img](../img/2_professional_mode/1761876067343-d4776cd2-c831-4b7c-8a07-b099b3b4545f.png)
+
+If you are not satisfied with the model’s performance, you can go to the **Model Training** module to create a new task, adjust the parameters, and retrain the model to further improve recognition accuracy.
+
+### Model Export  
+
+- When the model test results meet your requirements, switch to the **Model Training** module to export the model.  
+
+![img](../img/2_professional_mode/1761876231844-d700f2a8-0e8a-46b1-8459-00c3025f84c1.png)
+
+The exported model can be used for deployment. To learn how to operate model deployment, you can refer to Section [4.1.4 Model Deploy.](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi)
+
+### **Common Issues**
+
+When performing instance segmentation tasks in **Advanced Mode**, if issues occur, you can first refer to the table below for self-check and troubleshooting.
+
+| Problem                                          | Possible Cause                                               | Solution                                                     |
+| ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Error or unrecognized when uploading dataset     | Folder structure does not conform to YOLO format, or compressed file is incorrect | Organize images and labels folders according to platform requirements and re-upload |
+| Dataset is empty after importing unlabeled data  | Unsupported image format                                     | Use JPG/PNG format, and ensure each class has ≥20 samples    |
+| Poor recognition performance                     | Annotation boundaries are not closed or inaccurate           | Draw closed polygons along object contours to ensure accurate boundaries |
+| Incomplete segmentation / inaccurate recognition | Training samples are not diverse enough, or data augmentation not enabled | Increase samples from different environments and enable data augmentation |

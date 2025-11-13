@@ -1,126 +1,112 @@
-# 4.1.4 模型部署
+## 1. Function Overview
 
-## 1.功能介绍
+**Model Deploy** involves exporting a trained and validated model from the Mind+ **Model** tool and running it on target hardware to perform model inference. Through deployment, the model can process data collected by cameras or sensors in real time, generate recognition results, and drive hardware devices or intelligent interactive systems, realizing practical AI applications.
 
-模型部署是将训练完成并验证效果的模型，从AI工具箱导出并运行在目标硬件上，实现模型推理应用。通过部署，模型可以对摄像头或传感器采集的数据进行实时推理，生成识别结果，用于驱动硬件设备或智能交互系统，实现AI识别功能的实际应用落地。
+Models can be deployed to various hardware devices (such as PCs, edge computing terminals, or other compatible devices). Here, we will focus on deployment and inference on the **UNIHIKER M10**, demonstrating the complete workflow of applying a model on an end device.
 
-模型可部署到多种硬件设备（如PC、边缘计算终端或其他兼容设备），这里我们将重点展示UNIHIKER M10上的部署与推理应用，以便展示模型在终端的实际应用流程。
+![img](../img/4_model_deployment/1761634295987-94af6353-97c8-4486-9d3f-5ff61cddacb8.png)
 
-![img](../img/4_model_deployment/image_01.png)
+## 2. Model Inference Explanation  
 
-## 2.模型推理解释
+- **Model Inference:** Refers to the process in which a trained model, after deployment, processes new input data and generates prediction results. Unlike the training phase, inference does not update parameters; it only performs computation and prediction.
+- **Inference Application:** Uses the results of model inference in real-world scenarios, such as automatic sorting of premium apples, facial expression recognition, or automatic pricing after product identification.
 
-- **模型推理**：指已训练模型在部署后处理新输入数据，并生成预测结果的过程。与训练阶段不同，推理阶段不进行参数更新，只进行计算和预测。
-- **推理应用**：将模型推理结果用于实际场景，如优质苹果自动分拣装置、表情识别、商品识别完成自动计价等。
+## 3. Deployment Methods  
 
-## 3.部署方式
+- **Local Inference:** Run the model directly on target devices (e.g., **UNIHIKER M10**) to perform real-time inference on camera or sensor data.
+- **Result-Driven Applications:** Control fans, servos, pumps, lights, or other peripherals based on model inference output to enable intelligent interaction or automated operations.
 
-- **本地推理**：在目标设备（如UNIHIKER M10）上直接运行模型，对摄像头或传感器数据进行实时推理。
-- **结果联动应用**：根据模型推理输出控制风扇、舵机、水泵、灯光或其他外设，实现智能交互或自动化操作。
+## 4. Application Value  
 
-## 4.应用价值
+- **Edge Inference:** Perform model computation locally on the **UNIHIKER M10** without relying on the cloud, ensuring fast and stable response.
+- **Practical AI Applications:** Directly drive hardware through inference results, enabling scenarios like gesture control, facial expression recognition, and object detection.
+- **Teaching & Practice:** Demonstrates the complete workflow from model training and deployment to inference application, helping users understand AI applications in real life.
 
-- **边缘推理**：在UNIHIKER M10本地完成模型计算，无需依赖云端，响应快速且稳定。
-- **智能应用落地**：通过推理结果直接驱动硬件，实现手势控制、表情识别、物体检测等场景。
-- **教学与实践**：展示AI模型从训练、部署到推理应用的完整流程，便于理解AI在实际生活中的应用。
+## 5. Operation Workflow  
 
-## 5.操作流程
+**Note:** The following **Operation Workflow** mainly applies to exporting, inferring, and applying a model after its validation results meet expectations. For detailed steps on **Model** training, please refer to the corresponding **Model Operation Guide**.
 
-> **注意**：以下操作流程主要针对模型校验结果符合预期后的模型导出、推理及应用。关于模型训练的详细步骤，可参考对应的模型操作指南。
+###  5.1 Export Model  
 
-### 5.1导出模型
+- Once the model’s validation results meet expectations, the model files can be exported (using the model in **Quick Start** as an example). Click **Export Model** to export the model as an ONNX file and a YAML configuration file, select the save location, and complete the export process.
 
-- 当模型的校验结果符合预期后，即可导出模型文件（模型文件以2. 快速开始中的模型为例）。点击“导出模型”将模型导出为ONNX格式的文件和yaml格式的配置文件，选择保存位置并完成模型文件导出。
-  - **ONNX** **文件**：用于模型部署和推理。
-  - **YAML** **配置文件**：用于记录模型参数及部署配置。
+- - **ONNX File:** Used for model deployment and inference.
+  - **YAML Configuration File:** Records model parameters and deployment settings.
 
-![img](../img/4_model_deployment/image_02.png)
+![img](../img/4_model_deployment/1761639290414-cf1e9ec5-1520-4b76-9164-44356c2f593b.png)
 
-建议将整个模型训练项目保存为项目文件，以便后续优化或调整模型：
+It is recommended to save the entire Model project as a project file for later optimization or adjustment:  
 
-- 打开 “快速体验” 菜单，选择 “保存项目”。
-- 选择保存路径并点击 确认。
-- 后续可通过 “快速体验” → “打开项目”，重新打开已保存的项目文件。
+- Open the “Quick Experience” menu and select “Save Project”.
+- Choose the save path and click “Confirm”.
+- Later, you can reopen the saved project file through “Quick Experience” → “Open Project”.  
 
-![img](../img/4_model_deployment/image_03.png)
+![img](../img/4_model_deployment/1761640813249-af1bc32d-d8cc-42b0-8e20-a7617b44366c.png)
 
-### 5.2 Python模式 - 行空板M10
+### 5.2 Taking the UNIHIKER M10 as an example
 
-#### 5.2.1 硬件准备
+#### **5.2.1 Hardware Preparation**
 
-- 硬件清单
+- Hardware List  
 
-| ![img](../img/4_model_deployment/image_04.png) | ![img](../img/4_model_deployment/image_05.png) | ![img](../img/4_model_deployment/image_06.png) |
+| ![img](../img/4_model_deployment/1761628510806-5bd9820a-31f4-42fb-bc78-0f1b85bf6cdd.png) | ![img](../img/4_model_deployment/1761628510921-58f8d649-ebf9-4729-b2c7-622e888e2928.png) | ![img](../img/4_model_deployment/1761628511410-bae76cca-129a-41e4-9cc9-c92ad4c19073.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [行空板M10（系统版本：0.4.1）](https://www.dfrobot.com.cn/goods-3404.html) | [USB摄像头](https://www.dfrobot.com.cn/goods-2847.html)      | [USB数据线](https://www.dfrobot.com.cn/goods-2977.html)      |
 
-- 硬件连接
-  - 请参照下方连接图，完成电脑、行空板与 USB 摄像头的连接：
+- Hardware Connection  
 
-![img](../img/4_model_deployment/image_07.png)
+- - Please refer to the connection diagram below to connect the computer, UNIHIKER M10, and USB camera:
 
-#### 5.2.2编程环境和扩展准备
+![img](../img/4_model_deployment/1761628511545-2201c7f7-3ad5-4410-b39b-4c3ea12ebde0.png)
 
-- 新建程序设计项目：在程序设计中，选择“Python积木模式”。
+#### 5.2.2 Programming Environment and Extension Preparation  
 
-![img](../img/4_model_deployment/image_08.png)
+-  Create a new Program Design project: In Program Design, select **“Python Block Mode”**.  
 
-- 添加主控：点击“扩展”，在搜索框中输入“行空板”，点击扩展板上的“下载”按钮。下载完成后，点击扩展包完成加载，最后点击“返回”，返回编程界面。
+![img](../img/4_model_deployment/1761641173322-7d4869ae-6df8-4dac-b99c-dcd036e98c2f.png)
 
-![img](../img/4_model_deployment/image_09.png)
+- Add Main Controller: Click **Extension**, enter “UNIHIKER” in the search box, and click the **Download** button on the expansion board. After the download is complete, click the extension package to finish loading, then click **Back** to return to the coding interface.  
 
-- 连接终端设备：在终端连接选项中，选择“默认-10.1.2.3”以连接行空板。
+![img](../img/4_model_deployment/1761641707553-18712296-70d4-4522-9315-ed02e923d727.png)
 
-![img](../img/4_model_deployment/image_10.png)
+-  Connect the Terminal Device: In the terminal connection options, select **“Default-10.1.2.3”** to connect the UNIHIKER M10.  
 
-- 切换Python版本：在终端中输入“python --version”后按“回车键”以检查行空板M10的python环境版本。如果不是指定版本3.12.7，在终端输入“pyenv global 3.12.7”以切换为该版本。
+![img](../img/4_model_deployment/1761641986784-507ce582-5ff6-4966-b752-1a0f48212eb1.png)
 
-![img](../img/4_model_deployment/image_11.png)
+- **UNIHIKER M10 network configuration:** Since the dependent libraries need to be downloaded onto the UNIHIKER M10, you must first connect the board to a network.
 
-- 行空板网络配置：由于依赖库是要下载到行空板中的，因此，需要先给行空板联网。
+![img](../img/4_model_deployment/1761716656266-1cf9f634-2e48-4d6d-a6de-2160aa41f09a.png)
 
-![img](../img/4_model_deployment/image_12.png)
+- **Add Model Training User Library:** Click “Extensions,” enter “Model Training” in the search box, and click the “Download” button on the library. After the download is complete, click the extension package to finish loading, then click “Return” to go back to the coding interface.  
 
-- 添加模型训练用户库：点击“扩展”，在搜索框中输入“模型训练”，点击扩展库上的“下载”按钮。下载完成后，点击扩展包完成加载，最后点击“返回”，返回编程界面。
+![img](../img/4_model_deployment/1761717057262-679c475f-0e21-428e-a09d-e4c287febe1e.png)
 
-![img](../img/4_model_deployment/image_13.png)
+#### 5.2.3 Model Inference and Application  
 
-扩展库添加完成后，如果出现下载指定依赖库的提示，按照提示点击“立即下载”即可。
+- Upload Model  
 
-![img](../img/4_model_deployment/image_14.png)
+Upload the exported ONNX file and YAML configuration file to the target environment or hardware platform.
+This project is implemented based on the model trained and exported in the **Quick Start** example.  
 
-#### 5.2.3模型推理与应用
+![img](../img/4_model_deployment/1761717588361-804f189d-89e3-4d83-9413-c43e6726227b.png)
 
-- 上传模型
-  - 将导出的 ONNX 文件及yaml配置文件上传到目标环境或硬件平台。
+- Programming  
 
-本项目基于2.快速开始操作示例中训练并导出的模型进行实现。
+When a happy expression is recognized, display the corresponding happy image and prompt text on the UNIHIKER M10 screen; when an angry expression is recognized, display the angry expression and corresponding prompt text.
 
-![img](../img/4_model_deployment/image_15.png)
+Write a program to call the model for inference according to the actual application requirements.  
 
-- 编写程序
-  - 当识别到开心表情时，在M10屏幕上显示对应的开心图片以与对应的提示文字；当识别到愤怒表情时，在M10屏幕上显示愤怒的表情与对应的提示文字。
-  - 根据实际应用需求，编写调用模型进行推理的程序。
+![img](../img/4_model_deployment/1761628513021-dc20fe16-be98-4446-ac02-0833cd812f0d.png)
 
-![img](../img/4_model_deployment/image_16.png)
+- Run and Validate
 
-- 运行并验证
-
-| 图像分类结果为：开心                                         | 图像分类结果为：愤怒                                         |
+| The Image Classification result is: Happy                    | The Image Classification result is: Angre                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![img](../img/4_model_deployment/image_17.png) | ![img](../img/4_model_deployment/image_18.png) |
+| ![img](../img/4_model_deployment/1761628513198-1b1ff93b-5ab8-45aa-b46f-99ac03f34622.png) | ![img](../img/4_model_deployment/1761628513149-774af88a-09d5-4e0e-adb6-d78eec41a981.png) |
 
-### 5.3 上传模式 - 行空板K10
+## 6. More Model Deployment and Inference Application Cases
 
-- 暂不支持，持续开发中。
-
-### 5.4 实时模式 - 电脑
-
-- 暂不支持，持续开发中。
-
-## 6. 更多模型部署推理应用案例
-
-| 相关模型 | 应用案例                                                     | 案例描述                                                     |
-| -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 目标检测 | [商品自动检测与计价装置](https://h7dvigefi0.feishu.cn/drive/folder/XT8wffG7ilCSvOd9blscx8ianve) | 本项目基于目标检测技术，实现商品的自动识别与计价功能。系统通过摄像头实时采集货架或购物篮中的商品图像，利用训练好的目标检测模型识别每个商品的类别与位置，并根据商品信息计算总价格。 |
-| 图像分类 | [表情识别驾驶伙伴](https://h7dvigefi0.feishu.cn/drive/folder/NBRnf1qOVlRf77dKb6fcYrD0ntc) | 本项目基于图像分类技术，根据实时检测到的表情给予不同的互动反馈。当驾驶员表现出生气表情时，系统会友善地提醒“别生气，放轻松”，帮助舒缓情绪；当驾驶员展现出开心表情时，系统则会回应“我们来一起唱歌吧！”，为旅途增添轻松与乐趣。 |
+| Related Model        | Application Case                                             | Case Description                                             |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Object Detection     | Automatic Product Detection and Pricing Device               | This project uses object detection technology to automatically recognize and price products. The system captures real-time images of items on shelves or in shopping baskets through a camera, identifies each product’s category and location using a trained detection model, and calculates the total price based on product information. |
+| Image Classification | [Emotion Recognition Driving Companion](https://h7dvigefi0.feishu.cn/drive/folder/E0zXfpt63lghKpdKceoc5NWanJe) | This project leverages image classification to provide interactive responses based on real-time facial expressions. When the driver shows an angry expression, the system gently reminds, “Don’t be upset, take it easy.” When the driver smiles, it cheerfully responds, “Let’s sing together!”, creating a relaxed and enjoyable driving experience. |

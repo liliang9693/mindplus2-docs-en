@@ -1,174 +1,170 @@
-# 【目标检测】 专业模式 
+# 【Object Detection】 Advanced Mode
 
-本项目以 “野生动物识别” 为案例，带领用户在专业模式下完成目标检测任务。通过该案例，不仅能够学习基本流程（数据设置、数据标注、模型训练），还可以进一步体验专业模式中的进阶功能，如自定义训练参数、观察训练曲线、调整数据增强策略等，从而更精细地掌控模型训练过程并不断优化模型效果。 当模型训练完成后，系统即可对新图像中的野生动物进行准确检测与识别。
+This project uses **“Wild Animal Recognition”** as a case study to guide users through performing an object detection task in professional mode. Through this example, users can not only learn the basic workflow (data setup, data annotation, model training) but also experience advanced features in professional mode, such as customizing training parameters, observing training curves, and adjusting data augmentation strategies. This allows for more precise control over the model training process and continuous optimization of model performance. Once the model training is complete, the system can accurately detect and recognize wild animals in new images.
 
-- **效果：** 可以在上传的图片或摄像头画面中，对野生动物进行实时识别和框选标记，用不同颜色矩形框标记出 buffalo（水牛）、elephant（大象）、rhino（犀牛）、zebra（斑马）等野生动物目标的位置。
-- **效果展示：**
+● **Effect**: The system can perform real-time recognition and bounding box marking of wild animals in uploaded images or camera feeds. Different colored rectangles indicate the positions of targets such as **buffalo**, **elephant**, **rhino**, and **zebra**.
 
-![img](../img/2_professional_mode/image_01.png)
 
-### 模式切换
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。在训练选项中找到 “目标检测（M2）” 并点击，即可完成项目创建。
+### Mode Switching
 
-![img](../img/2_professional_mode/image_02.png)
+- Open Mind+, select “New Project” from the menu bar, then click “Model”. In the training options, locate “Object Detection (M2)” and click it to create the project.
 
-- 在界面右上角点击 “专业模式” 以切换模式。切换成功后，菜单栏将新增以下功能模块：数据设置、标注设置、模型训练、模型校验和模型部署。
+![img](../img/2_professional_mode/1761806357004-ae924f0e-43d1-4399-b5d2-795e4af36082.png)
 
-![img](../img/2_professional_mode/image_03.png)
+- Click **"Advanced Mode"** in the top-right corner of the interface to switch modes. Once switched successfully, the menu bar will add the following modules: **Data Settings**, **Annotation Settings**, **Model Training**, and **Model Validation**.
 
-### 数据设置
+![img](../img/2_professional_mode/1761889584367-d76a4e9e-c6ff-4591-91a2-5e6504dc5e68.png)
 
-- 切换到 “数据设置” → 点击左上角 “创建数据集”，例如创建一个名为野生动物识别的数据集。
+### Data Settings
 
-![img](../img/2_professional_mode/image_04.png)
+- Switch to "Data Settings" → Click "Create" at the top left, for example, create a dataset named **Wild Animal Recognition**.  
 
-- 切换到专业模式后，数据集列表中会默认显示一个 “Experience” 数据集，该数据集由快速体验模式生成。用户可以对新建数据集执行以下操作：标注、复制、导入数据、导出以及删除。
+![img](../img/2_professional_mode/1761889721366-94d81fc6-f45c-474d-90e2-8f20755827f2.png)
 
-注意：默认数据集不可删除。
+- After switching to Advanced Mode, the dataset list will display a default "Experience" dataset, which is generated from the Quick Experience mode. Users can perform the following operations on newly created datasets: annotation, copy, import data, export, and delete.  
 
-![img](../img/2_professional_mode/image_05.png)
+ Note: The default dataset cannot be deleted.  
 
-- 接下来，为新建的野生动物识别数据集执行 “导入数据” 操作。系统支持两种导入方式：有标注数据和无标注数据。
-- **导入方式1：无标注数据导入**
-  - 适用于仅上传原始图片的情况（如大象、斑马混合在一起的图片，且每种类别图片数量不低于20张）。
-  - 操作步骤：选择导入类型为 “无标注数据” → 点击 “点击上传” → 从本地选择图片 → 点击“确认”完成导入。
+![img](../img/2_professional_mode/1761889846247-90e250d2-0b8b-4a9a-8181-f39e9c955c2a.png)
 
-![img](../img/2_professional_mode/image_06.png)
+- Next, perform the “Import Data” operation for the newly created **Wild Animal Recognition** dataset. The system supports two import methods: **Labeled Data** and **Unlabeled Data**.  
+- Import Method 1: Unlabeled Data  
 
-  -  **导入方式2：有标注数据**
-- 直接上传 YOLO 格式的已标注数据（.zip 压缩包）。
-- 按照平台要求组织文件夹结构，上传后无需手动标注，直接跳转到模型训练。
+- - Suitable for uploading only raw images (e.g., images containing a mix of apples, pears, and bananas, with at least 20 images per category).  
 
-![img](../img/2_professional_mode/image_07.png)
+**Steps:**
 
-![img](../img/2_professional_mode/image_08.png)
+1. Select the import type as **NO annotations.**
+2. Click **Import Data.**
+3. Choose images from your local device.
+4. Click **Confirm** to complete the import.
 
-注意：有标注数据的分类名称需使用英文，否则上传后标签可能出现乱码。如案例中使用的野生动物标签buffalo（水牛）elephant（大象）、rhino（犀牛）、zebra（斑马）
+![img](../img/2_professional_mode/1761890143958-6da1e4ed-28b6-4148-831f-65f2409e07aa.png)
 
-![img](../img/2_professional_mode/image_09.png)
+Import Method 2: **With Annotations**
 
-**标注设置**
+- Directly upload YOLO-formatted annotated data (.zip file).
+- Organize the folder structure according to platform requirements. After uploading, manual annotation is not needed, and the system will directly proceed to model training.  
 
-- 野生动物图片（有标注数据）导入成功后，标注进度栏会同步显示已导入的图片数量及对应的标注数量。
+![img](../img/2_professional_mode/1761890377996-39b4d8ff-4743-43e9-841e-f8289768843e.png)
 
-![img](../img/2_professional_mode/image_10.png)
+### **Annotation Settings**
 
-- 如显示有数据无标注（198/200），则需要手动对数据进行标注
+- After successfully importing the **wild animal images (With annotations Data)**, the annotation progress bar will automatically display the number of imported images and the corresponding number of annotations.
 
-![img](../img/2_professional_mode/image_11.png)
+![img](../img/2_professional_mode/1761890684732-fde85d7a-d64f-4b06-b2ee-f18ae4c8ea34.png)
 
-- 在“操作”栏中点击 “标注”，进入野生动物识别的标注设置界面。
+- If it shows **No annotations Data (1504/1525)**, you need to manually annotate the remaining data.
 
-![img](../img/2_professional_mode/image_12.png)
+![img](../img/2_professional_mode/1761890979816-63f866c9-4938-4edb-af4e-e5ec1f9ac377.png)
 
-按照界面提示完成标签创建（buffalo - 水牛、elephant - 大象、rhino - 犀牛、zebra - 斑马），用于标注不同类别的野生动物。
+- Click **“Annotate”** in the **“Actions”** panel to enter the annotation settings interface for Wild Animal Recognition.
 
-![img](../img/2_professional_mode/image_13.png)
+![img](../img/2_professional_mode/1761891011938-6247af70-d181-4eac-a10d-eaa2d3cd657c.png)
 
-- 接下来为数据集进行标注。操作时先点击对应的标签名，通过鼠标左键点击目标一角，对角下拉至目标对角，再点一次左键形成矩形框（完整框选目标）。
-  - > “Ctrl+数字键1/2/3..."可快捷切换选择不同标签
+Follow the interface prompts to create labels (**buffalo**, **elephant**, **rhino**, **zebra**) for annotating different categories of wildlife.
 
-**数据集样本标注注意事项：**
+![img](../img/2_professional_mode/1761891256047-fd2b3731-598a-4712-a218-06e808126042.png)
 
-1. 标注过程中，需要将数据集中所有图片样本逐一完成标注。
-2. 如果一张图片中有多个野生动物目标，需要为每一个目标都进行标注。
+Next, annotate the dataset. When annotating, first click the corresponding label name, then use the left mouse button to click one corner of the target, drag to the opposite corner, and click again to form a rectangular box that fully encloses the target.
+Press **Ctrl + number key (1/2/3 …)** to quickly switch between different labels.
 
-![img](../img/2_professional_mode/image_14.png)
+**Notes for dataset annotation:**
 
-![img](../img/2_professional_mode/image_15.png)
+1. During annotation, all images in the dataset must be annotated one by one.
+2. If an image contains multiple wildlife targets, each target must be annotated separately.
 
-### 模型训练
+![img](../img/2_professional_mode/1761891325724-23e5b1ce-e894-4ccd-8019-5856bd5eeefb.png)
 
-- 所有图片都标注完成后，点击右上角切换到“模型训练”功能模块
+### Model Training
 
-![img](../img/2_professional_mode/image_16.png)
+- After all images have been annotated, switch to the **Model Training** module.
 
-- 点击 “创建训练任务”，在弹出的窗口中进行如下设置：
-  - **名称**：野生动物识别模型（根据需求自行命名）
-  - **模型**：根据自己需求进行选择（也可保持默认）
-  - **训练类型**：根据自己需求进行选择（也可保持默认）
-  - **数据集**：野生动物识别（在数据设置中，我们已创建并命名数据集 **“野生动物识别”**；在标注设置中，也完成了图片的标注与整理。至此，数据已具备训练所需的完整结构。接下来进入模型训练阶段，系统将基于该数据集对图片进行特征提取与模式学习，从而逐步具备对不同野生动物进行分类识别的能力。所以，这里的数据集必须选择野生动物识别。）
-  - **训练比例**：根据自己需求进行选择（也可保持默认）
+![img](../img/2_professional_mode/1761891508692-821c0f76-f0fa-4fdb-bff5-df370dbcf0e9.png)
 
-| **创建任务参数** | **作用**                                               | **说明**                                                     |
-| ---------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| 名称             | 仅用于区分和管理不同的训练任务，不会影响模型性能。     | 相当于给这次实验取一个名字，方便后续查看和比较。             |
-| 模型             | 决定使用哪一种神经网络结构来训练。                     | 不同的模型有不同的“学习方式”和“理解能力”。比如，有的模型适合处理小型数据集，有的模型更适合复杂的分类任务。 |
-| 训练类型         | 确定训练的方式，比如是**分类**、**回归**还是**检测**。 | 告诉模型“你要学会干什么”。                                   |
-| 数据集           | 告诉模型要从哪些数据中学习。                           | 相当于教材，模型会从这个数据集的图片和标签里，学习如何识别不同交通标志。 |
-| 训练比列         | 决定数据集中多少比例用来训练，多少比例用来验证。       | 训练集 = 模型学习用的例子验证集 = 检查模型学习效果的例子（模型没见过的图片） |
+-  Click **“Create Project”**, and in the pop-up window, configure the following settings:
+  **Name**: Wild Animal Recognition Model (customize as needed)
+  **Model**: Select according to your requirements (or keep the default)
+  **Training Method**: Select according to your requirements (or keep the default)
+  **Dataset**: Wild Animal Recognition (In Data Settings, we have created and named the dataset **“Wild Animal Recognition”**; in Data Annotation, all images have been labeled and organized. The dataset is now fully prepared for training. The system will use this dataset to extract features and learn patterns from the images, gradually enabling the model to classify different wild animals. Therefore, make sure to select the **Wild Animal Recognition** dataset here.)
+  **Training Ratio**: Select according to your requirements (or keep the default)  
 
-![img](../img/2_professional_mode/image_17.png)
+| Task Parameter | Purpose                                                      | Description                                                  |
+| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Name           | Used only to distinguish and manage different training tasks; does not affect model performance. | Like giving a name to this experiment, making it easier to review and compare later. |
+| Model          | Determines which neural network architecture to use for training. | Different models have different "learning methods" and "capabilities". For example, some models are suitable for small datasets, while others are better for complex classification tasks. |
+| Training Type  | Specifies the type of training, such as classification, regression, or detection. | Tells the model "what you want it to learn".                 |
+| Dataset        | Indicates which data the model should learn from.            | Acts like a textbook; the model will learn to recognize different traffic signs from the images and labels in this dataset. |
+| Training Ratio | Determines what proportion of the dataset is used for training and what proportion for validation. | Training set = examples for the model to learn from Validation set = examples to check the model’s learning performance (unseen by the model). |
 
-- 模型训练任务创建成功后，点击“参数设置”进入训练参数配置界面。你可以根据需要调整参数，也可以直接使用默认设置开始训练。
-  - 基础参数设置：图片大小、批次大小、训练轮次
-  - 高级参数设置：保存频率、随机上下翻转概率、随机左右翻转概率、优化器等
+![img](../img/2_professional_mode/1761891981605-4086f4db-801d-47f0-964b-e5efd8d763ae.png)
 
-| 高级参数     | 说明                                                         | 说明                                                         |
-| ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 保存频率     | 指训练时模型保存的间隔，防止训练过程中意外中断导致数据丢失。 | 保存频率 = 5 → 每 5 轮训练保存一次模型。保存频率 = -1 → 不自动保存，只留最后一个模型。 |
-| 随机上下翻转 | 指对图像进行数据增强时，系统会随机决定是否把图像沿着水平中轴线（上下方向）翻转，让模型学会识别不同方向的图像。 | 概率 = 0 → 永远不会翻转（等于没开启这个增强）。一只犀牛的照片，随机上下翻转后就是头朝下、脚朝上的样子。对于一些任务（比如人脸识别），上下翻转可能会破坏特征，所以一般要根据实际任务决定要不要用。 |
-| 随机左右翻转 | 指对图像进行水平翻转，就是镜像处理。                         | 概率 = 0 → 永远不会翻转。大象的图片，左右翻转后头到尾从左往右变成从右往左。 |
+- After the model training task is successfully created, click **Config Params** to enter the training parameter configuration interface. You can adjust the parameters according to your needs, or start training directly with the default settings.
 
-![img](../img/2_professional_mode/image_18.png)
+- - **Basic Parameters**: Image size, Batch size, Epochs.
+  - **Advanced Parameters**:  Save Period, Vertical Flip Probability, fliplr, Optimizer, etc.  
 
-- 点击“训练”，开始进行模型训练。
+| Parameter                 | Description                                                  | Explanation                                                  |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Save Period               | The interval at which the model is saved during training, preventing data loss in case of unexpected interruptions. | Save Frequency = 5 → Save the model every 5 epochs. Save Frequency = -1 → Do not save automatically, only keep the final model. |
+| Vertical Flip Probability | During data augmentation, the system randomly decides whether to flip the image along the vertical axis (top-bottom) so the model can learn to recognize objects in different orientations. | Probability = 0 → Never flip (augmentation is disabled). Example: A photo of a rhino, after vertical flip, appears upside down. For some tasks (e.g., face recognition), vertical flip may destroy features, so enable it based on the task. |
+| fliplr                    | Randomly flips the image horizontally (mirror image).        | Probability = 0 → Never flip. Example: An image of an elephant, after horizontal flip, changes its head-to-tail orientation from left-to-right to right-to-left. |
 
-![img](../img/2_professional_mode/image_19.png)
 
-- 模型训练过程中，可通过“训练监测”窗口，查看相关数据。
-  - 训练损失（train loss）：训练损失是模型在训练数据上的预测误差，损失越小，说明模型对训练数据的预测越准确。
-  - 验证损失（val loss）：验证损失是模型在验证数（未用于训练的数据）上的预测误差，验证损失持续下降，模型泛化能力在提升。
-  - 验证集平均精度（Val mAP50）：表示在验证集上，当预测框和真实框的重叠率大于一半（50%）时，预测才算正确。数值越高，说明模型识别得越准。
-- 模型训练完成后，可在操作栏对已训练的模型执行删除、导出和查看训练结果等操作。
 
-![img](../img/2_professional_mode/image_20.png)
+![img](../img/2_professional_mode/1761892535557-2d415b5c-ccf6-4c17-b17c-426581b45d89.png)
 
-### 模型校验
+- Click **Train** to start the model training.
 
-- 切换到“模型校验”功能模块，选择训练项目为：野生动物识别模型；选择模型为：best.pt。其余参数根据需求进行设置，直接使用默认参数也可以。
+![img](../img/2_professional_mode/1761893692017-800eba71-7975-4071-a8cc-a77c6b5c72ae.png)
 
-| **文件** | **保存时机**                       | **代表意义**       | **使用场景**  |
-| -------- | ---------------------------------- | ------------------ | ------------- |
-| last.pt  | 训练过程中的最后一次保存的模型     | 训练完成的最终状态 | 继续训练/微调 |
-| best.pt  | 训练过程中在验证集上表现最好的模型 | 模型验证性能最佳   | 测试/部署     |
+- During model training, you can view relevant data through the **Training Monitoring** window.
 
-![img](../img/2_professional_mode/image_21.png)
+- - **Training Loss (train loss):** The prediction error of the model on the training data. Lower loss indicates the model predicts the training data more accurately.
+  - **Validation Loss (val loss):** The prediction error on the validation data (data not used for training). A consistently decreasing validation loss indicates improved model generalization.
+  - **Validation mAP50 (Val mAP50):** Indicates the accuracy on the validation set where a prediction is considered correct only if the predicted box overlaps with the ground truth box by more than 50%. Higher values indicate better detection accuracy.
 
-**校验支持两种方式：摄像头实时测试、单张图片测试。**
+- After the model training is completed, you can delete, export, or view result of the trained model from the operation bar.
 
-- **摄像头实时测试：** 通过摄像头实时识别动物，并对识别的野生动物斑马生成彩色矩形框，框选野生动物目标，并显示类别及置信度。
+![img](../img/2_professional_mode/1761895201608-426ab4e4-29d6-4614-a74e-c92ff6bea88e.png)
 
-![img](../img/2_professional_mode/image_22.png)
+### Model Validation  
 
-- **单张图片测试：** 上传一张图片进行识别验证。
+- Switch to the **Model Validation** module, select the training project: **Wild Animal Recognition Model**; select the model: **best.pt**. Other parameters can be set according to your needs, or you can use the default settings.  
 
-![img](../img/2_professional_mode/image_23.png)
+| File    | Save Timing                                                  | Meaning                                    | Use Case                        |
+| ------- | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------- |
+| last.pt | The model saved at the last step during training             | Final state at the end of training         | Continue training / fine-tuning |
+| best.pt | The model that performed best on the validation set during training | Model with the best validation performance | Testing / deployment            |
 
-如果对模型效果不满意，可以在“模型训练”功能模块中，重新创建任务，调整参数后再次训练模型，以进一步提升识别效果。
+- **Model Validation** supports two methods: **Camera Real-Time Test** and **Single Image Test**.  
 
-### 模型部署
+- - **Camera Real-Time Test**: Recognize fruits in real time through the camera, and generate masks to cover the contours of the identified fruits, visually displaying the segmentation results.  
 
-- 模型测试结果符合需求时，切换到 “模型部署”功能模块：
-  - 可根据需求导出、转换或上传模型。
-  - 平台支持导出为 ONNX 格式，便于在其他应用环境或硬件设备中使用。
+![img](../img/2_professional_mode/1761895508728-d98e8327-e39a-4b2b-84cc-deb90dffaa46.png)
 
-![img](../img/2_professional_mode/image_24.png)
+- **Single Image Test**: Upload an image for recognition and validation.
 
-**如需了解模型部署及实时结果推送的操作方法，可访问以下进行学习**
+![img](../img/2_professional_mode/1761895747089-6f0fdf12-e293-4537-90be-6b4feee23d82.png)
 
-- [4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment) 
+If you are not satisfied with the model’s performance, you can go to the **Model Training** module to create a new task, adjust the parameters, and retrain the model to further improve recognition accuracy.
 
-- [4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push) 
+### Model Export  
 
-### 常见问题
+- When the model test results meet your requirements, switch to the **Model Training** module to export the model.  
 
-1. 在使用专业模式进行目标检测任务时，如果遇到问题，可以先参考下表进行自查和排除。
+![img](../img/2_professional_mode/1761895849427-cf1a6906-cd69-422e-bb21-0c79d17f25d7.png)
 
-| **问题**                   | **可能原因**                           | **解决方法**                                                 |
-| -------------------------- | -------------------------------------- | ------------------------------------------------------------ |
-| 上传数据集时报错/无法识别  | 文件夹结构不符合 YOLO 格式，压缩包错误 | 按平台要求整理 `images`、`labels` 文件夹，并重新打包上传     |
-| 导入无标注数据后数据集为空 | 图片格式不支持                         | 使用 JPG/PNG 格式，确保每类样本 ≥20 张                       |
-| 识别效果差                 | 标注边界不闭合或不精确                 | 沿目标边缘描绘完整矩形框，确保框选目标主体（如包含斑马的躯干 + 头部） |
-| 检测不完整 / 识别不准      | 训练样本不够多样化，未启用增强         | 增加不同环境下的样本，开启数据增强                           |
+The exported model can be used for deployment. To learn how to operate model deployment, you can refer to Section [4.1.4 Model Deploy.](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi)
+
+### **Common Issues**
+
+When performing instance segmentation tasks in **Advanced Mode**, if issues occur, you can first refer to the table below for self-check and troubleshooting.
+
+| Problem                                          | Possible Cause                                               | Solution                                                     |
+| ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Error or unrecognized when uploading dataset     | Folder structure does not conform to YOLO format, or compressed file is incorrect | Organize images and labels folders according to platform requirements and re-upload |
+| Dataset is empty after importing unlabeled data  | Unsupported image format                                     | Use JPG/PNG format, and ensure each class has ≥20 samples    |
+| Poor recognition performance                     | Annotation boundaries are not closed or inaccurate           | Draw closed polygons along object contours to ensure accurate boundaries |
+| Incomplete segmentation / inaccurate recognition | Training samples are not diverse enough, or data augmentation not enabled | Increase samples from different environments and enable data augmentation |

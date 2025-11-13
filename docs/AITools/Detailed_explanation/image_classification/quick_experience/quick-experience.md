@@ -1,126 +1,133 @@
-### 图像分类-快速体验
 
-图像分类的快速体验操作步骤以**“猫狗识别”**案例为例，带领大家学习图像分类模型的训练流程。该案例主要演示图像分类在实际应用中的效果：模型不仅能够识别图片中的猫或狗，还能对摄像头实时采集的画面进行分类，帮助用户直观理解图像分类的基本原理与应用价值。
+The “Quick Experience” operation steps for **Image Classification** use a “Cat vs. Dog” case to guide users through the training process of an image classification model. This case mainly demonstrates the practical application of image classification: the model can not only identify cats or dogs in pictures but also classify real-time footage captured by the camera, helping users intuitively understand the basic principles and application value of image classification.
 
-- 效果：通过摄像头或上传图片，可以看到每张图片或实时画面被识别为“猫”或“狗”，屏幕上同步显示预测标签和对应置信度，直观展示模型分类能力。
-- 效果展示：
+**Effect:** By using the camera or uploading images, each picture or real-time frame can be recognized as “Cat” or “Dog,” with the prediction label and corresponding confidence displayed on the screen, visually demonstrating the model’s classification capability.
 
-![img](../img/1_quick_experience/img.gif)
 
-图像分类模型训练实现过程分为五个步骤：
 
-- **新建项目** —— 创建图像分类项目并准备数据集；
-- **新增类别** —— 添加待识别的分类标签（如“猫”“狗”），并通过摄像头采集（或上传本地）对应的图像数据集；
-- **训练模型** —— 通过平台训练得到图像分类模型；
-- **模型校验** —— 测试模型效果。
-- **模型部署** —— 模型训练完成后，可以将其导出并部署到硬件设备，实现本地运行与应用。同时，用户还可以选择将模型的识别结果进行实时推送，便于远程监测与管理。
+The process of training an image classification model is divided into five steps:
 
-### 步骤1：新建项目
+1. **Create Project** ：Create an image classification project and prepare the dataset.
+2. **Add Categories**：Add classification labels to be recognized (e.g., “Cat” and “Dog”) and collect corresponding image data via the camera or upload from local files.
+3. **Train Model**： Train the image classification model using the platform.
+4. **Model Validation**：Test and verify the model’s performance.
+5. **Model Deploy**： After training, the model can be exported and deployed to hardware devices for local execution and application. Users can also choose to push the model’s recognition results in real time for remote monitoring and management.
 
-- 打开 Mind+，在菜单栏中选择 “新建项目”，然后点击 “模型训练”。在训练选项中找到 “图像分类（M1）” 并点击，即可完成项目创建。
+### Step 1: Create Project
 
-![img](../img/1_quick_experience/image_01.png)
+- Open Mind+, select “New Project” from the menu bar, then click “Model”. In the training options, locate “Image Classification (M1)” and click it to create the project.
 
-- 项目创建成功后，会跳转到新的图像分类快速体验界面。
+![img](../img/1_quick_experience/1761721555205-906ef868-b5af-4513-a767-0405df699952.png)
 
-![img](../img/1_quick_experience/image_02.png)
+- After the project is successfully created, it will jump to the new **Image Classification – Quick Start** interface.
 
-### 步骤2：新增类别
+![img](../img/1_quick_experience/1761722297268-25a127d3-77b0-4a50-b7dd-ef4df0e9ce5b.png)
 
-- 点击 “新增类别” 按钮，即可为图像分类任务添加所需的类别。用户可以根据项目需求，添加多个类别，用于后续的数据采集与模型训练。
+### Step 2: Add Category
 
-![img](../img/1_quick_experience/image_03.png)
+- Click the **“Add Category”** button to add the required categories for the image classification task. Users can add multiple categories according to project needs, which will be used for subsequent data collection and model training.
 
-- 类别创建成功后，可以通过两种方式添加图片样本：
-  - **摄像头采集**：适合现场拍摄，快速获取实时图像，方便在实验过程中直接收集数据。
-  - **本地上传**：适合导入已准备好的图片素材，便于批量添加和管理现有数据。
-- 通过这两种方式，用户能够灵活地构建数据集，为后续的模型训练做好准备。
+![img](../img/1_quick_experience/1761722544628-89bab139-b6fc-4aff-9422-4f2a5e3c05bc.png)
 
-![img](../img/1_quick_experience/image_04.png)
+- Once categories are created successfully, images can be added in two ways:
 
-- 样本添加方式1：摄像头采集
-  - 点击摄像头，将摄像头对准目标，可通过预览框，查看摄像头采集到的画面是否有效，按“录制”进行样本采集。图片样本采集完成后，点击“×”退出采集画面。
-  - 注：如果台式机没有摄像头，可通过外接USB摄像头。
-  - ![img](../img/1_quick_experience/image_05.png)
+- - **Webcam**: Suitable for on-site shooting, quickly obtaining real-time images, convenient for directly collecting data during experiments.
+  - **Upload**: Suitable for importing pre-prepared image materials, allowing batch addition and management of existing data.
 
-  - 在采集样本数据时，可通过“设置”按钮，设置摄像头的采集帧率（每秒采集的图片数，数值越高采集越快）。
-  - 注意：FPS太高，采集的画面差异过小，对训练的用处不是很大。
-  - ![img](../img/1_quick_experience/image_06.png)
-- 样本添加方式2：本地上传
-  - 点击“新增类别”，新建另一类别（如“狗”）→ 点击 “选择文件上传”，选择电脑本地图片批量导入。
+- These two methods enable users to flexibly build datasets and prepare for subsequent model training.
 
-![img](../img/1_quick_experience/image_07.png)
+![img](../img/1_quick_experience/1761722919731-a5805c82-b279-43aa-be28-c0825f1a6352.png)
 
-> 数据样本小提示：
->
-> - 每个数据类别可准备20-50张多样化图片（不同角度、光照、背景），类别间数量尽量平衡。
-> - 建议你给类别起个简洁的名字，比如‘猫’、‘狗’，不要用太复杂的符号或过长的名称。
+-  Sample Addition Method 1: Webcam Capture  
 
-### 步骤3：训练模型
+- - Click the webcam and point it at the target. Use the preview window to check whether the captured image is valid, then press “Record” to collect samples. After completing the image sample collection, click “×” to exit the capture screen.  
+  - Note: If the desktop does not have a built-in webcam, an external USB webcam can be used.  
 
-- 在训练模型前，点击“高级”设置训练参数，批次大小、训练轮次、优化器。
+![img](../img/1_quick_experience/1761723422207-5f5a3fcd-ab25-4005-9b1c-b10925b47c17.png)
 
-| 参数     | 参数说明                                                     | 类别说明                                     | 推荐设置                                       |
-| -------- | ------------------------------------------------------------ | -------------------------------------------- | ---------------------------------------------- |
-| 批次大小 | 一次送入模型里训练的数据样本数量。当数据很多时，一次把数据都送进去，计算机算不过来，因此就分成一批一批来学习。例如，默认批大小为16，每次训练用16张图片。 | 每次学习多少内容                             | 批次大小：16（默认即可）                       |
-| 训练轮次 | 所有训练数据完整地送入模型学习一遍，叫做一轮。学习一遍可能会不够牢固，要重复多次训练才能记住规律。例如，默认训练轮次为100，模型会将数据集从头到尾学习100遍。推荐训练轮次为20次以上。 | 学几遍                                       | 训练轮次：20（小数据集可以将训练轮次适当减小） |
-| 优化器   | 优化器时用于决定模型在训练过程中如何更新参数，也就是每次学习之后，要往哪个方向走，走多少步。优化器决定了模型训练的效率和效果。 | 学习的方法（死记硬背？归纳总结？举一反三？） | 优化器：auto（默认即可）                       |
+- - During sample data collection, you can use the “Settings” button to adjust the webcam’s frame rate (number of images captured per second; higher values result in faster capture).
+  - Note: If the FPS is too high, the captured images will have minimal differences, which is not very useful for training.  
 
-- 完成训练参数设置后，点击 “训练模型” 即可开始训练（若不做设置，也可直接使用系统默认参数）。
+![img](../img/1_quick_experience/1761723658572-c26bfd4b-0d53-4d97-866b-919197fc8720.png)
 
-![img](../img/1_quick_experience/image_08.png)
+- Sample Addition Method 2: Upload
 
-- 在训练模型过程中，可通过点击“深入了解”按钮，查看训练监测相关数据。
-  - 训练损失（train loss）：训练损失是模型在**训练数据**上的预测误差，损失越小，说明模型对训练数据的预测越准确。
-  - 验证损失（val loss）：验证损失是模型在验证数据（未用于训练的数据）上的预测误差，验证损失持续下降，模型泛化能力在提升。
-  - 准确率1（accuracy top 1）：模型预测的概率最高的类别与真实标签一致的比例。图片真实类别是“猫”，模型预测概率最高的类别也是“猫”，则算作正确。
-  - 准确率5（accuracy top 5）：模型预测概率排名前五的类别中包含真实标签的比例。图片真实类别是“猫”，模型预测概率前五的类别有“狗、猫、兔、鸟、牛”，则算作正确。
+- - Click “Add Category” to create another category (e.g., “Dog”) → Click “Select Files to Upload” to batch import images from your computer.
 
-![img](../img/1_quick_experience/image_09.png)
+![img](../img/1_quick_experience/1761723978297-b9b9c3a9-bfaa-4234-bdb0-14bf4b568660.png)
 
-### 步骤4：模型校验
+Tips for sample data:
 
-- 模型训练完成后，可以通过校验区，检验模型效果。校验的方式分为两种：摄像头、文件。
-  - 小提示：用一些未参与训练的新图片进行测试，更能反映模型实际效果。
-- 检验方式1：摄像头
-  - 将摄像头对着猫的图像，看看输出分类结果。
+- Prepare 20–50 diverse images for each category (different angles, lighting, backgrounds), and try to keep the number of images balanced across categories.
+- It’s recommended to give each category a simple name, such as ‘Cat’ or ‘Dog’; avoid using overly complex symbols or long names.
 
-![img](../img/1_quick_experience/image_10.png)
+### Step 3: Train Model
 
-- 校验方式2：文件
-  - 修改检验方式为“文件”，点击“上传文件”，选择一张图片并打开。
+- Before training the model, click “Advanced Settings” to configure training parameters such as batch size, number of epochs, and optimizer.
 
-![img](../img/1_quick_experience/image_11.png)
+| Parameter        | Description                                                  | Category Explanation                                         | Recommended Setting                                          |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Batch Size       | The number of data samples fed into the model for training at one time. When the dataset is large, feeding all data at once may exceed computing capacity, so data is divided into batches. For example, the default batch size is 16, meaning 16 images are used for each training step. | How much content to learn each time                          | Batch Size: 16 (default)                                     |
+| Number of Epochs | One epoch means the model has seen all training data once. Learning once may not be enough, so multiple epochs are needed to reinforce patterns. For example, the default is 100 epochs. | How many times to learn                                      | Number of Epochs: 20 (for small datasets, fewer epochs can be used) |
+| Optimizer        | Determines how the model updates parameters during training, i.e., which direction and step size to adjust after each learning step. It affects training efficiency and model performance. | Learning method (memorization, summarization, generalization?) | Optimizer: auto (default)                                    |
 
-- 图片上传成功后，输出图片分类结果。
+- After completing the training parameter setup, click **“Train Model”** to start training. (If no settings are adjusted, the system default parameters will be used.)
 
-![img](../img/1_quick_experience/image_12.png)
+![img](../img/1_quick_experience/1761724435262-60044feb-8b12-4a94-9c6b-5e14efb4979a.png)
 
-### 步骤5：模型导出
+- During the model training process, you can click the **“Learn More”** button to view training monitoring data:  
 
-- 当模型校验结果满足需求时，就可以进入部署阶段。
-  - “部署” → 点击 “导出模型”。
-  - 平台支持将模型导出为 ONNX 格式，便于在其他环境中使用或进行二次开发。
+- - **Training Loss (train loss):** The prediction error of the model on the training data. Lower loss indicates more accurate predictions on the training set.
+    **Validation Loss (val loss):** The prediction error of the model on the validation data (data not used for training). A continuously decreasing validation loss indicates improving model generalization.
+    **Top 1 Accuracy (accuracy top 1):** The proportion of predictions where the model's highest-probability class matches the true label. For example, if the true class is “cat” and the model predicts “cat” as the highest probability, it is considered correct.
+    **Top 5 Accuracy (accuracy top 5):** The proportion of predictions where the true label is within the top five highest-probability classes predicted by the model. For example, if the true class is “cat” and the top five predicted classes are “dog, cat, rabbit, bird, cow,” it is considered correct.  
 
-小提示：ONNX 是一种开放的模型格式，可以在多种深度学习框架和设备上运行。这样，你不仅可以在平台上测试，还能把模型应用到真实项目中。
+![img](../img/1_quick_experience/1761724656860-88d29994-01b6-4d21-96b3-c7e32080e2be.png)
 
-![img](../img/1_quick_experience/image_13.png)
+### Step 4: Model Validation  
 
-### 步骤6：模型部署
+- After completing model training, you can validate the model performance in the validation area. There are two validation methods: **Webcam** and **File**.
+  Tip: Using new images that were not part of the training set provides a more accurate reflection of the model’s real-world performance.
+- Validation Method 1: Webcam
 
-方法一：参考[4.1.4 模型部署](/AITools/Basic_description/model_deployment/model-deployment)
+- - Point the webcam at an image of a cat and check the classification result output.
 
-- 适用：支持硬件部署的模型（如行空板M10/K10），如图像分类、目标检测等模型。
+![img](../img/1_quick_experience/1761725078181-3f5b5615-62a2-4fbb-b386-26debe69d221.png)
 
-方法二：参考[4.1.5 实时结果推送](/AITools/Basic_description/real_time_push/real-time-push)
+- Verification Method 2: File
 
-- 适用：暂不支持硬件部署的模型，如语音识别、文本分类等模型。
+- - Change the verification method to "File", click "Upload File", select an image, and open it.
 
-### 模型训练常见问题
+![img](../img/1_quick_experience/1761726419270-dfa6f8b1-10f5-441f-8e4d-f62a77f419d5.png)
 
-- 在模型训练过程中，可能会遇到各种问题，例如训练速度慢、精度不理想或参数设置不当。下面整理了常见问题及解决思路，帮助你更顺利地完成模型训练。
+- After the image is successfully uploaded, the image classification result will be displayed.
 
-| **常见问题**     | **导致的原因及解决方法**                                     |
-| ---------------- | ------------------------------------------------------------ |
-| 模型准确率不高。 | 可能原因：样本数据数量不足样本类别不平衡。解决方法：在添加样本数据时，确保每个类别的样本覆盖不同角度、光照和背景。尽量保持各类别样本数量均衡，以提升模型的准确率。 |
-| 训练时间过长     | 可能原因：批次大小设置过小，每次训练处理的数据量少，导致训练轮次需要更多时间。训练轮次设置过大，模型重复学习数据太多。解决方法：适当增大批次大小，让模型每次处理更多样本，加快训练速度。根据数据量和任务需求合理调整训练轮次，避免不必要的重复训练。 |
+![img](../img/1_quick_experience/1761726519885-0a4c8682-52a6-4f97-bc7e-16d019df40e5.png)
+
+### Step 5: Model Deploy
+
+-  Once the model validation results meet the requirements, you can proceed to deployment
+
+- - “Deploy” → Click “Export Model”.
+  - The platform supports exporting the model in ONNX format, making it easy to use in other environments or for secondary development.
+
+- Tip: ONNX is an open model format that can run across various deep learning frameworks and devices. This allows you not only to test on the platform but also to apply the model in real projects.  
+
+![img](../img/1_quick_experience/1761726866033-4ace9fb7-29db-4bd8-8425-29cbeaa894f4.png)
+
+After validation, the model can push prediction results in real time. Click “Real-time Result Push” to synchronize the output to the SIoT platform. Hardware can receive the data from the platform and perform corresponding actions based on it.
+
+Although the data is sent to the SIoT platform in real time, it is not stored in the platform's database, so it cannot be viewed via the SIoT web interface.
+
+![img](../img/1_quick_experience/1761727083061-a6f217c0-691b-4a05-8bfe-5132823fe291.png)
+
+For instructions on model deployment and real-time result push, please refer to section [4.1.4 Model Deploy](https://www.yuque.com/joanna-rqvih/ilxuhv/aepmmgw4s77247vi) & [4.1.5Real-Time Result Push.](https://www.yuque.com/joanna-rqvih/ilxuhv/ph3e9rp4q7c7x1oe)
+
+### Common Issues in Model Training  
+
+- During model training, you may encounter various issues such as slow training speed, unsatisfactory accuracy, or improper parameter settings. The following lists common problems and suggested solutions to help you complete model training more smoothly.  
+
+| Common Issue       | Possible Causes & Solutions                                  |
+| ------------------ | ------------------------------------------------------------ |
+| Low model accuracy | **Possible Causes:** • Insufficient number of sample data • Imbalanced sample classes **Solutions:** • Ensure that samples for each class cover different angles, lighting conditions, and backgrounds. • Try to keep the number of samples balanced across classes to improve model accuracy. |
+| Long training time | **Possible Causes:** • Batch size set too small, so each training iteration processes only a few samples, requiring more iterations. • Number of training epochs set too high, causing the model to repeat learning excessively. **Solutions:** • Increase the batch size appropriately to process more samples per iteration. • Adjust the number of training epochs according to data size and task requirements to avoid unnecessary repetition. |
