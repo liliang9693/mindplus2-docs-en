@@ -1,0 +1,166 @@
+@keyframes heart {
+  0%, 40%, 80%, 100% {
+    transform: scale(1);
+  }
+  20%, 60% {
+    transform: scale(1.15);
+  }
+}
+.heart {
+  animation: heart 1000ms infinite;
+}
+
+
+.disk {
+  color: #FF00FF;
+}
+
+/* 页面底部导航栏 */
+.md-footer {
+  background-color: #FFFFFF !important;
+  color: #5A5A5A !important;
+  border-top: 1px solid #E0E0E0 !important; /* 添加顶部边框作为分隔线 */
+  padding-top: 10px !important; /* 添加一些顶部内边距 */
+}
+
+/* 页面底部导航链接文字颜色 */
+.md-footer-nav__link {
+  color: #5A5A5A !important;
+  font-size: 16px !important; /* 调整底部导航文字大小，从20px改为16px */
+}
+
+/* 页面底部导航箭头颜色 */
+.md-footer-nav__link svg {
+  fill: #7B7B7B !important;
+}
+
+/* 页面底部导航箭头悬停效果 */
+.md-footer-nav__link:hover svg {
+  fill: #5A5A5A !important;
+}
+
+/* 底部版权信息区域 */
+.md-footer-meta {
+  background-color: #EDEDED !important;
+}
+
+/* 底部版权信息和Made with Material文字颜色 */
+.md-footer-copyright,
+.md-footer-copyright__highlight,
+.md-footer .md-footer-copyright p,
+.md-footer-meta__inner,
+.md-footer-meta * {
+  color: #666666 !important;
+}
+
+/* 顶部导航栏 */
+.md-header {
+  background-color: #F0A53F !important;
+  color: #ffffff !important;
+  height: 60px !important;
+}
+
+/* 顶部导航栏内容垂直居中 */
+.md-header__inner {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* 标题向下移动5px */
+.md-header .md-header__title {
+  color: #FFFFFF !important;
+  transform: translateY(5px) !important;
+}
+
+.md-header .md-header__button,
+.md-header .md-search__input::placeholder {
+  color: #FFFFFF !important;
+}
+
+.md-header .md-icon svg {
+  fill: #ffffff !important;
+}
+
+/* 搜索框背景颜色和高度调整 */
+.md-search__input {
+  background-color: #F8C164 !important;
+
+}
+
+/* 标签栏(首页 文档 下载)背景颜色和文字颜色 */
+.md-tabs {
+  background-color: #F0A53F !important;
+  color: #ffffff !important;
+}
+
+.md-tabs__link {
+  color: #ffffff !important;
+  font-size: 18px; /* 调整标签栏文字大小 */
+  font-weight: normal !important; /* 确保文字不加粗 */
+}
+
+/* 活动标签项的颜色 */
+.md-tabs__item--active .md-tabs__link {
+  color: #ffffff !important;
+}
+
+/* 侧边栏活动菜单项的颜色 */
+.md-nav__link--active {
+  color: #E2991E !important;
+}
+
+/* logo 图片大小和垂直居中 */
+.md-header__button.md-logo {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  transform: translateY(0px) !important;
+}
+
+.md-header__button.md-logo img {
+  height: 30px; 
+  width: auto;
+}
+
+/* 回到页面顶部按钮 */
+.md-top {
+  background-color: #F0A53F !important;
+  color: #ffffff !important;
+  border-radius: 50px;
+}
+
+.md-top:hover {
+  background-color: #E2991E !important;
+}
+
+/* 表格边框样式：为文档内容中的表格添加外边框与单元格边框，
+   使用较浅的灰色并保持 border-collapse，以便在 MkDocs/Material 主题中生效 */
+.md-typeset table,
+.md-content table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border: 1px solid #DDDDDD !important; /* 表格外边框 */
+}
+
+.md-typeset th,
+.md-typeset td,
+.md-content th,
+.md-content td {
+  border: 1px solid #DDDDDD !important; /* 单元格边框 */
+  padding: 8px 10px !important; /* 单元格内边距 */
+  text-align: left !important;
+}
+
+.md-typeset th,
+.md-content th {
+  background-color: #F7F7F7 !important; /* 表头浅灰背景 */
+  font-weight: 600 !important;
+}
+
+/* 在窄屏或响应式布局中，允许表格水平滚动以防止内容破版 */
+.md-typeset table,
+.md-content table {
+  display: block !important;
+  overflow-x: auto !important;
+}

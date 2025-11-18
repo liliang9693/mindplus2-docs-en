@@ -1,0 +1,299 @@
+# Project information
+site_name: "Mind+ Official Documentation"
+site_url: https://mindplus.cc
+site_author: Mind+ Team
+site_description: >-
+     Mind+ Official Tutorial-Mind+
+
+# Repository
+repo_name: Mind+/Docs
+repo_url: https://mindplus.cc
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2025 - 2029 Mind+ Team'
+
+# Configuration
+
+theme:
+  name: material
+  #custom_dir: overrides
+  nav_style: dark
+  features:
+    - navigation.path  # Enable breadcrumbs
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - navigation.path
+    # - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+    - navigation.top
+  
+  
+  palette:
+    - scheme: default
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.ico
+
+  #icon:
+    #logo: material/library
+  logo: assets/images/Mindlogo.png
+
+# Plugins
+plugins:
+  - search:
+      lang: 
+        - en
+  - minify:
+      minify_html: true
+  - glightbox
+
+# Hooks
+# hooks:
+  # - material/.overrides/hooks/translations.py
+
+# Customization
+# extra:
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY
+  # social:
+  #   - icon: fontawesome/solid/globe
+  #     link: https://www.mindplus.com.cn/
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/UNIHIKER/unihiker-docs
+  #   - icon: fontawesome/brands/twitter
+  #     link: https://twitter.com/UNIHIKER
+  #   - icon: fontawesome/brands/facebook
+  #     link: https://www.facebook.com/UNIHIKER
+  #   - icon: fontawesome/brands/discord
+  #     link: https://discord.gg/rvvfNCvBKv
+#  alternate:
+#    - name: Chinese
+#      link: /zh/
+#      lang: zh
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.snippets
+  # - markdown.extensions.meta
+  - attr_list 
+  - md_in_html 
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: https://mindplus.cc/en.html
+  - Download: https://mindplus.cc/en.html
+  - Documentation:
+    - Mind+ V2 Official Tutorial: index.md
+    - 1.Quick Start: 
+      - 1.1 Mind+ Usage Guide: GettingStarted/UserGuide.md
+      - 1.2 Mind+ Usage Tutorial: GettingStarted/UserTutorial.md
+    - 2.General Features:
+      - 2.1 Mind+ Introduction: SoftwareIntroduction//Introduction.md
+      - 2.2 Software Installation:
+        - 2.1.1 Windows: SoftwareIntroduction/Windows.md
+        - 2.1.2 MacOS: SoftwareIntroduction/MacOS.md
+        - 2.1.3 Linux: SoftwareIntroduction/Linux.md
+        - 2.2.4 Xinchuang: SoftwareIntroduction/Xinchuang.md
+        - 2.1.4 ReleaseLogs: SoftwareIntroduction/ReleaseLogs.md
+        - 2.1.5 PreviousVersions: SoftwareIntroduction/PreviousVersions.md
+    # - 3.Coding:
+    #   - 3.1 Real-time Mode: 
+    #     - ProgrammingModes/RealTimeMode/index.md
+    #     - 3.1.1 Menu Bar: ProgrammingModes/RealTimeMode/MenuBar.md
+    #     - 3.1.2 Settings: ProgrammingModes/RealTimeMode/Settings.md
+    #     - 3.1.3 Function - Blocks: 
+    #       - ProgrammingModes/RealTimeMode/FunctioModule/index.md
+    #       - 3.1.3.1 Motion: ProgrammingModes/RealTimeMode/FunctioModule/Movement.md
+    #       - 3.1.3.2 Looks: ProgrammingModes/RealTimeMode/Appearance.md
+    #       - 3.1.3.3 Sound: ProgrammingModes/RealTimeMode/Sound.md
+    #       - 3.1.3.4 Events: ProgrammingModes/RealTimeMode/Event.md
+    #       - 3.1.3.5 Control: ProgrammingModes/RealTimeMode/Control.md
+    #       - 3.1.3.6 Sensing: ProgrammingModes/RealTimeMode/Detection.md
+    #       - 3.1.3.7 Operators: ProgrammingModes/RealTimeMode/Operator.md
+    #       - 3.1.3.8 Variables: ProgrammingModes/RealTimeMode/Variable.md
+    #       - 3.1.3.9 Functions: ProgrammingModes/RealTimeMode/Function.md
+    #     - 3.1.4 Function - Costumes: ProgrammingModes/RealTimeMode/FunctionalModeling.md
+    #     - 3.1.5 Function - Sounds: ProgrammingModes/RealTimeMode/FunctionalSound.md
+    #     - 3.1.6 Extension: ProgrammingModes/RealTimeMode/Expansion.md
+    #     - 3.1.7 Programming: ProgrammingModes/RealTimeMode/Programming.md
+    #     - 3.1.8 Stage: ProgrammingModes/RealTimeMode/Stage.md
+    #     - 3.1.9 Sprite and Backdrop: ProgrammingModes/RealTimeMode/CharactersAndBackground.md
+    #   - 3.2 Upload Mode: 
+    #     -  ProgrammingModes/UploadMode/index.md
+    #     - 3.2.1 Menu Bar: ProgrammingModes/UploadMode/MenuBar.md
+    #     - 3.2.2 Settings: ProgrammingModes/UploadMode/Settings.md
+    #     - 3.2.3 Function - Blocks: 
+    #       - ProgrammingModes/UploadMode/FunctioModule/index.md
+    #       - 3.2.3.1 Control: ProgrammingModes/UploadMode/FunctioModule/Control.md
+    #       - 3.2.3.2 Operators: ProgrammingModes/UploadMode/FunctioModule/Operator.md
+    #       - 3.2.3.3 Variables: ProgrammingModes/UploadMode/FunctioModule/Variable.md
+    #       - 3.2.3.4 Functions: ProgrammingModes/UploadMode/FunctioModule/Function.md
+    #     - 3.2.4 Extension: ProgrammingModes/UploadMode/Expansion.md
+    #     - 3.2.5 Programming: ProgrammingModes/UploadMode/Programming.md
+    #     - 3.2.6 Code Display: ProgrammingModes/UploadMode/CodeDisplay.md
+    #     - 3.2.7 Serial Monitor: ProgrammingModes/UploadMode/SerialMonitor.md
+    #   - 3.3 Python Block Mode: 
+    #     - ProgrammingModes/PythonBlockMode/index.md
+    #     - 3.3.1 Menu Bar: ProgrammingModes/PythonBlockMode/MenuBar.md
+    #     - 3.3.2 Settings: ProgrammingModes/PythonBlockMode/Settings.md
+    #     - 3.3.3 Function - Blocks:
+    #       - ProgrammingModes/PythonBlockMode/FunctioModule/index.md
+    #       - 3.3.3.1 Control: ProgrammingModes/PythonBlockMode/FunctioModule/Control.md
+    #       - 3.3.3.2 Operators: ProgrammingModes/PythonBlockMode/FunctioModule/Operator.md
+    #       - 3.3.3.3 Text: ProgrammingModes/PythonBlockMode/FunctioModule/Text.md
+    #       - 3.3.3.4 Variables: ProgrammingModes/PythonBlockMode/FunctioModule/Variable.md
+    #       - 3.3.3.5 Functions: ProgrammingModes/PythonBlockMode/FunctioModule/Function.md
+    #       - 3.3.3.6 Advanced Types: ProgrammingModes/PythonBlockMode/FunctioModule/AdvancedTypes.md
+    #       - 3.3.3.7 Python: ProgrammingModes/PythonBlockMode/FunctioModule/Python.md
+    #     - 3.3.4 Extension - Resource Files: ProgrammingModes/PythonBlockMode/Resources.md
+    #     - 3.3.5 Extension: ProgrammingModes/PythonBlockMode/Expansion.md
+    #     - 3.3.6 Programming: ProgrammingModes/PythonBlockMode/Programming.md
+    #     - 3.3.7 Code Display: ProgrammingModes/PythonBlockMode/CodeDisplay.md
+    #     - 3.3.8 Terminal Display: ProgrammingModes/PythonBlockMode/TerminalDisplay.md
+    #   - 3.4 MicroPython Block Mode: 
+    #     - ProgrammingModes/MicroPythonBlockMode/index.md
+    #     - 3.4.1 Menu Bar: ProgrammingModes/MicroPythonBlockMode/MenuBar.md
+    #     - 3.4.2 Settings: ProgrammingModes/MicroPythonBlockMode/Settings.md
+    #     - 3.4.3 Function - Blocks: 
+    #       - ProgrammingModes/MicroPythonBlockMode/FunctioModule/index.md
+    #       - 3.4.3.1 Control: ProgrammingModes/MicroPythonBlockMode/FunctioModule/Control.md
+    #       - 3.4.3.2 Operators: ProgrammingModes/MicroPythonBlockMode/FunctioModule/Operator.md
+    #       - 3.4.3.3 Text: ProgrammingModes/MicroPythonBlockMode/FunctioModule/Text.md
+    #       - 3.4.3.4 Variables: ProgrammingModes/MicroPythonBlockMode/FunctioModule/Variable.md
+    #       - 3.4.3.5 Functions: ProgrammingModes/MicroPythonBlockMode/FunctioModule/Function.md
+    #       - 3.4.3.6 Advanced Types: ProgrammingModes/MicroPythonBlockMode/FunctioModule/AdvancedTypes.md
+    #     - 3.4.4 Function - Resource Files: ProgrammingModes/MicroPythonBlockMode/Resources.md
+    #     - 3.4.5 Extension: ProgrammingModes/MicroPythonBlockMode/Expansion.md
+    #     - 3.4.6 Programming: ProgrammingModes/MicroPythonBlockMode/Programming.md
+    #     - 3.4.7 Code Display: ProgrammingModes/MicroPythonBlockMode/CodeDisplay.md
+    #     - 3.4.8 Terminal Display: ProgrammingModes/MicroPythonBlockMode/TerminalDisplay.md
+      # - 3.5 MicroPython代码模式: ProgrammingModes/MicroPythonCodeMode/index.md
+      # - 3.6 Python代码模式: ProgrammingModes/PythonCodeMode/index.md
+    - 4.Model:
+      # - AITools/index.md
+      - 4.1 Basic Description: 
+        # - AITools/Basic_description/index.md
+        - 4.1.1 Introduction: AITools/Basic_description/introduction/introduction.md
+        - 4.1.2 Quick Start: AITools/Basic_description/quick_start/quick-start.md
+        - 4.1.3 Model Training: AITools/Basic_description/model_training/model-training.md
+        - 4.1.4 Model Deploy: AITools/Basic_description/model_deployment/model-deployment.md
+        - 4.1.5 Real-time Result Push: AITools/Basic_description/real_time_push/real-time-push.md
+      - 4.2 Detailed Description:
+        - 4.2.1 【Image Classification】 Quick Start: AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Image Classification】 Advanced Mode": AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
+        - 4.2.2 【Object Detection】 Quick Start: AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Object Detection】 Advanced Mode": AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
+        - 4.2.3 【Instance Segmentation】 Quick Start: AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Instance Segmentation】 Advanced Mode": AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
+        - 4.2.4 【Temporal Pattern Recognitionn】 Quick Start: AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Temporal Pattern Recognition】 Advanced Mode": AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
+        - 4.2.5 【Speech Classification】 Quick Start: AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md
+        - 4.2.6 【Text Classification】 Quick Start: AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md
+        - 4.2.7 【Pose Classification】 Quick Start: AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md
+    # - 5.View: 
+    #   - 5.1 DashBoard: 
+    #     - ViewDesign/DashBoard/index.md
+  - FAQ:  
+    - FAQ: FAQ/index.md
+    - Coding:
+      - "&nbsp;&nbsp;&nbsp;&nbsp;1.1 Real-time Mode": 
+        - FAQ/Coding/RealTimeMode/index.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;Real-time Mode Issues": FAQ/Coding/RealTimeMode/runtime-error.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;1.2 Upload Mode": 
+        - FAQ/Coding/UploadMode/index.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;Upload Mode Issues": FAQ/Coding/UploadMode/upload-mode-issues.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;1.3 Python":
+        - FAQ/Coding/PythonBlockMode/index.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;Python Environment Not Found?": FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
+      - "&nbsp;&nbsp;&nbsp;&nbsp;1.4 MicroPython": 
+        - FAQ/Coding/MicroPythonBlockMode/index.md
+        - "&nbsp;&nbsp;&nbsp;&nbsp;MicroPython Block Mode Issues": FAQ/Coding/MicroPythonBlockMode/fix-micropython-not-found-error.md
+    - 2. Model: FAQ/AITools/index.md
+    - 3. View: FAQ/ViewDesign/index.md
+    # - 4. Extensions: 
+    #   - FAQ/UserExtension/index.md
+  # - 扩展库: Extensions/index.md
+  # - 发现: https://mindplus.cc/discover.html
+  # - Extensions: Extensions/index.md
+  # - Discover: https://mindplus.dfrobot.com/catalog
+  - Community: https://community.dfrobot.com/
+  - About Us: AboutUs/index.md
+  - Mind+ V1.x Documentation: https://mindplus.dfrobot.com
+  
