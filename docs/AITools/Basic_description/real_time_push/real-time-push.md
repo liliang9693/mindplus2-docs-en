@@ -43,10 +43,11 @@ Do not close the transmission tool while it is running.
 
 -  SIoT Tool Download Links：
 
-- - Tencent Weiyun (Recommended): Link: https://share.weiyun.com/6SFhgLQj
+Under development, stay tuned.
+<!-- - - Tencent Weiyun (Recommended): Link: https://share.weiyun.com/6SFhgLQj
   - Baidu Netdisk: Link: https://pan.baidu.com/s/17clVjJXWTZh02FteKy3mcA?pwd=mind Extraction Code: mind
   - Alibaba Cloud Drive: https://www.aliyundrive.com/s/tCqwJwGtZzL Extraction Code: 3h4x
-  - Google Drive: Link: [Click to Download](https://drive.google.com/drive/folders/16Lf0itQ-v2oZrUJEFHrOhjfgS68eN6bn)
+  - Google Drive: Link: [Click to Download](https://drive.google.com/drive/folders/16Lf0itQ-v2oZrUJEFHrOhjfgS68eN6bn) -->
 
 ![img](../img/5_real_time_push/1761628514086-91176434-5375-444d-890b-0fcc1c07112d.png)
 
