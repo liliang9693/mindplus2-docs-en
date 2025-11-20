@@ -24,8 +24,8 @@ It can not only identify static images but also analyze real-time footage captur
 
 Please choose the learning mode that suits you and follow the corresponding tutorial:
 
-- [**Image Classification — Quick Experience**](../../../Detailed_explanation/image_classification/quick_experience/quick-experience/) (suitable for beginners, complete training quickly)
-- [**Image Classification — Advanced Mode**](../../../Detailed_explanation/image_classification/professional_mode/professional-mode/) (suitable for advanced users, supports custom parameters and in-depth optimization)
+- [**Image Classification — Quick Experience**](../Detailed_explanation/image_classification/quick_experience/quick-experience.md) (suitable for beginners, complete training quickly)
+- [**Image Classification — Advanced Mode**](../Detailed_explanation/image_classification/professional_mode/professional-mode.md) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
 ## 2. Object Detection（M2）
 
@@ -46,8 +46,8 @@ To use this function, you can collect and label a dataset containing different o
 
 ### Operation Guide
 
-- [**Object Detection — Quick Experience**](../../../Detailed_explanation/object_detection/quick_experience/quick-experience/) (suitable for beginners, complete training quickly)
-- [**Object Detection — Advanced Mode**](../../../Detailed_explanation/object_detection/professional_mode/professional-mode/) (suitable for advanced users, supports custom parameters and in-depth optimization)
+- [**Object Detection — Quick Experience**](../Detailed_explanation/object_detection/quick_experience/quick-experience.md) (suitable for beginners, complete training quickly)
+- [**Object Detection — Advanced Mode**](../Detailed_explanation/object_detection/professional_mode/professional-mode.md) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
 ## 3. Instance Segmentation（M3）  
 
@@ -69,8 +69,8 @@ Unlike **Object Detection**, which uses only bounding boxes, **Instance Segmenta
 
 ### Operation Guide
 
-- [**Instance Segmentation — Quick Experience**](../../../Detailed_explanation/instance_segmentation/quick_experience/) (suitable for beginners, complete training quickly)
-- [**Instance Segmentation — Advanced Mode**](../../../Detailed_explanation/instance_segmentation/professional_mode/) (suitable for advanced users, supports custom parameters and in-depth optimization)
+- [**Instance Segmentation — Quick Experience**](../Detailed_explanation/instance_segmentation/quick_experience.md) (suitable for beginners, complete training quickly)
+- [**Instance Segmentation — Advanced Mode**](../Detailed_explanation/instance_segmentation/professional_mode.md) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
 ## 4. Temporal Pattern Recognition（M4）  
 
@@ -91,8 +91,8 @@ For example, using the accelerometer on the **UNIHIKER K10** to collect hand mov
 
 ### Operation Guide
 
-- [**Temporal Pattern Recognition — Quick Experience**](../../../Detailed_explanation/time_series_recognition/quick_experience/) (suitable for beginners, complete training quickly)
-- [**Temporal Pattern Recognition — Advanced Mode**](../../../Detailed_explanation/time_series_recognition/professional_mode/) (suitable for advanced users, supports custom parameters and in-depth optimization)
+- [**Temporal Pattern Recognition — Quick Experience**](../Detailed_explanation/time_series_recognition/quick_experience.md) (suitable for beginners, complete training quickly)
+- [**Temporal Pattern Recognition — Advanced Mode**](../Detailed_explanation/time_series_recognition/professional_mode.md) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
 ## 5. Speech Classification（M5）  
 
@@ -113,7 +113,7 @@ Through training, a **Speech Classification** model can learn patterns from mult
 
 ### Operation Guide
 
-- [**Speech Classification — Quick Experience**](../../../Detailed_explanation/speech_classification/quick_experience/)
+- [**Speech Classification — Quick Experience**](../Detailed_explanation/speech_classification/quick_experience.md)
 
 ## 6. Text Classification （M6） 
 
@@ -134,7 +134,7 @@ Through training, a **Speech Classification** model can learn patterns from mult
 
 ### Operation Guide
 
-- [**Text Classification — Quick Experience**](../../../Detailed_explanation/text_classification/quick_experience/)
+- [**Text Classification — Quick Experience**](../Detailed_explanation/text_classification/quick_experience.md)
 
 ## 7. Pose Classification（M7）  
 
@@ -156,4 +156,4 @@ Unlike general action recognition, **Pose Classification** focuses on the relati
 
 ### Operation Guide
 
-- [**Pose Classification — Quick Experience**](../../../Detailed_explanation/pose_classification/quick_experience/)
+- [**Pose Classification — Quick Experience**](../Detailed_explanation/pose_classification/quick_experience.md)
