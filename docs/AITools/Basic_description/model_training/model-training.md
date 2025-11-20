@@ -24,7 +24,7 @@ It can not only identify static images but also analyze real-time footage captur
 
 Please choose the learning mode that suits you and follow the corresponding tutorial:
 
-- [**Image Classification — Quick Experience**](/AITools/Detailed_explanation/image_classification/quick_experience/quick-experience/) (suitable for beginners, complete training quickly)
+- [**Image Classification — Quick Experience**](AITools/Detailed_explanation/image_classification/quick_experience/quick-experience/) (suitable for beginners, complete training quickly)
 - [**Image Classification — Advanced Mode**](/AITools/Detailed_explanation/image_classification/professional_mode/professional-mode/) (suitable for advanced users, supports custom parameters and in-depth optimization)
 
 ## 2. Object Detection（M2）
