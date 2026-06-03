@@ -172,8 +172,6 @@ nav:
               - 2.1.3 Linux: SoftwareIntroduction/Linux.md
               - 2.1.4 ReleaseLogs: SoftwareIntroduction/ReleaseLogs.md
               - 2.1.5 PreviousVersions: SoftwareIntroduction/PreviousVersions.md
-<<<<<<< Updated upstream
-=======
       - 3. Coding:
           - 3.1 RealTime Mode:
               - 3Coding/31RealTimeMode/index.md
@@ -185,7 +183,6 @@ nav:
               - 3Coding/34MicropythonBlockMode/index.md
           - 3.5 Micropython Code Mode:
               - 3Coding/35MicropythonCodeMode/index.md
->>>>>>> Stashed changes
       - 4.Model:
           - 4.1 Basic Description:
               - 4.1.1 Introduction: AITools/Basic_description/introduction/introduction.md
