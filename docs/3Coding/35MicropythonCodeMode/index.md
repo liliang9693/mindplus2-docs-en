@@ -14,7 +14,7 @@ The interface is divided into five areas: the menu bar, settings, the file area,
 
 Next, we’ll take a closer look at these sections. For a detailed overview of each section’s features, click here:
 
-| [Menu Bar](321MenuBar.md) | [Settings ](322Settings.md) | file area | [Programming area](325ProgrammingArea.md) | **Terminal** [**display area**](326CodeDisplayArea.md) |
+| [Menu Bar](351MenuBar.md) | [Settings](352Settings.md) | [file area](353FileArea.md) | [Programming area](354ProgrammingArea.md) | [**Terminal display area**](355TerminalDisplayArea.md) |
 | :--------------------: | :----------------------: | --------- | :------------------------------------: | ---------------------------------------------------------------- |
 
 ### Frequently Asked Questions

@@ -7,7 +7,7 @@ In upload mode, the extension area supports two types of extension content:
 
 By configuring the expansion zone, users can flexibly select hardware controllers based on project requirements and load the corresponding modules to enable additional hardware interaction features.
 
-Want to learn more about the commands in each extension library? Click "[Extension Libraries](../../Extensions/index.md)" to view detailed descriptions of the extension libraries in upload mode.
+Want to learn more about the commands in each extension library? Click "[Extension](../../FAQ/Extension/UploadMode/index.md)" to view detailed descriptions of the extension libraries in upload mode.
 
 ![image](./324ExtensionArea.assets/pic_1780992877876.png)
 
@@ -61,4 +61,5 @@ Once the update is complete, the red dot next to the version number will automat
 
 #### 4. Frequently Asked Questions
 
-Click here for a solution to the issue of being unable to download the extension library.
+Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/4Extension.md).
+

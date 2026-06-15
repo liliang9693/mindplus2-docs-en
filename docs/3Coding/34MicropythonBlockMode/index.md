@@ -19,12 +19,15 @@ The interface can be divided into seven areas: the menu bar, settings, the ribbo
 
 ![image](./index.assets/pic_1781230907669.png)
 
+
+
 Next, we’ll take a closer look at these sections. For a detailed overview of each section’s features, click here:
 
-|            [Menu Bar](321MenuBar.md)            |             [Settings ](322Settings.md)             | [Functional area-Blocks](323FunctionalAreasBlocks)   |      [Functional area-](323FunctionalAreasBlocks)Resource File      |
-| :-------------------------------------------: | :----------------------------------------------: | ------------------------------------------------- | :--------------------------------------------------------------: |
-| [**Extensions area**](324ExtensionArea.md) | [**Programming area**](325ProgrammingArea.md) | [**code display area**](326CodeDisplayArea.md) | **Terminal** [**display area**](326CodeDisplayArea.md) |
+
+|            [Menu Bar](341MenuBar.md)            |             [Settings ](342Settings.md)             | [Functional Areas-Modules](343FunctionalAreas/index.md) |     [Functional area-Asset](344FunctionalAreasAsset.md)     |
+| :-------------------------------------------: | :----------------------------------------------: | ---------------------------------------------------- | :-------------------------------------------------------: |
+| [**Extensions area**](344ExtensionArea.md) | [**Programming area**](345ProgrammingArea.md) | [**code display area**](346CodeDisplayArea.md)    | [**Terminal display area**](347TerminalDisplayArea.md) |
 
 ### Frequently Asked Questions
 
-Click to view [FAQ](../../FAQ/Coding/UploadMode/index.md)
+Click to view [FAQ](../../FAQ/Coding/MicropythonBlockMode/index.md)

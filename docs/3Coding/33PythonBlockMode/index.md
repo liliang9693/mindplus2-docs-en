@@ -10,10 +10,10 @@ The interface can be divided into seven areas: the menu bar, settings, the ribbo
 
 Next, we’ll take a closer look at these sections. For a detailed overview of each section’s features, click here:
 
-|            [Menu Bar](321MenuBar.md)            |             [Settings ](322Settings.md)             | [Functional area-Blocks](323FunctionalAreasBlocks)   |      [Functional area-](323FunctionalAreasBlocks)Resource File      |
+|            [Menu Bar](331MenuBar.md)            |             [Settings ](332Settings.md)             | [Functional Areas-Modules](333FunctionalAreas/index.md)   |      [Functional area-Asset](334FunctionalAreasResourceFiles.md)      |
 | :-------------------------------------------: | :----------------------------------------------: | ------------------------------------------------- | :--------------------------------------------------------------: |
-| [**Extensions area**](324ExtensionArea.md) | [**Programming area**](325ProgrammingArea.md) | [**code display area**](326CodeDisplayArea.md) | **Terminal** [**display area**](326CodeDisplayArea.md) |
+| [**Extensions area**](334ExtensionArea.md) | [**Programming area**](335ProgrammingArea.md) | [**code display area**](336CodeDisplayArea.md) |[**Terminal display area**](337SerialMonitor.md) |
 
 ### Frequently Asked Questions
 
-Click to view [FAQ](../../FAQ/Coding/UploadMode/index.md)
+Click to view [FAQ](../../FAQ/Coding/PythonBlockMode/index.md)

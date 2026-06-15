@@ -273,7 +273,7 @@ nav:
               - 4.2.7 【Pose Classification】 Quick Experience: AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md
   - FAQ:
       - FAQ: FAQ/index.md
-      - Coding:
+      - 1. Coding:
           - "&nbsp;&nbsp;&nbsp;&nbsp;1.1 Real-time Mode":
               - FAQ/Coding/RealTimeMode/index.md
               - "&nbsp;&nbsp;&nbsp;&nbsp;Real-time Mode Issues": FAQ/Coding/RealTimeMode/runtime-error.md
@@ -288,8 +288,20 @@ nav:
               - "&nbsp;&nbsp;&nbsp;&nbsp;MicroPython Block Mode Issues": FAQ/Coding/MicroPythonBlockMode/fix-micropython-not-found-error.md
       - 2. Model: FAQ/AITools/index.md
       - 3. View: FAQ/ViewDesign/index.md
+      - 4. Extension: FAQ/4Extension.md
   - Extension:
       - FAQ/Extension/index.md
+      - RealTime Mode:
+          - FAQ/Extension/RealTimeMode/index.md
+          - Stage Extension:
+              - FAQ/Extension/RealTimeMode/StageExtension/index.md
+          - Image Classificatiom: FAQ/Extension/ImageClassificatiom.md
+      - Upload Mode:
+          - FAQ/Extension/UploadMode/index.md
+      - Python Block Mode:
+          - FAQ/Extension/PythonBlockMode/index.md
+      - MicroPythonBlockMode:
+          - FAQ/Extension/MicroPythonBlockMode/index.md
   - Community: https://community.dfrobot.com/
   - About Us: AboutUs/index.md
   - Mind+ V1.x Documentation: https://mindplus.dfrobot.com
