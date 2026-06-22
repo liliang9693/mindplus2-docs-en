@@ -274,13 +274,13 @@ nav:
   - FAQ:
       - FAQ: FAQ/index.md
       - 1. Coding:
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.1 Real-time Mode":
+          - 1.1 RealTime Mode:
               - FAQ/Coding/RealTimeMode/index.md
               - "&nbsp;&nbsp;&nbsp;&nbsp;Real-time Mode Issues": FAQ/Coding/RealTimeMode/runtime-error.md
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.2 Upload Mode":
+          - 1.2 Upload Mode:
               - FAQ/Coding/UploadMode/index.md
               - "&nbsp;&nbsp;&nbsp;&nbsp;Upload Mode Issues": FAQ/Coding/UploadMode/upload-mode-issues.md
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.3 Python":
+          - 1.3 Python Block Mode:
               - FAQ/Coding/PythonBlockMode/index.md
               - "&nbsp;&nbsp;&nbsp;&nbsp;Python Environment Not Found?": FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
           - "&nbsp;&nbsp;&nbsp;&nbsp;1.4 MicroPython":
@@ -290,18 +290,15 @@ nav:
       - 3. View: FAQ/ViewDesign/index.md
       - 4. Extension: FAQ/4Extension.md
   - Extension:
-      - FAQ/Extension/index.md
+      - Extension/index.md
       - RealTime Mode:
-          - FAQ/Extension/RealTimeMode/index.md
-          - Stage Extension:
-              - FAQ/Extension/RealTimeMode/StageExtension/index.md
-          - Image Classificatiom: FAQ/Extension/ImageClassificatiom.md
-      - Upload Mode:
-          - FAQ/Extension/UploadMode/index.md
-      - Python Block Mode:
-          - FAQ/Extension/PythonBlockMode/index.md
-      - MicroPythonBlockMode:
-          - FAQ/Extension/MicroPythonBlockMode/index.md
+          - Extension/RealTimeMode/index.md
+          - Image Classification: Extension/RealTimeMode/ImageClassification.md
+          - Object Detection: Extension/RealTimeMode/ObjectDetection.md
+          - Instance Segmentation: Extension/RealTimeMode/InstanceSegmentation.md
+          - Pose Classification: Extension/RealTimeMode/PoseClassification.md
+          - Speech Classification: Extension/RealTimeMode/SpeechClassification.md
+          - Text Classification: Extension/RealTimeMode/TextClassification.md
   - Community: https://community.dfrobot.com/
   - About Us: AboutUs/index.md
   - Mind+ V1.x Documentation: https://mindplus.dfrobot.com

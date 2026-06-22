@@ -1,3 +1,0 @@
-# MicroPythonBlockMode
-
-12345
