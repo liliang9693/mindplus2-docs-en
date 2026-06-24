@@ -2,6 +2,8 @@
 
 This document will explain how to use the "Object Detection" module in the Model Training and Inference Library under Mind+ > Programming > Real-Time Mode to apply an object detection model you have trained yourself and complete an object detection project.
 
+![image](./ObjectDetection.assets/pic_1782266007584.gif)
+
 ## Features
 
 Using the object detection module, users can load pre-trained object detection models to perform inference and recognition on local images or live camera feeds. This allows them to obtain results such as the object’s label, confidence score, center point X and Y coordinates, width, and height, which can then be used for subsequent logical decisions, interactive control, or visual display.
@@ -29,8 +31,8 @@ Before creating an object detection project, you must first train and export an 
 
 Please refer to the tutorial below to prepare an object detection model for use in the upcoming project.
 
-* Object Detection Model Training Tutorial: Object Detection—Training the Model
-* Tutorial on Exporting Object Detection Models: Object Detection—Model Export
+* Object Detection Model Training Tutorial: [Object Detection—Training the Model](../../AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md#step-3-train-model)
+* Tutorial on Exporting Object Detection Models: [Object Detection—Model Export](../../AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md#step-5-model-deploy)
 
 ## Load the model training and inference library
 
@@ -60,11 +62,13 @@ In practice, you can replace the example model with a target detection model tha
 
 ## Sample Program
 
-![image](./ObjectDetection.assets/pic_1781761014947.png)
+![image](./ObjectDetection.assets/pic_1782267816668.png)
 
 ## Runtime Results
 
 After running the program, a window displaying the model’s inference results will pop up. The detection results will be overlaid on the original image, with boxes drawn around the recognized traffic signs; the corresponding labels and confidence scores will be displayed in the upper-right corner of each box.
+
+![image](./ObjectDetection.assets/pic_1782266567151.gif)
 
 ## Project 2: Real-Time Object Detection with a Camera
 
@@ -81,6 +85,8 @@ The model used in this example is the same as the one in Project 1. You can repl
 After running the program, observe the camera feed displayed on the stage. Once the object detection model has finished loading, press the spacebar to start real-time traffic sign detection. The detection results will be overlaid on the video feed in real time, with boxes drawn around all traffic signs that appear.
 
 Based on the detection data it receives, the Mind+ character will move sequentially to the center of each corresponding marker and say the corresponding label.
+
+![image](./ObjectDetection.assets/pic_1782266162335.gif)
 
 ## Building Block Instructions
 

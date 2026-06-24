@@ -2,6 +2,8 @@
 
 This document will explain how to use the "Text Classification" module in the Model Training and Inference Library under Mind+ > Programming > Real-Time Mode to apply a text classification model you have trained yourself and complete a text classification project.
 
+![image](./TextClassification.assets/pic_1782272419613.gif)
+
 ## Features
 
 Using the text classification module, users can load a pre-trained text classification model to classify input text and obtain results such as the corresponding category ID, label, and confidence score.
@@ -29,8 +31,8 @@ Before creating an image classification project, you must first train and export
 
 Please refer to the tutorial below to set up an Text classification model for use in your upcoming project.
 
-* Text Classification Model Training Tutorial: Text Classification—Training the Model
-* Tutorial on Exporting Text Classification Models: Text Classification—Model Export
+* Text Classification Model Training Tutorial: [Text Classification—Training the Model](../../AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md#step-3-train-model)
+* Tutorial on Exporting Text Classification Models: [Text Classification—Model Export](../../AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md#step-5-model-deploy)
 
 ## Load the model training and inference library
 
@@ -63,6 +65,8 @@ In this example, the sample model used is a reader review classification model t
 ### Runtime Results
 
 After running the program, click the Mind+ sprite, enter the reading comment in the input box, and observe the text classification label and confidence result. The category label with the highest confidence is used as the final reader comment category.
+
+![image](./TextClassification.assets/pic_1782272425354.gif)
 
 ## Building Block Instructions
 

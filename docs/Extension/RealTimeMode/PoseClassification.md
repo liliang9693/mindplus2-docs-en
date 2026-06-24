@@ -2,11 +2,14 @@
 
 This document will explain how to use the "Posture Classification" module in the Model Training and Inference Library under Mind+ > Programming > Real-Time Mode to apply a posture classification model you have trained yourself and complete a posture classification project.
 
+![image](./PoseClassification.assets/pic_1782268262330.gif)
+
 ## Features
 
 Using the pose classification module, users can load a pre-trained pose classification model to perform inference and classification on local images or live camera feeds, and obtain results such as the corresponding pose category label, ID, and confidence score.
 
 With this, users can not only quickly apply their self-trained pose classification models to create various projects related to human pose classification, but also gain an intuitive understanding of the entire application process—from image input to model inference to result output—and build AI projects with “perception, decision-making, and interaction” capabilities, thereby providing foundational support for both course instruction and practical applications.
+
 
 ## Preparations
 
@@ -29,8 +32,8 @@ Before creating a pose classification project, you must first train and export a
 
 Please refer to the tutorial below to set up a pose classification model for use in the upcoming project.
 
-* Tutorial on Training a Pose Classification Model: Pose Classification—Training the Model
-* Tutorial on Exporting Pose Classification Models: Pose Classification—Model Export
+* Tutorial on Training a Pose Classification Model: [Pose Classification—Training the Model](../../AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md#step-4-train-model)
+* Tutorial on Exporting Pose Classification Models: [Pose Classification—Model Export](../../AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md#step-6-model-deploy)
 
 ## Load the model training and inference library
 
@@ -64,6 +67,8 @@ In this example, the pose classification model used can distinguish between two 
 
 After running the program, the system will display a window showing the model’s inference results, with the detected human body keypoints overlaid on the original image. At the same time, the confidence scores for the human pose in each category will be displayed below the image, and the category with the highest confidence score will be used as the final classification result for the human pose in that image.
 
+![image](./PoseClassification.assets/pic_1782268571344.gif)
+
 ## Project 2: Real-Time Camera Pose Classification
 
 This project demonstrates how to use a pre-trained pose classification model to continuously analyze real-time video captured by a camera and obtain real-time human pose classification results.
@@ -80,6 +85,7 @@ After running the program, a window displaying the model’s inference results w
 
 Press the spacebar to display the pose classification results for the current frame, including: the classification label with the highest confidence; the corresponding category ID; and the confidence value for that classification result.
 
+![image](./PoseClassification.assets/pic_1782268269189.gif)
 
 ## Building Block Instructions
 

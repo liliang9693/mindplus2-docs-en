@@ -261,34 +261,49 @@ nav:
               - 4.1.5 Real-time Result Push: AITools/Basic_description/real_time_push/real-time-push.md
           - 4.2 Detailed Description:
               - 4.2.1 【Image Classification】 Quick Experience: AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Image Classification】 Advanced Mode": AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
+              - 【Image Classification】 Advanced Mode: AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
               - 4.2.2 【Object Detection】 Quick Experience: AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Object Detection】 Advanced Mode": AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
+              - 【Object Detection】 Advanced Mode: AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
               - 4.2.3 【Instance Segmentation】 Quick Experience: AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Instance Segmentation】 Advanced Mode": AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
+              - 【Instance Segmentation】 Advanced Mode: AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
               - 4.2.4 【Temporal Pattern Recognitionn】 Quick Experience: AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Temporal Pattern Recognition】 Advanced Mode": AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
+              - 【Temporal Pattern Recognition】 Advanced Mode: AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
               - 4.2.5 【Speech Classification】 Quick Experience: AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md
               - 4.2.6 【Text Classification】 Quick Experience: AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md
               - 4.2.7 【Pose Classification】 Quick Experience: AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md
   - FAQ:
+      - 1. General Settings FAQs:
+          - FAQ/GeneralSettingsFAQs/index.md
+          - What should I do if I can't find the login page?: FAQ/GeneralSettingsFAQs/WhatShouldIDoIfICanTFindTheLoginPage.md
+          - Fix "Please Connect to Mind+Link First" Error in Extension Library: FAQ/GeneralSettingsFAQs/FixPleaseConnectToMindLinkFirstErrorInExtensionLibrary.md
       - FAQ: FAQ/index.md
-      - 1. Coding:
-          - 1.1 RealTime Mode:
+      - 2. Coding:
+          - FAQ/Coding/Coding/index.md
+          - 2.1 RealTime Mode:
               - FAQ/Coding/RealTimeMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;Real-time Mode Issues": FAQ/Coding/RealTimeMode/runtime-error.md
-          - 1.2 Upload Mode:
+              - RealTime Mode Issues: FAQ/Coding/RealTimeMode/runtime-error.md
+          - 2.2 Upload Mode:
               - FAQ/Coding/UploadMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;Upload Mode Issues": FAQ/Coding/UploadMode/upload-mode-issues.md
-          - 1.3 Python Block Mode:
+              - What should I do if I get a K10 character quotation mark error?: FAQ/Coding/UploadMode/WhatShouldIDoIfIGetAK10CharacterQuotationMarkError.md
+              - How do I restore the firmware in upload mode?: FAQ/Coding/UploadMode/HowDoIRestoreTheFirmwareInUploadMode.md
+              - Fix "Failed to Load Extension" When Downloading Mainboard Driver: FAQ/Coding/UploadMode/FixFailedToLoadExtensionWhenDownloadingMainboardDriver.md
+          - 2.3 Python Block Mode:
               - FAQ/Coding/PythonBlockMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;Python Environment Not Found?": FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.4 MicroPython":
+              - Python Environment Not Found?: FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
+          - 2.4 MicroPython block Mode:
               - FAQ/Coding/MicroPythonBlockMode/index.md
               - "&nbsp;&nbsp;&nbsp;&nbsp;MicroPython Block Mode Issues": FAQ/Coding/MicroPythonBlockMode/fix-micropython-not-found-error.md
-      - 2. Model: FAQ/AITools/index.md
-      - 3. View: FAQ/ViewDesign/index.md
-      - 4. Extension: FAQ/4Extension.md
+      - 3. Model:
+          - FAQ/Model/index.md
+          - How to Fix "No module named 'model_mp_io'" Error: FAQ/Model/HowToFixNoModuleNamedModelMpIoError.md
+          - 'How to Fix "pyenv: command not found" Error': FAQ/Model/HowToFixPyenvCommandNotFoundError.md
+          - How to Fix Software Interface Language Inconsistency: FAQ/Model/HowToFixSoftwareInterfaceLanguageInconsistency.md
+      - 4. View:
+          - FAQ/View/index.md
+      - 5. Extension:
+          - FAQ/Coding/RealTimeMode/Extension/index.md
+          - How to Add an Extension Library: FAQ/Coding/RealTimeMode/Extension/HowToAddAnExtensionLibrary.md
+          - How to Fix Extension Library Download Failure: FAQ/Coding/RealTimeMode/Extension/HowToFixExtensionLibraryDownloadFailure.md
   - Extension:
       - Extension/index.md
       - RealTime Mode:
@@ -299,6 +314,12 @@ nav:
           - Pose Classification: Extension/RealTimeMode/PoseClassification.md
           - Speech Classification: Extension/RealTimeMode/SpeechClassification.md
           - Text Classification: Extension/RealTimeMode/TextClassification.md
+      - UploadMode:
+          - Extension/UploadMode/index.md
+          - Temporal Pattern Recognition: Extension/UploadMode/TemporalPatternRecognition.md
+      - Python Block Mode:
+          - Extension/PythonBlockMode/index.md
+          - Model Training and Inference Library: Extension/PythonBlockMode/ModelTrainingAndInferenceLibrary.md
   - Community: https://community.dfrobot.com/
   - About Us: AboutUs/index.md
   - Mind+ V1.x Documentation: https://mindplus.dfrobot.com

@@ -29,8 +29,8 @@ Before creating an image classification project, you must first train and export
 
 Please refer to the tutorial below to set up an image classification model for use in your upcoming project.
 
-* Image Classification Model Training Tutorial: Speech Classification—Training the Model
-* Image Classification Model Export Tutorial: Speech Classification—Model Export
+* Image Classification Model Training Tutorial: [Speech Classification—Training the Model](../../AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md#step-4-train-model)
+* Image Classification Model Export Tutorial: [Speech Classification—Model Export](../../AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md#step-6-model-deploy)
 
 ## Load the model training and inference library
 

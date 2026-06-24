@@ -2,6 +2,8 @@
 
 This document will explain how to use the "Instance Segmentation" feature module in the Model Training and Inference Library under Mind+ > Programming > Real-Time Mode to apply a self-trained instance segmentation model and complete an instance segmentation project.
 
+![image](./InstanceSegmentation.assets/pic_1782267495424.gif)
+
 ## Features
 
 Using the Instance Segmentation module, users can load a pre-trained instance segmentation model to perform inference and recognition on local images or real-time footage captured by a camera. This allows users to obtain information such as the number of instances detected in the image, as well as the class labels, confidence scores, center point X/Y coordinates, width, and height for each instance, which can be used for subsequent logical decisions, interactive control, or visualization.
@@ -31,8 +33,8 @@ Before creating an instance segmentation project, you must first train and expor
 
 Please refer to the tutorial below to prepare a segmented model for use in your upcoming project.
 
-* Tutorial on Training Instance Segmentation Models: Instance Segmentation—Training the Model
-* Tutorial on Exporting Instance Segmentation Models: Instance Segmentation—Model Export
+* Tutorial on Training Instance Segmentation Models: [Instance Segmentation—Training the Model](../../AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md#step-3-train-model)
+* Tutorial on Exporting Instance Segmentation Models: [Instance Segmentation—Model Export](../../AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md#step-5-model-deploy)
 
 ## Load the model training and inference library
 
@@ -64,11 +66,13 @@ In practice, you can replace the example model with a model you’ve trained you
 
 ## Sample Program
 
-![image](./InstanceSegmentation.assets/pic_1781766936142.png)
+![image](./InstanceSegmentation.assets/pic_1782267611241.png)
 
 ## Runtime Results
 
 After running the program, a window displaying the model's inference results will pop up. The detection results will be overlaid on the original image, showing the outlines of the detected flowers and labeling them with their corresponding categories and confidence scores.
+
+![image](./InstanceSegmentation.assets/pic_1782267787339.gif)
 
 ## Project 2: Real-Time Object Segmentation Using a Camera
 
@@ -84,6 +88,8 @@ The model used in this example is the same as the one in Project 1. You can repl
 
 Once the program starts, the camera feed will be displayed in real time on the stage area. After the instance segmentation model has finished loading, press the spacebar to begin the instance segmentation inference task. The program will then draw the outline of each detected flower in real time on the screen, labeling it with its corresponding category and confidence score. The Mind+ character will move sequentially to the center of each instance and announce the category label for that instance.
 
+![image](./InstanceSegmentation.assets/pic_1782267503829.gif)
+
 ## Building Block Instructions
 
 | Instance Segmentation Block                                                                                      | Feature Description                                                                                                                                                                                                                                                                                                                                        |
@@ -97,7 +103,6 @@ Once the program starts, the camera feed will be displayed in real time on the s
 | ![image](./InstanceSegmentation.assets/pic_1781768542645.png) | Retrieve detailed information about the instance with the specified index from the inference results of the instance segmentation model, including the label, confidence score, center point X coordinate, center point Y coordinate, width, and height. Enter the index of the detected instance you want to retrieve in the box; counting starts from 0. |
 | ![image](./InstanceSegmentation.assets/pic_1781768554665.png) | Used to retrieve the total number of instances detected in a single inference result                                                                                                                                                                                                                                                                       |
 | ![image](./InstanceSegmentation.assets/pic_1781768561521.png) | Clear the currently saved instance-segmented inference results.                                                                                                                                                                                                                                                                                            |
-
 
 | Camera-related Blocks                                                                                           | Feature Description                                                                                                                                                                                                                                                                |
 | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

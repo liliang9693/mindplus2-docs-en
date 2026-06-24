@@ -1,2 +1,5 @@
 # Python Block Mode Issues
-Under development, stay tuned.
+
+| Problem Description | What should I do if the Python environment can't be found? |
+| ------------------- | ---------------------------------------------------------- |
+| Solution            | [Click to view](fix-python-not-found-error.md)                                              |

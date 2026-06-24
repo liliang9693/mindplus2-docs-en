@@ -2,6 +2,8 @@
 
 This document will explain how to use the "Image Classification" module in the Model Training and Inference Library under Mind+ > Programming > Real-Time Mode to apply a self-trained image classification model and complete an image classification project.
 
+![image](./ImageClassification.assets/pic_1782264360263.gif)
+
 ## Features
 
 Using the image classification module, users can load pre-trained image classification models to perform inference and classification on local images or camera feeds, and obtain results such as the corresponding category ID, label, and confidence score.
@@ -29,8 +31,8 @@ Before creating an image classification project, you must first train and export
 
 Please refer to the tutorial below to set up an image classification model for use in the upcoming project.
 
-* Tutorial on Training Image Classification Models: Image Classification—Training the Model
-* Tutorial on Exporting Image Classification Models: Image Classification - Model Export
+* Tutorial on Training Image Classification Models: [Image Classification—Training the Model](../../AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md#step-3-train-model)
+* Tutorial on Exporting Image Classification Models: [Image Classification - Model Export](../../AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md#step-5-model-deploy)
 
 ### Load the model training and inference library
 
@@ -72,6 +74,8 @@ This project demonstrates how to use a pre-trained image classification model to
 
 The model used in this example is the same as the one in Project 1. You can replace it with an image classification model you’ve trained yourself or one you already have; the rest of the code remains the same.
 
+![image](./ImageClassification.assets/pic_1782265206633.png)
+
 ## Sample Program
 
 ![image](./ImageClassification.assets/pic_1781753834469.png)
@@ -82,6 +86,8 @@ After running the program, a window displaying the model inference results will 
 
 Press the Spacebar to display the image classification results for the current frame, including: the classification label with the highest confidence; the corresponding category ID; and the confidence value for that classification result.
 
+![image](./ImageClassification.assets/pic_1782264796567.gif)
+
 ## Building Block Instructions
 
 | Image Classification Blocks                                                                                    | Feature Description                                                                                                                                                                                                                                                                                               |
@@ -91,7 +97,7 @@ Press the Spacebar to display the image classification results for the current f
 | ![image](./ImageClassification.assets/pic_1781745705616.png) | Perform continuous image classification inference on real-time footage captured by the camera.                                                                                                                                                                                                                    |
 | ![image](./ImageClassification.assets/pic_1781745712977.png) | Stop the image classification inference for the camera feed.                                                                                                                                                                                                                                                      |
 | ![image](./ImageClassification.assets/pic_1781745722840.png) | Perform an image classification inference on a specified image and display the corresponding recognition result.                                                                                                                                                                                                  |
-| ![image](./ImageClassification.assets/pic_1781745730703.png) | Retrieves the confidence score corresponding to a specified category ID from the image classification results. Enter an integer starting from 0 for the ID; you can also use an\`int\` type variable.多模型翻译对比                                                                                               |
+| ![image](./ImageClassification.assets/pic_1781745730703.png) | Retrieves the confidence score corresponding to a specified category ID from the image classification results. Enter an integer starting from 0 for the ID; you can also use an\`int\` type variable.                                                                                                             |
 | ![image](./ImageClassification.assets/pic_1781745737575.png) | Retrieve the classification label with the highest confidence score from the current image classification results. This is often used directly as the final image classification label.                                                                                                                           |
 | ![image](./ImageClassification.assets/pic_1781745745049.png) | Retrieve the category ID corresponding to the classification with the highest confidence in the current image classification results.                                                                                                                                                                             |
 | ![image](./ImageClassification.assets/pic_1781745752598.png) | Clear the currently saved image classification results.                                                                                                                                                                                                                                                           |
@@ -104,8 +110,6 @@ Press the Spacebar to display the image classification results for the current f
 | ![image](./ImageClassification.assets/pic_1781752382776.png) | When displaying a camera feed on the stage, you can use this block to adjust the transparency so that the stage background and the camera feed appear together.                                                                                                                    |
 | ![image](./ImageClassification.assets/pic_1781752391619.png) | Infer the results in real time and display them on the camera feed.                                                                                                                                                                                                                |
 | ![image](./ImageClassification.assets/pic_1781752399173.png) | Use the computer's webcam to take a photo and save it to a specified folder on the computer.                                                                                                                                                                                       |
-
-
 
 ## Frequently Asked Questions
 
