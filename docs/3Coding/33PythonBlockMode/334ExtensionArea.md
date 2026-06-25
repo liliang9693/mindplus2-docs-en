@@ -2,7 +2,7 @@
 
 n Python Block Mode, users can add various sensor or actuator modules using the "Extension Library" feature. The Extension Library functions similarly to installing corresponding module drivers for the system. Once successfully added, it automatically generates matching Python block commands, helping users quickly implement data reading or motion control, thereby significantly improving programming efficiency and expanding the possibilities for hardware interaction projects.
 
-Want to learn more about the commands in each extension library? Click "[Extension](../../FAQ/Extension/PythonBlockMode/index.md)" to view detailed descriptions.
+Want to learn more about the commands in each extension library? Click "[Extension](../../Extension/index.md)" to view detailed descriptions.
 
 ![image](./334ExtensionArea.assets/pic_1781248997205.png)
 

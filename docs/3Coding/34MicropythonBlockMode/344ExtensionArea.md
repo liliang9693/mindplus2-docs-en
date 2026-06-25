@@ -7,7 +7,7 @@ In Micropython's block mode, the extension area supports two types of extensions
 
 By configuring the expansion zone, users can flexibly select hardware controllers based on project requirements and load the corresponding modules to enable additional hardware interaction features.   
 
-Want to learn more about the commands in each extension library? Click "[Extension](../../FAQ/Extension/MicroPythonBlockMode/index.md)" to view detailed descriptions.
+Want to learn more about the commands in each extension library? Click "[Extension](../../Extension/index.md)" to view detailed descriptions.
 
 #### 1. Controller Expansion
 

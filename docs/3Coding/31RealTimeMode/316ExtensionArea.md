@@ -2,7 +2,7 @@
 
 In realtime mode, the extension area serves as a key entry point for building project functionality. By selecting the appropriate stage extension, control extension, or module extension, users can transition from virtual stage animations to real-world hardware interactions, enabling a comprehensive creative experience that spans from software to hardware.
 
-Want to learn more about the commands in each extension library? Click "[Extension](../../FAQ/Extension/RealTimeMode/index.md)" to view detailed descriptions.
+Want to learn more about the commands in each extension library? Click "[Extension](../../Extension/index.md)" to view detailed descriptions.
 
 #### 1. Stage Extensions
 
