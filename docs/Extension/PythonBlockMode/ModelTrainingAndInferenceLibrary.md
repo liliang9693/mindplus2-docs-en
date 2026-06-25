@@ -171,7 +171,7 @@ Please refer to the connection diagram below to connect the computer, the UNIHIK
 
 ![img](https://mindplus.dfrobot.com.cn/mp2/python-block-ext-docs/docs/extensions/ext-DFRobot-aiInference/readme.assets/1768465845698-17ad4c98-bc83-4797-aa61-487145a03b73.png)
 
-## Image Classification Example—Cat and Dog Classification
+### Image Classification Example—Cat and Dog Classification
 
 This example demonstrates how to use the UNIHIKER M10 to deploy a self-trained cat-and-dog image classification model, perform inference on real-time video captured by a camera to classify cats and dogs, and display the recognition results on the UNIHIKER M10.
 
@@ -197,7 +197,7 @@ Search results related to terminal printing.
 
 ![image](./ModelTrainingAndInferenceLibrary.assets/pic_1782294747294.png)
 
-## Object Detection Example—Traffic Sign Detection
+### Object Detection Example—Traffic Sign Detection
 
 This example demonstrates how to use the UNIHIKER M10 to deploy a self-trained traffic sign object detection model, perform inference on real-time video captured by a camera, detect and annotate traffic signs appearing in the video in real time, and output the object detection results.
 
@@ -227,7 +227,7 @@ Examine the relevant data for each flag detected by the terminal printer.
 
 ![image](./ModelTrainingAndInferenceLibrary.assets/pic_1782294595950.png)
 
-## Example of Instance Segmentation—Flower Instance Segmentation
+### Example of Instance Segmentation—Flower Instance Segmentation
 
 This example demonstrates how to use the UNIHIKER M10 to deploy a self-trained flower instance segmentation model and perform inference on images captured by a camera. It boxes the flower instances appearing in the images, marks their outlines, and outputs instance segmentation-related data.
 
@@ -261,7 +261,7 @@ You can find the saved images of the extracted flower outlines in the correspond
 
 ![img](https://mindplus.dfrobot.com.cn/mp2/python-block-ext-docs/docs/extensions/ext-DFRobot-aiInference/readme.assets/1768554344586-e032de48-ad60-4d51-8658-27885018c5b4.png)
 
-# Timeporal Pattern Recognition Projects
+### Timeporal Pattern Recognition Projects
 
 ## Hardware Preparation
 
@@ -275,7 +275,7 @@ Please refer to the connection diagram below to connect the computer, the UNIHIK
 
 ![img](https://mindplus.dfrobot.com.cn/mp2/python-block-ext-docs/docs/extensions/ext-DFRobot-aiInference/readme.assets/1768465845698-17ad4c98-bc83-4797-aa61-487145a03b73.png)
 
-## Example of Temporal Pattern Recognition—Action Recognition
+### Example of Temporal Pattern Recognition—Action Recognition
 
 This project demonstrates how to use a pre-trained temporal pattern recognition model to analyze continuous data collected by the UNIHIKER M10 accelerometer, extract label data from the inference results, and perform motion recognition.
 
