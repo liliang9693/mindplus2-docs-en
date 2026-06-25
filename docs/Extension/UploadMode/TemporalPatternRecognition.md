@@ -2,6 +2,8 @@
 
 This document will explain how to use the Time Series Pattern Recognition Library in Mind+ > Programming Software > Upload Mode to apply a Temporal Pattern Recognition model and complete a time series pattern recognition project using the UNIHIKER K10.
 
+![image](./TemporalPatternRecognition.assets/pic_1782370370758.gif)
+
 ## Feature Overview
 
 Using the Temporal Pattern Recognition library, users can load Temporal Pattern Recognition models to perform real-time recognition and classification of continuous sensor time-series data, and obtain results such as the corresponding category ID, label name, and confidence score.
@@ -39,26 +41,21 @@ Open Mind+ version 2.0.4 or later, and tap to enter "Upload Mode."
 
 ![image](./TemporalPatternRecognition.assets/pic_1782272508707.png)
 
-
 In upload mode, click “Extensions” in the lower-left corner, then click “Board” In the Master Control Extensions list, select “UNIHIKER K10,” and click to load the “UNIHIKER K10” library.
 
 ![image](./TemporalPatternRecognition.assets/pic_1782272554057.png)
-
 
 After the UNIHIKER K10 library has finished loading, click "Module" then enter the keyword "Temporal Pattern Recognition" in the search box in the upper-right corner to perform a search. Once the result is found, click to load the "Temporal Pattern Recognition" library.
 
 ![image](./TemporalPatternRecognition.assets/pic_1782272568671.png)
 
-
 Once loading is complete, return to the upload mode programming page and click "Temporal Pattern Recognition" to locate the Temporal Pattern Recognition blocks, as shown below.
 
 ![image](./TemporalPatternRecognition.assets/pic_1782272581719.png)
 
-
 ## Usage Instructions
 
 ![image](./TemporalPatternRecognition.assets/pic_1782272618319.png)
-
 
 ## Project: Action Recognition
 
@@ -70,12 +67,13 @@ In practice, you can replace the example model with a model you’ve trained you
 
 ![image](./TemporalPatternRecognition.assets/pic_1782281895590.png)
 
-
 ## Runtime Results
 
 Click "Connect Device." When the interface indicates that the connection was successful, click "Upload" and wait for the program to finish uploading.
 
-After the program has finished uploading, press and hold the A button on the XK Board K10 with one hand while performing a clapping or tapping gesture. Maintain the gesture for approximately 5 to 10 seconds. Then release the A button. Observe the recognized action label, category ID, and corresponding confidence score displayed on the screen. Repeat the above steps to perform a new round of action recognition.
+After the program has finished uploading, press and hold the A button on UNIHIKER K10 with one hand while performing a clapping or tapping gesture. Maintain the gesture for approximately 5 to 10 seconds. Then release the A button. Observe the recognized action label, category ID, and corresponding confidence score displayed on the screen. Repeat the above steps to perform a new round of action recognition.
+
+![image](./TemporalPatternRecognition.assets/pic_1782370352222.gif)
 
 ## Building Block Instructions
 
