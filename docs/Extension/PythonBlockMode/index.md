@@ -1,7 +1,6 @@
 # Python Block Mode
 
-
-In the [**Model Training Inference Library**](ModelTrainingAndInferenceLibrary.md) of **Python Block Mode**, models trained in the AI Toolbox can be deployed on Linux hardware such as the Unihiker M10. ONNX models are invoked via drag-and-drop blocks, balancing ease of use with flexibility:
+In the [**Model Training Inference Library**](ModelTrainingAndInferenceLibrary.md) of **Python Block Mode**, models trained in the AI Toolbox can be deployed on Linux hardware such as the UNIHIKER M10. ONNX models are invoked via drag-and-drop blocks, balancing ease of use with flexibility:
 
 | Module                                 | Input                  | Output                              | Typical Use Case                              |
 | -------------------------------------- | ---------------------- | ----------------------------------- | --------------------------------------------- |

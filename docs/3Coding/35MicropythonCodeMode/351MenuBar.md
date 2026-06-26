@@ -30,7 +30,7 @@ In MicroPython Code Mode, after adding a host device, you can connect or disconn
 
 ## Please note:
 
-After connecting the main controller, you will see an advanced menu to the right of the Connect button. You can use this advanced menu to flash or erase the firmware on the main controller (using the Xingkong K10 as an example).
+After connecting the main controller, you will see an advanced menu to the right of the Connect button. You can use this advanced menu to flash or erase the firmware on the main controller (using the UNIHIKER K10 as an example).
 
 **Flashing**: Flashing the low-level system firmware onto the motherboard; the flashing options include "default," "0.5," "0.9.8," and so on.
 

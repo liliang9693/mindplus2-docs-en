@@ -16,4 +16,4 @@ An error message appears when using the model training and inference library in 
 ## Solution
 
 * First, confirm that the program is connected to the UNIHIKER M10 and running (Mind+ top menu: Connect 10.1.2.3).
-* Next, make sure the UNIHIKER M10 system firmware is up to date (you can check the system version by long-pressing the Home menu > View System Information); it must be at least v0.4.1. To update the UNIHIKER system firmware: [Click here to view]()
+* Next, make sure the UNIHIKER M10 system firmware is up to date (you can check the system version by long-pressing the Home menu > View System Information); it must be at least v0.4.1. To update the UNIHIKER system firmware: [Click here to view](https://www.unihiker.com/wiki/SystemAndConfiguration/UnihikerOS/unihiker_os_burn/)

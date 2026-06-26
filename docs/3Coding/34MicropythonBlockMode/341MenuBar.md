@@ -12,7 +12,7 @@ Provides project management functions, including creating new projects, opening 
 
 | Features      | Note                                                                                                                                                                                    |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Project   | Create a blank project and clear all currently loaded extension instructions so you can start programming from scratch.多模型翻译对比                                                   |
+| New Project   | Create a blank project and clear all currently loaded extension instructions so you can start programming from scratch.                                                                 |
 | Load project | Load the saved project file to continue editing or running it.                                                                                                                         |
 | Save Project  | Save the current project to your computer and update the original file.                                                                                                                 |
 | Save As       | Save the current project as a new file. Users can specify the filename and location; the original project will not be overwritten. This is useful for creating backups or new versions. |
@@ -33,8 +33,6 @@ We provide a wide range of learning resources, including official documentation,
 | Video Tutorials        | If you're just getting started, you might want to check out some simple examples.                                                                                                             |
 | Example Program        | Here is a sample program for the current main control board. Please note that you must first select the main control board in the "Extensions" section before the sample program will appear. |
 
-
-
 #### 3. Connecting Devices
 
 In MicroPython Block Mode, after adding a host device, you can connect or disconnect the hardware by clicking the "Connect Device" button. Quick access links to "Tutorials" and "Open Device Manager" are also provided to help troubleshoot hardware connection issues.
@@ -43,7 +41,7 @@ In MicroPython Block Mode, after adding a host device, you can connect or discon
 
 ## Please note:
 
-After connecting the main controller, you will see an advanced menu to the right of the Connect button. You can use this advanced menu to flash or erase the firmware on the main controller (using the Xingkong K10 as an example).
+After connecting the main controller, you will see an advanced menu to the right of the Connect button. You can use this advanced menu to flash or erase the firmware on the main controller (using the UNIHIKER K10 as an example).
 
 **Flashing**: Flashing the low-level system firmware onto the motherboard; the flashing options include "default," "0.5," "0.9.8," and so on.
 

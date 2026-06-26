@@ -2,7 +2,7 @@
 
 In upload mode, the extension area supports two types of extension content:
 
-* **Board Expansion**: Used to select or replace the hardware main controller board currently used for programming, such as Arduino, micro:bit, Xingkong Board K10, etc.
+* **Board Expansion**: Used to select or replace the hardware main controller board currently used for programming, such as Arduino, micro:bit, UNIHIKER K10, etc.
 * **Module Expansion**: Once the main controller has been selected, you can further add sensors, actuators, or functional modules compatible with that controller to enhance the program's capabilities.
 
 By configuring the expansion zone, users can flexibly select hardware controllers based on project requirements and load the corresponding modules to enable additional hardware interaction features.
@@ -61,5 +61,4 @@ Once the update is complete, the red dot next to the version number will automat
 
 #### 4. Frequently Asked Questions
 
-Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/4Extension.md).
-
+Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/Coding/RealTimeMode/Extension/HowToFixExtensionLibraryDownloadFailure.md).

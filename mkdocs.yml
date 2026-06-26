@@ -252,6 +252,8 @@ nav:
               - 3.5.3 File Area: 3Coding/35MicropythonCodeMode/353FileArea.md
               - 3.5.4 Programming Area: 3Coding/35MicropythonCodeMode/354ProgrammingArea.md
               - 3.5.5 Terminal Display Area: 3Coding/35MicropythonCodeMode/355TerminalDisplayArea.md
+          - 3.6 Python Code Model:
+              - 3Coding/31RealTimeMode/PythonCodeModel/index.md
       - 4.Model:
           - 4.1 Basic Description:
               - 4.1.1 Introduction: AITools/Basic_description/introduction/introduction.md
@@ -292,12 +294,14 @@ nav:
               - Python Environment Not Found?: FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
           - 2.4 MicroPython block Mode:
               - FAQ/Coding/MicroPythonBlockMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;MicroPython Block Mode Issues": FAQ/Coding/MicroPythonBlockMode/fix-micropython-not-found-error.md
+          - 2.5 MicroPython Code Mode:
+              - FAQ/Coding/Coding/MicroPythonCodeMode/index.md
+          - 2.6 Python Code Mode:
+              - FAQ/Coding/Coding/PythonCodeMode/index.md
       - 3. Model:
           - FAQ/Model/index.md
           - How to Fix "No module named 'model_mp_io'" Error: FAQ/Model/HowToFixNoModuleNamedModelMpIoError.md
           - 'How to Fix "pyenv: command not found" Error': FAQ/Model/HowToFixPyenvCommandNotFoundError.md
-          - How to Fix Software Interface Language Inconsistency: FAQ/Model/HowToFixSoftwareInterfaceLanguageInconsistency.md
       - 4. View:
           - FAQ/View/index.md
       - 5. Extension:

@@ -12,7 +12,7 @@ Provides project management functions, including creating new projects, load pro
 
 | Features      | Note                                                                                                                                                                                    |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Project   | Create a blank project and clear all currently loaded extension instructions so you can start programming from scratch.多模型翻译对比                                                   |
+| New Project   | Create a blank project and clear all currently loaded extension instructions so you can start programming from scratch.                                                                 |
 | Load project | Load the saved project file to continue editing or running it.                                                                                                                         |
 | Save Project  | Save the current project to your computer and update the original file.                                                                                                                 |
 | Save As       | Save the current project as a new file. Users can specify the filename and location; the original project will not be overwritten. This is useful for creating backups or new versions. |

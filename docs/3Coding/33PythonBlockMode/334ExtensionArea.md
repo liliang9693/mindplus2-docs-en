@@ -1,4 +1,4 @@
-# 3.3.4 Extension Area
+# 3.3.5 Extension Area
 
 n Python Block Mode, users can add various sensor or actuator modules using the "Extension Library" feature. The Extension Library functions similarly to installing corresponding module drivers for the system. Once successfully added, it automatically generates matching Python block commands, helping users quickly implement data reading or motion control, thereby significantly improving programming efficiency and expanding the possibilities for hardware interaction projects.
 
@@ -20,4 +20,4 @@ Select the extension library, click the "Download" button in the upper-right cor
 
 #### Frequently Asked Questions
 
-Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/4Extension.md).
+Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/Coding/RealTimeMode/Extension/HowToFixExtensionLibraryDownloadFailure.md).

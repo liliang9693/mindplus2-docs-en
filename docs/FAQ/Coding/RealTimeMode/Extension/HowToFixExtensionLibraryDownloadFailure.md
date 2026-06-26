@@ -48,7 +48,7 @@ If this occurs, please contact your school or company’s network administrator 
 ### 3. Deploying Using an Offline Resource Package
 
 * For environments without internet access or server rooms, we provide an offline installer and an extension library resource package (updated periodically).
-* Download links for the offline installer and extension library resources: Click to download.
+* Download links for the offline installer and extension library resources: [Click to download](https://h7dvigefi0.feishu.cn/drive/folder/Qh7kfvla8lG6VCdhUr8cmr0snrm).
 * After downloading, please review the PDF tutorial included in the compressed file (e.g., “Mind+ V2.X Extension Library Offline Installation Tutorial—2026.0407.pdf”) before proceeding.
 
 **Important Reminder**: Please ensure that your extension library resource packages and Mind+ version are up to date;

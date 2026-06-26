@@ -67,4 +67,4 @@ Once the update is complete, the red dot next to the version number will automat
 
 #### 5. Frequently Asked Questions          
 
-Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/4Extension.md).
+Click here for a solution to the [issue of being unable to download the extension library](../../FAQ/Coding/RealTimeMode/Extension/HowToFixExtensionLibraryDownloadFailure.md).

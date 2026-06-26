@@ -12,7 +12,7 @@ Provides project management functions, including creating new projects, opening 
 
 | Features      | Note                                                                                                                                                                                    |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| New Project   | Create a blank project and clear all currently loaded extension instructions so you can start programming from scratch.多模型翻译对比                                                   |
+| New Project   | Create a blank project and clear all currently loaded extension instructions so you can start programming from scratch.                                                                 |
 | Load project | Load the saved project file to continue editing or running it.                                                                                                                         |
 | Save Project  | Save the current project to your computer and update the original file.                                                                                                                 |
 | Save As       | Save the current project as a new file. Users can specify the filename and location; the original project will not be overwritten. This is useful for creating backups or new versions. |
@@ -35,14 +35,14 @@ We provide a wide range of learning resources, including official documentation,
 
 ## 3. Local Terminal
 
-The local terminal is not just "a place to run Python programs"; it also serves as a hub for selecting environments and connecting to terminals, allowing you to switch freely between your computer, a local interpreter, the Xingkong M10, or remote devices to meet the execution needs of different projects.
+The local terminal is not just "a place to run Python programs"; it also serves as a hub for selecting environments and connecting to terminals, allowing you to switch freely between your computer, a local interpreter, the UNIHIKER M10, or remote devices to meet the execution needs of different projects.
 
 ![image](./331MenuBar.assets/pic_1781059749442.png)
 
 | Features                                | Note                                                                                           |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Default - Local Terminal                | Connect to the current computer environment and run the Python program directly (run locally). |
-| Default: 10.1.2.3 (example)             | Connect to a recognized remote device (such as the Xingkong M10) to execute code.              |
+| Default: 10.1.2.3 (example)             | Connect to a recognized remote device (such as the UNIHIKER M10) to execute code.             |
 | Switch to the local Python installation | Change the version of the local Python interpreter (e.g., Python 3.8 or Python 3.10).          |
 | Create a new SSH connection             | Manually establish a remote terminal connection (for devices that support SSH).                |
 | Open the Network Center                 | Access the network device management interface to manage remote connections and device status. |

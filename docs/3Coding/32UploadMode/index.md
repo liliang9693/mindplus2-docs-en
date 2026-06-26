@@ -1,12 +1,12 @@
 # 3.2 Upload Mode
 
-Upload mode is an operating mode in which the program is written directly to a hardware device (such as the micro:bit, Xingkong K10, Arduino Uno, or other microcontrollers). In this mode, the program does not rely on real-time execution but is stored in the hardware, allowing the device to operate independently. Even if the device is disconnected from the computer, the program will continue to run.
+Upload mode is an operating mode in which the program is written directly to a hardware device (such as the micro:bit, UNIHIKER K10, Arduino Uno, or other microcontrollers). In this mode, the program does not rely on real-time execution but is stored in the hardware, allowing the device to operate independently. Even if the device is disconnected from the computer, the program will continue to run.
 
 ## Features
 
 * Program runs independently: Once uploaded, the program is stored within the hardware, allowing the device to operate offline.
 * No real-time connection required: It runs without needing a constant connection to a computer, making it ideal for presentations or projects that run continuously.
-* Supports a variety of hardware: Compatible with devices such as the micro:bit, Xingkong K10, and Arduino Uno.
+* Supports a variety of hardware: Compatible with devices such as the micro:bit, UNIHIKER K10, and Arduino Uno.
 * High code execution efficiency: In upload mode, the program runs directly on the device, resulting in faster response times.
 
 ### Understanding the Interface
@@ -19,9 +19,9 @@ The interface can be divided into seven areas: the menu bar, settings, modules, 
 
 For a detailed description of each section's features, click here to jump to that section.
 
-| [Menu Bar](321MenuBar.md)                 | [Settings](322Settings.md)    | [Functional Areas-Blocks](323FunctionalAreasBlocks/index.md) | [Extension Area](324ExtensionArea.md) |
-| -------------------------------------- | -------------------------- | --------------------------------------------------------- | ---------------------------------- |
-| [Programming Area](325ProgrammingArea.md) |[Code Display Area](326CodeDisplayArea.md)|   [Serial Monitor](327SerialMonitor.md)                                     |                      |
+| [Menu Bar](321MenuBar.md)                 | [Settings](322Settings.md)                 | [Functional Areas-Blocks](323FunctionalAreasBlocks/index.md) | [Extension Area](324ExtensionArea.md) |
+| -------------------------------------- | --------------------------------------- | --------------------------------------------------------- | ---------------------------------- |
+| [Programming Area](325ProgrammingArea.md) | [Code Display Area](326CodeDisplayArea.md) | [Serial Monitor](327SerialMonitor.md)                        |                                    |
 
 Before we look at the upload interface, we need to understand two very important buttons: “Compile Only” and “Compile and Upload.” Located in the upper-left corner of the code display area, these buttons control the program’s compilation and upload process—a critical step before the program runs.
 
