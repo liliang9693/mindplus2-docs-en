@@ -10,6 +10,6 @@
 | Solution            | [Click to View](HowToFixPyenvCommandNotFoundError.md)                                                                                            |
 
 
-| Problem Description | What should I do if the software interface language is inconsistent? |
+<!-- | Problem Description | What should I do if the software interface language is inconsistent? |
 | ------------------- | -------------------------------------------------------------------- |
-| Solution            | [Click to View](HowToFixSoftwareInterfaceLanguageInconsistency.md)                                                        |
+| Solution            | [Click to View](HowToFixSoftwareInterfaceLanguageInconsistency.md)                                                        | -->

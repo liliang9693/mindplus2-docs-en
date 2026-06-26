@@ -47,5 +47,5 @@ Process and optimize the selected audio. The audio editing area provides a varie
 | Mute          | Set the volume to zero to achieve complete silence.                                                             |
 | Fade In       | Add a volume fade effect to the audio, starting soft and gradually getting louder.                              |
 | Fade Out      | Add a volume fade effect to the audio, starting loud and ending soft.                                           |
-| Reverse       | Play the audio in reverse to create a unique sound experience. 多模型翻译对比                                   |
+| Reverse       | Play the audio in reverse to create a unique sound experience.                                   |
 | Robot         | Apply special sound effects to give the audio a mechanical style, making it sound more high-tech or electronic. |

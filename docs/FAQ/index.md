@@ -21,7 +21,7 @@ Select the corresponding category based on the type of issue you encounter:
 <div class="grid cards" markdown>
 
 - **[Model](Model/index.md)**
-  [![Model](./img/cover5-5.png){style="display:block;margin: 10px auto"}](AITools/index.md)
+  [![Model](./img/cover5-5.png){style="display:block;margin: 10px auto"}](../AITools/index.md)
 
 </div>
 
@@ -30,7 +30,7 @@ Select the corresponding category based on the type of issue you encounter:
 <div class="grid cards" markdown>
 
 - **[View](View/index.md)**
-  [![View](./img/cover6-6.png){style="display:block;margin: 10px auto"}](ViewDesign/index.md)
+  [![View](./img/cover6-6.png){style="display:block;margin: 10px auto"}](../ViewDesign/index.md)
 
 <!-- - **[Extension Libraries](UserExtension/index.md)**  
     [![Extension Libraries](./img/cover7-7.png){style="display:block;margin: 10px auto"}](UserExtension/index.md) -->

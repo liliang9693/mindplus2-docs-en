@@ -2,7 +2,7 @@
 
 In Micropython's block mode, the extension area supports two types of extensions:
 
-* Main Controller Expansion: Used to select or replace the hardware main controller board currently used for programming, such as the Control Board or the [UNIHIKER](http://127.0.0.1:8090/3Coding/33PythonBlockMode/331MenuBar/?q=xingkong) K10.
+* Main Controller Expansion: Used to select or replace the hardware main controller board currently used for programming, such as the Control Board or the [UNIHIKER](http://127.0.0.1:8090/3Coding/33PythonBlockMode/331MenuBar/) K10.
 * Module Expansion: Once the main controller has been selected, you can further add sensors, actuators, or functional modules compatible with that controller to enhance the program's capabilities.
 
 By configuring the expansion zone, users can flexibly select hardware controllers based on project requirements and load the corresponding modules to enable additional hardware interaction features.
