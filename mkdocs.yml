@@ -165,13 +165,95 @@ nav:
           - 1.1 Mind+ Usage Guide: GettingStarted/UserGuide.md
           - 1.2 Mind+ Usage Tutorial: GettingStarted/UserTutorial.md
       - 2.General Features:
-          - 2.1 Mind+ Introduction: SoftwareIntroduction//Introduction.md
+          - 2.1 Mind+ Introduction: SoftwareIntroduction/Introduction.md
           - 2.2 Software Installation:
-              - 2.1.1 Windows: SoftwareIntroduction/Windows.md
-              - 2.1.2 MacOS: SoftwareIntroduction/MacOS.md
-              - 2.1.3 Linux: SoftwareIntroduction/Linux.md
-              - 2.1.4 ReleaseLogs: SoftwareIntroduction/ReleaseLogs.md
-              - 2.1.5 PreviousVersions: SoftwareIntroduction/PreviousVersions.md
+              - 2.2.1 Windows: SoftwareIntroduction/Windows.md
+              - 2.2.2 macOS: SoftwareIntroduction/MacOS.md
+              - 2.2.3 Linux: SoftwareIntroduction/Linux.md
+              - 2.2.4 ReleaseLogs: SoftwareIntroduction/ReleaseLogs.md
+              - 2.2.5 PreviousVersions: SoftwareIntroduction/PreviousVersions.md
+      - 3.Coding:
+          - 3.1 RealTime Mode:
+              - 3Coding/31RealTimeMode/index.md
+              - 3.1.1 Menu Bar: 3Coding/31RealTimeMode/311MenuBar.md
+              - 3.1.2 Settings: 3Coding/31RealTimeMode/312Settings.md
+              - 3.1.3 Functional Areas-Blocks:
+                  - 3Coding/31RealTimeMode/313FunctionalAreasBlocks/index.md
+                  - 3.1.3.1 Motion: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3131.md
+                  - 3.1.3.2 Looks: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3132Looks.md
+                  - 3.1.3.3 Sound: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3133Sounds.md
+                  - 3.1.3.4 Events: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3134Events.md
+                  - 3.1.3.5 Control: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3135Control.md
+                  - 3.1.3.6 Sensing: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3136Sensing.md
+                  - 3.1.3.7 Operators: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3137Operators.md
+                  - 3.1.3.8 Variables: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3138Variables.md
+                  - 3.1.3.9 My Blocks: 3Coding/31RealTimeMode/313FunctionalAreasBlocks/3139MyBlocks.md
+              - 3.1.4 Functional area-Costumes: 3Coding/31RealTimeMode/314FunctionalAreaCostumes.md
+              - 3.1.5 Function Area-Sounds: 3Coding/31RealTimeMode/315FunctionAreaSound.md
+              - 3.1.6 Extension Area: 3Coding/31RealTimeMode/316ExtensionArea.md
+              - 3.1.7 Programming Area: 3Coding/31RealTimeMode/317ProgrammingArea.md
+              - 3.1.8 Stage Area: 3Coding/31RealTimeMode/318StageArea.md
+              - 3.1.9 Sprite and background area: 3Coding/31RealTimeMode/319CharactersAndBackgroundArea.md
+          - 3.2 Upload Mode:
+              - 3Coding/32UploadMode/index.md
+              - 3.2.1 Menu Bar: 3Coding/32UploadMode/321MenuBar.md
+              - 3.2.2 Settings: 3Coding/32UploadMode/322Settings.md
+              - 3.2.3 Functional Areas-Blocks:
+                  - 3Coding/32UploadMode/323FunctionalAreasBlocks/index.md
+                  - 3.2.3.1 Control: 3Coding/32UploadMode/323FunctionalAreasBlocks/3231Control.md
+                  - 3.2.3.2 Operators: 3Coding/32UploadMode/323FunctionalAreasBlocks/3232Operators.md
+                  - 3.2.3.3 Variables: 3Coding/32UploadMode/323FunctionalAreasBlocks/3233Variables.md
+                  - 3.2.3.4 My Blocks: 3Coding/32UploadMode/323FunctionalAreasBlocks/3234MyBlocks.md
+              - 3.2.4 Extension Area: 3Coding/32UploadMode/324ExtensionArea.md
+              - 3.2.5 Programming Area: 3Coding/32UploadMode/325ProgrammingArea.md
+              - 3.2.6 Code Display Area: 3Coding/32UploadMode/326CodeDisplayArea.md
+              - 3.2.7 Serial Monitor: 3Coding/32UploadMode/327SerialMonitor.md
+          - 3.3 Python Block Mode:
+              - 3Coding/33PythonBlockMode/index.md
+              - 3.3.1 Menu Bar: 3Coding/33PythonBlockMode/331MenuBar.md
+              - 3.3.2 Settings: 3Coding/33PythonBlockMode/332Settings.md
+              - 3.3.3 Functional Areas - Modules:
+                  - 3Coding/33PythonBlockMode/333FunctionalAreas/index.md
+                  - 3.3.3.1 Control: 3Coding/33PythonBlockMode/333FunctionalAreas/3331Control.md
+                  - 3.3.3.2 Operators: 3Coding/33PythonBlockMode/333FunctionalAreas/3332Operators.md
+                  - 3.3.3.3 Number: 3Coding/33PythonBlockMode/333FunctionalAreas/3333Number.md
+                  - 3.3.3.4 Text: 3Coding/33PythonBlockMode/333FunctionalAreas/3334Text.md
+                  - 3.3.3.5 Variables: 3Coding/33PythonBlockMode/333FunctionalAreas/3335Variables.md
+                  - 3.3.3.6 My Blocks: 3Coding/33PythonBlockMode/333FunctionalAreas/3336MyBlocks.md
+                  - 3.3.3.7 Advanced Types: 3Coding/33PythonBlockMode/333FunctionalAreas/3337AdvancedTypes.md
+                  - 3.3.3.8 Python: 3Coding/33PythonBlockMode/333FunctionalAreas/3338Python.md
+              - 3.3.4 Functional Areas - Asset: 3Coding/33PythonBlockMode/334FunctionalAreasResourceFiles.md
+              - 3.3.5 Extension Area: 3Coding/33PythonBlockMode/334ExtensionArea.md
+              - 3.3.6 Programming Area: 3Coding/33PythonBlockMode/335ProgrammingArea.md
+              - 3.3.7 Code Display Area: 3Coding/33PythonBlockMode/336CodeDisplayArea.md
+              - 3.3.8 Terminal display area: 3Coding/33PythonBlockMode/337SerialMonitor.md
+          - 3.4 MicroPython Block Mode:
+              - 3Coding/34MicropythonBlockMode/index.md
+              - 3.4.1 Menu Bar: 3Coding/34MicropythonBlockMode/341MenuBar.md
+              - 3.4.2 Settings: 3Coding/34MicropythonBlockMode/342Settings.md
+              - 3.4.3 Functional Areas - Modules:
+                  - 3Coding/34MicropythonBlockMode/343FunctionalAreas/index.md
+                  - 3.4.3.1 Control: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3431Control.md
+                  - 3.4.3.2 Operators: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3432Operators.md
+                  - 3.4.3.3 Number: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3433Number.md
+                  - 3.4.3.4 Text: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3434Text.md
+                  - 3.4.3.5 Variables: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3435Variables.md
+                  - 3.4.3.6 My Blocks: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3436MyBlocks.md
+                  - 3.4.3.7 Advanced Types: 3Coding/34MicropythonBlockMode/343FunctionalAreas/3437AdvancedTypes.md
+              - 3.4.4 Functional Areas - Asset: 3Coding/34MicropythonBlockMode/344FunctionalAreasAsset.md
+              - 3.4.5 Extension Area: 3Coding/34MicropythonBlockMode/344ExtensionArea.md
+              - 3.4.6 Programming Area: 3Coding/34MicropythonBlockMode/345ProgrammingArea.md
+              - 3.4.7 Code Display Area: 3Coding/34MicropythonBlockMode/346CodeDisplayArea.md
+              - 3.4.8 Terminal Display Area: 3Coding/34MicropythonBlockMode/347TerminalDisplayArea.md
+          - 3.5 MicroPython Code Mode:
+              - 3Coding/35MicropythonCodeMode/index.md
+              - 3.5.1 Menu Bar: 3Coding/35MicropythonCodeMode/351MenuBar.md
+              - 3.5.2 Settings: 3Coding/35MicropythonCodeMode/352Settings.md
+              - 3.5.3 File Area: 3Coding/35MicropythonCodeMode/353FileArea.md
+              - 3.5.4 Programming Area: 3Coding/35MicropythonCodeMode/354ProgrammingArea.md
+              - 3.5.5 Terminal Display Area: 3Coding/35MicropythonCodeMode/355TerminalDisplayArea.md
+          - 3.6 Python Code Model:
+              - 3Coding/PythonCodeMode/index.md
       - 4.Model:
           - 4.1 Basic Description:
               - 4.1.1 Introduction: AITools/Basic_description/introduction/introduction.md
@@ -181,33 +263,68 @@ nav:
               - 4.1.5 Real-time Result Push: AITools/Basic_description/real_time_push/real-time-push.md
           - 4.2 Detailed Description:
               - 4.2.1 【Image Classification】 Quick Experience: AITools/Detailed_explanation/image_classification/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Image Classification】 Advanced Mode": AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
+              - 【Image Classification】 Advanced Mode: AITools/Detailed_explanation/image_classification/professional_mode/professional-mode.md
               - 4.2.2 【Object Detection】 Quick Experience: AITools/Detailed_explanation/object_detection/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Object Detection】 Advanced Mode": AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
+              - 【Object Detection】 Advanced Mode: AITools/Detailed_explanation/object_detection/professional_mode/professional-mode.md
               - 4.2.3 【Instance Segmentation】 Quick Experience: AITools/Detailed_explanation/instance_segmentation/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Instance Segmentation】 Advanced Mode": AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
-              - 4.2.4 【Temporal Pattern Recognitionn】 Quick Experience: AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Temporal Pattern Recognition】 Advanced Mode": AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
+              - 【Instance Segmentation】 Advanced Mode: AITools/Detailed_explanation/instance_segmentation/professional_mode/professional-mode.md
+              - 4.2.4 【Temporal Pattern Recognition】 Quick Experience: AITools/Detailed_explanation/time_series_recognition/quick_experience/quick-experience.md
+              - 【Temporal Pattern Recognition】 Advanced Mode: AITools/Detailed_explanation/time_series_recognition/professional_mode/professional-mode.md
               - 4.2.5 【Speech Classification】 Quick Experience: AITools/Detailed_explanation/speech_classification/quick_experience/quick-experience.md
               - 4.2.6 【Text Classification】 Quick Experience: AITools/Detailed_explanation/text_classification/quick_experience/quick-experience.md
               - 4.2.7 【Pose Classification】 Quick Experience: AITools/Detailed_explanation/pose_classification/quick_experience/quick-experience.md
   - FAQ:
       - FAQ: FAQ/index.md
-      - Coding:
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.1 Real-time Mode":
+      - 1. General Settings FAQs:
+          - FAQ/GeneralSettingsFAQs/index.md
+          - What should I do if I can't find the login page?: FAQ/GeneralSettingsFAQs/WhatShouldIDoIfICanTFindTheLoginPage.md
+          - Fix "Please Connect to Mind+Link First" Error in Extension Library: FAQ/GeneralSettingsFAQs/FixPleaseConnectToMindLinkFirstErrorInExtensionLibrary.md
+      - 2. Coding:
+          - FAQ/Coding/index.md
+          - 2.1 RealTime Mode:
               - FAQ/Coding/RealTimeMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;Real-time Mode Issues": FAQ/Coding/RealTimeMode/runtime-error.md
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.2 Upload Mode":
+              - RealTime Mode Issues: FAQ/Coding/RealTimeMode/runtime-error.md
+          - 2.2 Upload Mode:
               - FAQ/Coding/UploadMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;Upload Mode Issues": FAQ/Coding/UploadMode/upload-mode-issues.md
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.3 Python":
+              - What should I do if I get a K10 character quotation mark error?: FAQ/Coding/UploadMode/WhatShouldIDoIfIGetAK10CharacterQuotationMarkError.md
+              - How do I restore the firmware in upload mode?: FAQ/Coding/UploadMode/HowDoIRestoreTheFirmwareInUploadMode.md
+              - Fix "Failed to Load Extension" When Downloading Mainboard Driver: FAQ/Coding/UploadMode/FixFailedToLoadExtensionWhenDownloadingMainboardDriver.md
+          - 2.3 Python Block Mode:
               - FAQ/Coding/PythonBlockMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;Python Environment Not Found?": FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
-          - "&nbsp;&nbsp;&nbsp;&nbsp;1.4 MicroPython":
+              - Python Environment Not Found?: FAQ/Coding/PythonBlockMode/fix-python-not-found-error.md
+          - 2.4 MicroPython block Mode:
               - FAQ/Coding/MicroPythonBlockMode/index.md
-              - "&nbsp;&nbsp;&nbsp;&nbsp;MicroPython Block Mode Issues": FAQ/Coding/MicroPythonBlockMode/fix-micropython-not-found-error.md
-      - 2. Model: FAQ/AITools/index.md
-      - 3. View: FAQ/ViewDesign/index.md
+              - MicroPython Block Mode Issues: FAQ/Coding/MicroPythonBlockMode/fix-micropython-not-found-error.md
+          - 2.5 MicroPython Code Mode:
+              - FAQ/Coding/MicroPythonCodeMode/index.md
+          - 2.6 Python Code Mode:
+              - FAQ/Coding/PythonCodeMode/index.md
+      - 3. Model:
+          - FAQ/Model/index.md
+          - How to Fix No module named model_mp_io Error: FAQ/Model/HowToFixNoModuleNamedModelMpIoError.md
+          - 'How to Fix pyenv: command not found Error': FAQ/Model/HowToFixPyenvCommandNotFoundError.md
+      - 4. View:
+          - FAQ/View/index.md
+      - 5. Extension:
+          - FAQ/Extension/index.md
+          - How to Add an Extension Library: FAQ/Extension/HowToAddAnExtensionLibrary.md
+          - How to Fix Extension Library Download Failure: FAQ/Extension/HowToFixExtensionLibraryDownloadFailure.md
+  - Extensions:
+      - Extension/index.md
+      - RealTime Mode:
+          - Extension/RealTimeMode/index.md
+          - Image Classification: Extension/RealTimeMode/ImageClassification.md
+          - Object Detection: Extension/RealTimeMode/ObjectDetection.md
+          - Instance Segmentation: Extension/RealTimeMode/InstanceSegmentation.md
+          - Pose Classification: Extension/RealTimeMode/PoseClassification.md
+          - Speech Classification: Extension/RealTimeMode/SpeechClassification.md
+          - Text Classification: Extension/RealTimeMode/TextClassification.md
+      - Upload Mode:
+          - Extension/UploadMode/index.md
+          - Temporal Pattern Recognition: Extension/UploadMode/TemporalPatternRecognition.md
+      - Python Block Mode:
+          - Extension/PythonBlockMode/index.md
+          - Model Training and Inference Library: Extension/PythonBlockMode/ModelTrainingAndInferenceLibrary.md
   - Community: https://community.dfrobot.com/
   - About Us: AboutUs/index.md
   - Mind+ V1.x Documentation: https://mindplus.dfrobot.com
