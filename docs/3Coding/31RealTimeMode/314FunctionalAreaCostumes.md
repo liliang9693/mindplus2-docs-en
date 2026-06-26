@@ -1,4 +1,4 @@
-# 3.1.3 Functional area-Costumes
+# 3.1.4 Functional area-Costumes
 
 The Functional area is a key area for operations in realtime mode. It combines program controls, visual effects, and audio controls into a single interface, allowing users to quickly create and debug. It primarily includes blocks, Costumes, and sounds.
 
@@ -29,7 +29,6 @@ Used to add new looks to characters, supporting operations such as capturing loo
 **Note**: When selecting a design, you can use the "Select Design" feature to choose the desired design from the design library. The design library offers over 700 diverse designs, covering a wide range of categories such as animals, people, fantasy, dance, music, sports, food, fashion, and letters, to meet users' varied creative needs.
 
 ![image](./313FunctionalAreaCostumes.assets/pic_1780477969217.png)
-
 
 ##### 3. Style Edit area
 

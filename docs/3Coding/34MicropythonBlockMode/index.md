@@ -27,4 +27,4 @@ Next, we’ll take a closer look at these sections. For a detailed overview of e
 
 ### Frequently Asked Questions
 
-Click to view [FAQ](../../FAQ/Coding/MicropythonBlockMode/index.md)
+Click to view [FAQ](../../FAQ/Coding/MicroPythonBlockMode/index.md)

@@ -1,4 +1,4 @@
-# 4. Extension
+# 5. Extension
 
 Frequently Asked Questions About Extension Libraries
 
